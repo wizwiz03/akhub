@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+#main-outlet {
+  display: flex;
+  justify-content: center;
+}

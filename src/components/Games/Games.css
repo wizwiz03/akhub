@@ -1,0 +1,10 @@
+.games-home {
+  padding: 36px 55px;
+  max-width: 1024px;
+}
+
+.games-home h1 {
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 24px;
+}

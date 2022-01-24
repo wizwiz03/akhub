@@ -9,7 +9,9 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <div id='main-outlet'>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
