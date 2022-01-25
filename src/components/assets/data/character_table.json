@@ -514,9 +514,7 @@
   "char_123_fang": {
     "name": "Fang",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[1]"
-      }
+      "skcom_charge_cost[1]"
     ],
     "phases": [
       {
@@ -640,9 +638,7 @@
   "char_240_wyvern": {
     "name": "Vanilla",
     "skills": [
-      {
-        "skillId": "skchr_wyvern_1"
-      }
+      "skchr_wyvern_1"
     ],
     "phases": [
       {
@@ -888,9 +884,7 @@
   "char_192_falco": {
     "name": "Plume",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[1]"
-      }
+      "skcom_quickattack[1]"
     ],
     "phases": [
       {
@@ -1014,9 +1008,7 @@
   "char_208_melan": {
     "name": "Melantha",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[1]"
-      }
+      "skcom_atk_up[1]"
     ],
     "phases": [
       {
@@ -1140,9 +1132,7 @@
   "char_281_popka": {
     "name": "Popukar",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[1]"
-      }
+      "skcom_atk_up[1]"
     ],
     "phases": [
       {
@@ -1266,9 +1256,7 @@
   "char_209_ardign": {
     "name": "Cardigan",
     "skills": [
-      {
-        "skillId": "skcom_heal_self[1]"
-      }
+      "skcom_heal_self[1]"
     ],
     "phases": [
       {
@@ -1392,9 +1380,7 @@
   "char_122_beagle": {
     "name": "Beagle",
     "skills": [
-      {
-        "skillId": "skcom_def_up[1]"
-      }
+      "skcom_def_up[1]"
     ],
     "phases": [
       {
@@ -1518,9 +1504,7 @@
   "char_284_spot": {
     "name": "Spot",
     "skills": [
-      {
-        "skillId": "skchr_spot_1"
-      }
+      "skchr_spot_1"
     ],
     "phases": [
       {
@@ -1644,9 +1628,7 @@
   "char_124_kroos": {
     "name": "Kroos",
     "skills": [
-      {
-        "skillId": "skchr_kroos_1"
-      }
+      "skchr_kroos_1"
     ],
     "phases": [
       {
@@ -1770,9 +1752,7 @@
   "char_211_adnach": {
     "name": "Adnachiel",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[1]"
-      }
+      "skcom_atk_up[1]"
     ],
     "phases": [
       {
@@ -2018,9 +1998,7 @@
   "char_121_lava": {
     "name": "Lava",
     "skills": [
-      {
-        "skillId": "skcom_magic_rage[1]"
-      }
+      "skcom_magic_rage[1]"
     ],
     "phases": [
       {
@@ -2144,9 +2122,7 @@
   "char_120_hibisc": {
     "name": "Hibiscus",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[1]"
-      }
+      "skcom_heal_up[1]"
     ],
     "phases": [
       {
@@ -2270,9 +2246,7 @@
   "char_212_ansel": {
     "name": "Ansel",
     "skills": [
-      {
-        "skillId": "skcom_range_extend"
-      }
+      "skcom_range_extend"
     ],
     "phases": [
       {
@@ -2518,9 +2492,7 @@
   "char_210_stward": {
     "name": "Steward",
     "skills": [
-      {
-        "skillId": "skchr_stward_1"
-      }
+      "skchr_stward_1"
     ],
     "phases": [
       {
@@ -2766,9 +2738,7 @@
   "char_278_orchid": {
     "name": "Orchid",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[1]"
-      }
+      "skcom_quickattack[1]"
     ],
     "phases": [
       {
@@ -2892,12 +2862,8 @@
   "char_141_nights": {
     "name": "Haze",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_nights_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_nights_2"
     ],
     "phases": [
       {
@@ -3111,12 +3077,8 @@
   "char_109_fmout": {
     "name": "Gitano",
     "skills": [
-      {
-        "skillId": "skcom_magic_rage[2]"
-      },
-      {
-        "skillId": "skchr_fmout_2"
-      }
+      "skcom_magic_rage[2]",
+      "skchr_fmout_2"
     ],
     "phases": [
       {
@@ -3330,12 +3292,8 @@
   "char_253_greyy": {
     "name": "Greyy",
     "skills": [
-      {
-        "skillId": "skcom_magic_rage[2]"
-      },
-      {
-        "skillId": "skchr_greyy_2"
-      }
+      "skcom_magic_rage[2]",
+      "skchr_greyy_2"
     ],
     "phases": [
       {
@@ -3549,12 +3507,8 @@
   "char_328_cammou": {
     "name": "Click",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_cammou_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_cammou_2"
     ],
     "phases": [
       {
@@ -3768,12 +3722,8 @@
   "char_469_indigo": {
     "name": "Indigo",
     "skills": [
-      {
-        "skillId": "skchr_indigo_1"
-      },
-      {
-        "skillId": "skchr_indigo_2"
-      }
+      "skchr_indigo_1",
+      "skchr_indigo_2"
     ],
     "phases": [
       {
@@ -3987,12 +3937,8 @@
   "char_235_jesica": {
     "name": "Jessica",
     "skills": [
-      {
-        "skillId": "skchr_jesica_1"
-      },
-      {
-        "skillId": "skchr_jesica_2"
-      }
+      "skchr_jesica_1",
+      "skchr_jesica_2"
     ],
     "phases": [
       {
@@ -4206,12 +4152,8 @@
   "char_126_shotst": {
     "name": "Meteor",
     "skills": [
-      {
-        "skillId": "skchr_shotst_1"
-      },
-      {
-        "skillId": "skchr_shotst_2"
-      }
+      "skchr_shotst_1",
+      "skchr_shotst_2"
     ],
     "phases": [
       {
@@ -4425,12 +4367,8 @@
   "char_190_clour": {
     "name": "Vermeil",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_clour_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_clour_2"
     ],
     "phases": [
       {
@@ -4644,12 +4582,8 @@
   "char_133_mm": {
     "name": "May",
     "skills": [
-      {
-        "skillId": "skchr_mm_1"
-      },
-      {
-        "skillId": "skchr_mm_2"
-      }
+      "skchr_mm_1",
+      "skchr_mm_2"
     ],
     "phases": [
       {
@@ -4863,12 +4797,8 @@
   "char_118_yuki": {
     "name": "Shirayuki",
     "skills": [
-      {
-        "skillId": "skchr_yuki_1"
-      },
-      {
-        "skillId": "skchr_yuki_2"
-      }
+      "skchr_yuki_1",
+      "skchr_yuki_2"
     ],
     "phases": [
       {
@@ -5082,12 +5012,8 @@
   "char_440_pinecn": {
     "name": "Pinecone",
     "skills": [
-      {
-        "skillId": "skchr_pinecn_1"
-      },
-      {
-        "skillId": "skchr_pinecn_2"
-      }
+      "skchr_pinecn_1",
+      "skchr_pinecn_2"
     ],
     "phases": [
       {
@@ -5301,12 +5227,8 @@
   "char_302_glaze": {
     "name": "Ambriel",
     "skills": [
-      {
-        "skillId": "skchr_glaze_1"
-      },
-      {
-        "skillId": "skchr_glaze_2"
-      }
+      "skchr_glaze_1",
+      "skchr_glaze_2"
     ],
     "phases": [
       {
@@ -5520,12 +5442,8 @@
   "char_366_acdrop": {
     "name": "Aciddrop",
     "skills": [
-      {
-        "skillId": "skchr_acdrop_1"
-      },
-      {
-        "skillId": "skchr_acdrop_2"
-      }
+      "skchr_acdrop_1",
+      "skchr_acdrop_2"
     ],
     "phases": [
       {
@@ -5739,12 +5657,8 @@
   "char_198_blackd": {
     "name": "Courier",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[2]"
-      },
-      {
-        "skillId": "skchr_blackd_2"
-      }
+      "skcom_charge_cost[2]",
+      "skchr_blackd_2"
     ],
     "phases": [
       {
@@ -5958,12 +5872,8 @@
   "char_149_scave": {
     "name": "Scavenger",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[2]"
-      },
-      {
-        "skillId": "skchr_scave_2"
-      }
+      "skcom_charge_cost[2]",
+      "skchr_scave_2"
     ],
     "phases": [
       {
@@ -6177,12 +6087,8 @@
   "char_290_vigna": {
     "name": "Vigna",
     "skills": [
-      {
-        "skillId": "skchr_vigna_1"
-      },
-      {
-        "skillId": "skchr_vigna_2"
-      }
+      "skchr_vigna_1",
+      "skchr_vigna_2"
     ],
     "phases": [
       {
@@ -6396,12 +6302,8 @@
   "char_151_myrtle": {
     "name": "Myrtle",
     "skills": [
-      {
-        "skillId": "skcom_assist_cost[2]"
-      },
-      {
-        "skillId": "skchr_myrtle_2"
-      }
+      "skcom_assist_cost[2]",
+      "skchr_myrtle_2"
     ],
     "phases": [
       {
@@ -6615,12 +6517,8 @@
   "char_452_bstalk": {
     "name": "Beanstalk",
     "skills": [
-      {
-        "skillId": "skchr_bstalk_1"
-      },
-      {
-        "skillId": "skchr_bstalk_2"
-      }
+      "skchr_bstalk_1",
+      "skchr_bstalk_2"
     ],
     "phases": [
       {
@@ -6834,12 +6732,8 @@
   "char_130_doberm": {
     "name": "Dobermann",
     "skills": [
-      {
-        "skillId": "skchr_doberm_1"
-      },
-      {
-        "skillId": "skchr_doberm_2"
-      }
+      "skchr_doberm_1",
+      "skchr_doberm_2"
     ],
     "phases": [
       {
@@ -7053,12 +6947,8 @@
   "char_289_gyuki": {
     "name": "Matoimaru",
     "skills": [
-      {
-        "skillId": "skcom_heal_self[2]"
-      },
-      {
-        "skillId": "skchr_gyuki_2"
-      }
+      "skcom_heal_self[2]",
+      "skchr_gyuki_2"
     ],
     "phases": [
       {
@@ -7272,12 +7162,8 @@
   "char_159_peacok": {
     "name": "Conviction",
     "skills": [
-      {
-        "skillId": "skchr_peacok_1"
-      },
-      {
-        "skillId": "skchr_peacok_2"
-      }
+      "skchr_peacok_1",
+      "skchr_peacok_2"
     ],
     "phases": [
       {
@@ -7491,12 +7377,8 @@
   "char_193_frostl": {
     "name": "Frostleaf",
     "skills": [
-      {
-        "skillId": "skchr_frostl_1"
-      },
-      {
-        "skillId": "skchr_frostl_2"
-      }
+      "skchr_frostl_1",
+      "skchr_frostl_2"
     ],
     "phases": [
       {
@@ -7710,12 +7592,8 @@
   "char_127_estell": {
     "name": "Estelle",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_estell_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_estell_2"
     ],
     "phases": [
       {
@@ -7929,12 +7807,8 @@
   "char_185_frncat": {
     "name": "Mousse",
     "skills": [
-      {
-        "skillId": "skchr_frncat_1"
-      },
-      {
-        "skillId": "skchr_frncat_2"
-      }
+      "skchr_frncat_1",
+      "skchr_frncat_2"
     ],
     "phases": [
       {
@@ -8148,12 +8022,8 @@
   "char_301_cutter": {
     "name": "Cutter",
     "skills": [
-      {
-        "skillId": "skchr_cutter_1"
-      },
-      {
-        "skillId": "skchr_cutter_2"
-      }
+      "skchr_cutter_1",
+      "skchr_cutter_2"
     ],
     "phases": [
       {
@@ -8367,12 +8237,8 @@
   "char_337_utage": {
     "name": "Utage",
     "skills": [
-      {
-        "skillId": "skchr_utage_1"
-      },
-      {
-        "skillId": "skchr_utage_2"
-      }
+      "skchr_utage_1",
+      "skchr_utage_2"
     ],
     "phases": [
       {
@@ -8586,12 +8452,8 @@
   "char_271_spikes": {
     "name": "Arene",
     "skills": [
-      {
-        "skillId": "skchr_spikes_1"
-      },
-      {
-        "skillId": "skchr_spikes_2"
-      }
+      "skchr_spikes_1",
+      "skchr_spikes_2"
     ],
     "phases": [
       {
@@ -8805,12 +8667,8 @@
   "char_237_gravel": {
     "name": "Gravel",
     "skills": [
-      {
-        "skillId": "skchr_gravel_1"
-      },
-      {
-        "skillId": "skchr_gravel_2"
-      }
+      "skchr_gravel_1",
+      "skchr_gravel_2"
     ],
     "phases": [
       {
@@ -9024,12 +8882,8 @@
   "char_272_strong": {
     "name": "Jaye",
     "skills": [
-      {
-        "skillId": "skchr_strong_1"
-      },
-      {
-        "skillId": "skchr_strong_2"
-      }
+      "skchr_strong_1",
+      "skchr_strong_2"
     ],
     "phases": [
       {
@@ -9243,12 +9097,8 @@
   "char_236_rope": {
     "name": "Rope",
     "skills": [
-      {
-        "skillId": "skchr_rope_1"
-      },
-      {
-        "skillId": "skchr_rope_2"
-      }
+      "skchr_rope_1",
+      "skchr_rope_2"
     ],
     "phases": [
       {
@@ -9462,12 +9312,8 @@
   "char_117_myrrh": {
     "name": "Myrrh",
     "skills": [
-      {
-        "skillId": "skchr_myrrh_1"
-      },
-      {
-        "skillId": "skchr_myrrh_2"
-      }
+      "skchr_myrrh_1",
+      "skchr_myrrh_2"
     ],
     "phases": [
       {
@@ -9681,12 +9527,8 @@
   "char_187_ccheal": {
     "name": "Gavial",
     "skills": [
-      {
-        "skillId": "skchr_ccheal_1"
-      },
-      {
-        "skillId": "skchr_ccheal_2"
-      }
+      "skchr_ccheal_1",
+      "skchr_ccheal_2"
     ],
     "phases": [
       {
@@ -9900,12 +9742,8 @@
   "char_298_susuro": {
     "name": "Sussurro",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[2]"
-      },
-      {
-        "skillId": "skchr_susuro_2"
-      }
+      "skcom_heal_up[2]",
+      "skchr_susuro_2"
     ],
     "phases": [
       {
@@ -10119,12 +9957,8 @@
   "char_181_flower": {
     "name": "Perfumer",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[2]"
-      },
-      {
-        "skillId": "skchr_flower_2"
-      }
+      "skcom_heal_up[2]",
+      "skchr_flower_2"
     ],
     "phases": [
       {
@@ -10338,12 +10172,8 @@
   "char_385_finlpp": {
     "name": "Purestream",
     "skills": [
-      {
-        "skillId": "skchr_finlpp_1"
-      },
-      {
-        "skillId": "skchr_finlpp_2"
-      }
+      "skchr_finlpp_1",
+      "skchr_finlpp_2"
     ],
     "phases": [
       {
@@ -10557,12 +10387,8 @@
   "char_199_yak": {
     "name": "Matterhorn",
     "skills": [
-      {
-        "skillId": "skchr_yak_1"
-      },
-      {
-        "skillId": "skchr_yak_2"
-      }
+      "skchr_yak_1",
+      "skchr_yak_2"
     ],
     "phases": [
       {
@@ -10776,12 +10602,8 @@
   "char_150_snakek": {
     "name": "Cuora",
     "skills": [
-      {
-        "skillId": "skcom_def_up[2]"
-      },
-      {
-        "skillId": "skchr_snakek_2"
-      }
+      "skcom_def_up[2]",
+      "skchr_snakek_2"
     ],
     "phases": [
       {
@@ -10995,12 +10817,8 @@
   "char_381_bubble": {
     "name": "Bubble",
     "skills": [
-      {
-        "skillId": "skcom_def_up[2]"
-      },
-      {
-        "skillId": "skchr_bubble_2"
-      }
+      "skcom_def_up[2]",
+      "skchr_bubble_2"
     ],
     "phases": [
       {
@@ -11214,12 +11032,8 @@
   "char_196_sunbr": {
     "name": "Gummy",
     "skills": [
-      {
-        "skillId": "skchr_sunbr_1"
-      },
-      {
-        "skillId": "skchr_sunbr_2"
-      }
+      "skchr_sunbr_1",
+      "skchr_sunbr_2"
     ],
     "phases": [
       {
@@ -11433,12 +11247,8 @@
   "char_260_durnar": {
     "name": "Dur-nar",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_durnar_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_durnar_2"
     ],
     "phases": [
       {
@@ -11652,12 +11462,8 @@
   "char_110_deepcl": {
     "name": "Deepcolor",
     "skills": [
-      {
-        "skillId": "skchr_deepcl_1"
-      },
-      {
-        "skillId": "skchr_deepcl_2"
-      }
+      "skchr_deepcl_1",
+      "skchr_deepcl_2"
     ],
     "phases": [
       {
@@ -11871,12 +11677,8 @@
   "char_183_skgoat": {
     "name": "Earthspirit",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[2]"
-      },
-      {
-        "skillId": "skchr_skgoat_2"
-      }
+      "skcom_atk_up[2]",
+      "skchr_skgoat_2"
     ],
     "phases": [
       {
@@ -12090,12 +11892,8 @@
   "char_258_podego": {
     "name": "Podenco",
     "skills": [
-      {
-        "skillId": "skchr_podego_1"
-      },
-      {
-        "skillId": "skchr_podego_2"
-      }
+      "skchr_podego_1",
+      "skchr_podego_2"
     ],
     "phases": [
       {
@@ -12309,12 +12107,8 @@
   "char_355_ethan": {
     "name": "Ethan",
     "skills": [
-      {
-        "skillId": "skchr_ethan_1"
-      },
-      {
-        "skillId": "skchr_ethan_2"
-      }
+      "skchr_ethan_1",
+      "skchr_ethan_2"
     ],
     "phases": [
       {
@@ -12528,12 +12322,8 @@
   "char_277_sqrrel": {
     "name": "Shaw",
     "skills": [
-      {
-        "skillId": "skchr_sqrrel_1"
-      },
-      {
-        "skillId": "skchr_sqrrel_2"
-      }
+      "skchr_sqrrel_1",
+      "skchr_sqrrel_2"
     ],
     "phases": [
       {
@@ -12747,12 +12537,8 @@
   "char_128_plosis": {
     "name": "Ptilopsis",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[3]"
-      },
-      {
-        "skillId": "skchr_plosis_2"
-      }
+      "skcom_heal_up[3]",
+      "skchr_plosis_2"
     ],
     "phases": [
       {
@@ -12966,12 +12752,8 @@
   "char_275_breeze": {
     "name": "Breeze",
     "skills": [
-      {
-        "skillId": "skchr_breeze_1"
-      },
-      {
-        "skillId": "skchr_breeze_2"
-      }
+      "skchr_breeze_1",
+      "skchr_breeze_2"
     ],
     "phases": [
       {
@@ -13185,12 +12967,8 @@
   "char_115_headbr": {
     "name": "Zima",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[3]"
-      },
-      {
-        "skillId": "skchr_headbr_2"
-      }
+      "skcom_charge_cost[3]",
+      "skchr_headbr_2"
     ],
     "phases": [
       {
@@ -13404,12 +13182,8 @@
   "char_102_texas": {
     "name": "Texas",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[3]"
-      },
-      {
-        "skillId": "skchr_texas_2"
-      }
+      "skcom_charge_cost[3]",
+      "skchr_texas_2"
     ],
     "phases": [
       {
@@ -13623,12 +13397,8 @@
   "char_349_chiave": {
     "name": "Chiave",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[3]"
-      },
-      {
-        "skillId": "skchr_chiave_2"
-      }
+      "skcom_charge_cost[3]",
+      "skchr_chiave_2"
     ],
     "phases": [
       {
@@ -13842,12 +13612,8 @@
   "char_261_sddrag": {
     "name": "Reed",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[3]"
-      },
-      {
-        "skillId": "skchr_sddrag_2"
-      }
+      "skcom_quickattack[3]",
+      "skchr_sddrag_2"
     ],
     "phases": [
       {
@@ -14061,12 +13827,8 @@
   "char_401_elysm": {
     "name": "Elysium",
     "skills": [
-      {
-        "skillId": "skcom_assist_cost[3]"
-      },
-      {
-        "skillId": "skchr_elysm_2"
-      }
+      "skcom_assist_cost[3]",
+      "skchr_elysm_2"
     ],
     "phases": [
       {
@@ -14280,12 +14042,8 @@
   "char_308_swire": {
     "name": "Swire",
     "skills": [
-      {
-        "skillId": "skchr_swire_1"
-      },
-      {
-        "skillId": "skchr_swire_2"
-      }
+      "skchr_swire_1",
+      "skchr_swire_2"
     ],
     "phases": [
       {
@@ -14499,12 +14257,8 @@
   "char_265_sophia": {
     "name": "Whislash",
     "skills": [
-      {
-        "skillId": "skchr_sophia_1"
-      },
-      {
-        "skillId": "skchr_sophia_2"
-      }
+      "skchr_sophia_1",
+      "skchr_sophia_2"
     ],
     "phases": [
       {
@@ -14718,12 +14472,8 @@
   "char_106_franka": {
     "name": "Franka",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[3]"
-      },
-      {
-        "skillId": "skchr_franka_2"
-      }
+      "skcom_quickattack[3]",
+      "skchr_franka_2"
     ],
     "phases": [
       {
@@ -14937,12 +14687,8 @@
   "char_131_flameb": {
     "name": "Flamebringer",
     "skills": [
-      {
-        "skillId": "skchr_flameb_1"
-      },
-      {
-        "skillId": "skchr_flameb_2"
-      }
+      "skchr_flameb_1",
+      "skchr_flameb_2"
     ],
     "phases": [
       {
@@ -15156,9 +14902,7 @@
   "char_508_aguard": {
     "name": "Sharp",
     "skills": [
-      {
-        "skillId": "skchr_aguard_1"
-      }
+      "skchr_aguard_1"
     ],
     "phases": [
       {
@@ -15340,12 +15084,8 @@
   "char_155_tiger": {
     "name": "Indra",
     "skills": [
-      {
-        "skillId": "skchr_tiger_1"
-      },
-      {
-        "skillId": "skchr_tiger_2"
-      }
+      "skchr_tiger_1",
+      "skchr_tiger_2"
     ],
     "phases": [
       {
@@ -15559,12 +15299,8 @@
   "char_415_flint": {
     "name": "Flint",
     "skills": [
-      {
-        "skillId": "skchr_flint_1"
-      },
-      {
-        "skillId": "skchr_flint_2"
-      }
+      "skchr_flint_1",
+      "skchr_flint_2"
     ],
     "phases": [
       {
@@ -15778,12 +15514,8 @@
   "char_140_whitew": {
     "name": "Lappland",
     "skills": [
-      {
-        "skillId": "skchr_whitew_1"
-      },
-      {
-        "skillId": "skchr_whitew_2"
-      }
+      "skchr_whitew_1",
+      "skchr_whitew_2"
     ],
     "phases": [
       {
@@ -15997,12 +15729,8 @@
   "char_294_ayer": {
     "name": "Ayerscarpe",
     "skills": [
-      {
-        "skillId": "skchr_ayer_1"
-      },
-      {
-        "skillId": "skchr_ayer_2"
-      }
+      "skchr_ayer_1",
+      "skchr_ayer_2"
     ],
     "phases": [
       {
@@ -16216,12 +15944,8 @@
   "char_252_bibeak": {
     "name": "Bibeak",
     "skills": [
-      {
-        "skillId": "skchr_bibeak_1"
-      },
-      {
-        "skillId": "skchr_bibeak_2"
-      }
+      "skchr_bibeak_1",
+      "skchr_bibeak_2"
     ],
     "phases": [
       {
@@ -16435,12 +16159,8 @@
   "char_459_tachak": {
     "name": "Tachanka",
     "skills": [
-      {
-        "skillId": "skchr_tachak_1"
-      },
-      {
-        "skillId": "skchr_tachak_2"
-      }
+      "skchr_tachak_1",
+      "skchr_tachak_2"
     ],
     "phases": [
       {
@@ -16654,12 +16374,8 @@
   "char_143_ghost": {
     "name": "Specter",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_ghost_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_ghost_2"
     ],
     "phases": [
       {
@@ -16873,12 +16589,8 @@
   "char_356_broca": {
     "name": "Broca",
     "skills": [
-      {
-        "skillId": "skchr_broca_1"
-      },
-      {
-        "skillId": "skchr_broca_2"
-      }
+      "skchr_broca_1",
+      "skchr_broca_2"
     ],
     "phases": [
       {
@@ -17092,12 +16804,8 @@
   "char_274_astesi": {
     "name": "Astesia",
     "skills": [
-      {
-        "skillId": "skchr_astesi_1"
-      },
-      {
-        "skillId": "skchr_astesi_2"
-      }
+      "skchr_astesi_1",
+      "skchr_astesi_2"
     ],
     "phases": [
       {
@@ -17311,12 +17019,8 @@
   "char_333_sidero": {
     "name": "Sideroca",
     "skills": [
-      {
-        "skillId": "skcom_heal_self[3]"
-      },
-      {
-        "skillId": "skchr_sidero_2"
-      }
+      "skcom_heal_self[3]",
+      "skchr_sidero_2"
     ],
     "phases": [
       {
@@ -17530,12 +17234,8 @@
   "char_475_akafyu": {
     "name": "Akafuyu",
     "skills": [
-      {
-        "skillId": "skchr_akafyu_1"
-      },
-      {
-        "skillId": "skchr_akafyu_2"
-      }
+      "skchr_akafyu_1",
+      "skchr_akafyu_2"
     ],
     "phases": [
       {
@@ -17749,12 +17449,8 @@
   "char_421_crow": {
     "name": "La Pluma",
     "skills": [
-      {
-        "skillId": "skchr_crow_1"
-      },
-      {
-        "skillId": "skchr_crow_2"
-      }
+      "skchr_crow_1",
+      "skchr_crow_2"
     ],
     "phases": [
       {
@@ -17968,12 +17664,8 @@
   "char_486_takila": {
     "name": "Tequila",
     "skills": [
-      {
-        "skillId": "skchr_takila_1"
-      },
-      {
-        "skillId": "skchr_takila_2"
-      }
+      "skchr_takila_1",
+      "skchr_takila_2"
     ],
     "phases": [
       {
@@ -18187,12 +17879,8 @@
   "char_129_bluep": {
     "name": "Blue Poison",
     "skills": [
-      {
-        "skillId": "skchr_bluep_1"
-      },
-      {
-        "skillId": "skchr_bluep_2"
-      }
+      "skchr_bluep_1",
+      "skchr_bluep_2"
     ],
     "phases": [
       {
@@ -18406,12 +18094,8 @@
   "char_204_platnm": {
     "name": "Platinum",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_platnm_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_platnm_2"
     ],
     "phases": [
       {
@@ -18625,12 +18309,8 @@
   "char_367_swllow": {
     "name": "GreyThroat",
     "skills": [
-      {
-        "skillId": "skchr_swllow_1"
-      },
-      {
-        "skillId": "skchr_swllow_2"
-      }
+      "skchr_swllow_1",
+      "skchr_swllow_2"
     ],
     "phases": [
       {
@@ -18844,9 +18524,7 @@
   "char_511_asnipe": {
     "name": "Stormeye",
     "skills": [
-      {
-        "skillId": "skchr_asnipe_1"
-      }
+      "skchr_asnipe_1"
     ],
     "phases": [
       {
@@ -19028,12 +18706,8 @@
   "char_365_aprl": {
     "name": "April",
     "skills": [
-      {
-        "skillId": "skchr_aprl_1"
-      },
-      {
-        "skillId": "skchr_aprl_2"
-      }
+      "skchr_aprl_1",
+      "skchr_aprl_2"
     ],
     "phases": [
       {
@@ -19247,12 +18921,8 @@
   "char_219_meteo": {
     "name": "Meteorite",
     "skills": [
-      {
-        "skillId": "skchr_meteo_1"
-      },
-      {
-        "skillId": "skchr_meteo_2"
-      }
+      "skchr_meteo_1",
+      "skchr_meteo_2"
     ],
     "phases": [
       {
@@ -19466,12 +19136,8 @@
   "char_379_sesa": {
     "name": "Sesa",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_sesa_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_sesa_2"
     ],
     "phases": [
       {
@@ -19685,12 +19351,8 @@
   "char_279_excu": {
     "name": "Executor",
     "skills": [
-      {
-        "skillId": "skchr_excu_1"
-      },
-      {
-        "skillId": "skchr_excu_2"
-      }
+      "skchr_excu_1",
+      "skchr_excu_2"
     ],
     "phases": [
       {
@@ -19904,12 +19566,8 @@
   "char_346_aosta": {
     "name": "Aosta",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[3]"
-      },
-      {
-        "skillId": "skchr_aosta_2"
-      }
+      "skcom_quickattack[3]",
+      "skchr_aosta_2"
     ],
     "phases": [
       {
@@ -20123,15 +19781,9 @@
   "char_002_amiya": {
     "name": "Amiya",
     "skills": [
-      {
-        "skillId": "skcom_magic_rage[3]"
-      },
-      {
-        "skillId": "skchr_amiya_2"
-      },
-      {
-        "skillId": "skchr_amiya_3"
-      }
+      "skcom_magic_rage[3]",
+      "skchr_amiya_2",
+      "skchr_amiya_3"
     ],
     "phases": [
       {
@@ -20345,12 +19997,8 @@
   "char_405_absin": {
     "name": "Absinthe",
     "skills": [
-      {
-        "skillId": "skchr_absin_1"
-      },
-      {
-        "skillId": "skchr_absin_2"
-      }
+      "skchr_absin_1",
+      "skchr_absin_2"
     ],
     "phases": [
       {
@@ -20564,12 +20212,8 @@
   "char_411_tomimi": {
     "name": "Tomimi",
     "skills": [
-      {
-        "skillId": "skchr_tomimi_1"
-      },
-      {
-        "skillId": "skchr_tomimi_2"
-      }
+      "skchr_tomimi_1",
+      "skchr_tomimi_2"
     ],
     "phases": [
       {
@@ -20783,12 +20427,8 @@
   "char_166_skfire": {
     "name": "Skyfire",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_skfire_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_skfire_2"
     ],
     "phases": [
       {
@@ -21002,9 +20642,7 @@
   "char_509_acast": {
     "name": "Pith",
     "skills": [
-      {
-        "skillId": "skchr_acast_1"
-      }
+      "skchr_acast_1"
     ],
     "phases": [
       {
@@ -21186,12 +20824,8 @@
   "char_306_leizi": {
     "name": "Leizi",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_leizi_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_leizi_2"
     ],
     "phases": [
       {
@@ -21405,12 +21039,8 @@
   "char_344_beewax": {
     "name": "Beeswax",
     "skills": [
-      {
-        "skillId": "skchr_beewax_1"
-      },
-      {
-        "skillId": "skchr_beewax_2"
-      }
+      "skchr_beewax_1",
+      "skchr_beewax_2"
     ],
     "phases": [
       {
@@ -21624,12 +21254,8 @@
   "char_373_lionhd": {
     "name": "Leonhardt",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_lionhd_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_lionhd_2"
     ],
     "phases": [
       {
@@ -21843,12 +21469,8 @@
   "char_388_mint": {
     "name": "Mint",
     "skills": [
-      {
-        "skillId": "skchr_mint_1"
-      },
-      {
-        "skillId": "skchr_mint_2"
-      }
+      "skchr_mint_1",
+      "skchr_mint_2"
     ],
     "phases": [
       {
@@ -22062,12 +21684,8 @@
   "char_338_iris": {
     "name": "Iris",
     "skills": [
-      {
-        "skillId": "skchr_iris_1"
-      },
-      {
-        "skillId": "skchr_iris_2"
-      }
+      "skchr_iris_1",
+      "skchr_iris_2"
     ],
     "phases": [
       {
@@ -22281,12 +21899,8 @@
   "char_1011_lava2": {
     "name": "Lava the Purgatory",
     "skills": [
-      {
-        "skillId": "skchr_lava2_1"
-      },
-      {
-        "skillId": "skchr_lava2_2"
-      }
+      "skchr_lava2_1",
+      "skchr_lava2_2"
     ],
     "phases": [
       {
@@ -22500,12 +22114,8 @@
   "char_242_otter": {
     "name": "Mayer",
     "skills": [
-      {
-        "skillId": "skchr_otter_1"
-      },
-      {
-        "skillId": "skchr_otter_2"
-      }
+      "skchr_otter_1",
+      "skchr_otter_2"
     ],
     "phases": [
       {
@@ -22719,12 +22329,8 @@
   "char_336_folivo": {
     "name": "Scene",
     "skills": [
-      {
-        "skillId": "skchr_folivo_1"
-      },
-      {
-        "skillId": "skchr_folivo_2"
-      }
+      "skchr_folivo_1",
+      "skchr_folivo_2"
     ],
     "phases": [
       {
@@ -22938,12 +22544,8 @@
   "char_108_silent": {
     "name": "Silence",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[3]"
-      },
-      {
-        "skillId": "skchr_silent_2"
-      }
+      "skcom_heal_up[3]",
+      "skchr_silent_2"
     ],
     "phases": [
       {
@@ -23157,12 +22759,8 @@
   "char_171_bldsk": {
     "name": "Warfarin",
     "skills": [
-      {
-        "skillId": "skchr_bldsk_1"
-      },
-      {
-        "skillId": "skchr_bldsk_2"
-      }
+      "skchr_bldsk_1",
+      "skchr_bldsk_2"
     ],
     "phases": [
       {
@@ -23376,12 +22974,8 @@
   "char_345_folnic": {
     "name": "Folinic",
     "skills": [
-      {
-        "skillId": "skchr_folnic_1"
-      },
-      {
-        "skillId": "skchr_folnic_2"
-      }
+      "skchr_folnic_1",
+      "skchr_folnic_2"
     ],
     "phases": [
       {
@@ -23595,9 +23189,7 @@
   "char_510_amedic": {
     "name": "Touch",
     "skills": [
-      {
-        "skillId": "skchr_amedic_1"
-      }
+      "skchr_amedic_1"
     ],
     "phases": [
       {
@@ -23779,12 +23371,8 @@
   "char_348_ceylon": {
     "name": "Ceylon",
     "skills": [
-      {
-        "skillId": "skchr_ceylon_1"
-      },
-      {
-        "skillId": "skchr_ceylon_2"
-      }
+      "skchr_ceylon_1",
+      "skchr_ceylon_2"
     ],
     "phases": [
       {
@@ -23998,12 +23586,8 @@
   "char_436_whispr": {
     "name": "Whisperain",
     "skills": [
-      {
-        "skillId": "skchr_whispr_1"
-      },
-      {
-        "skillId": "skchr_whispr_2"
-      }
+      "skchr_whispr_1",
+      "skchr_whispr_2"
     ],
     "phases": [
       {
@@ -24217,12 +23801,8 @@
   "char_402_tuye": {
     "name": "Tuye",
     "skills": [
-      {
-        "skillId": "skchr_tuye_1"
-      },
-      {
-        "skillId": "skchr_tuye_2"
-      }
+      "skchr_tuye_1",
+      "skchr_tuye_2"
     ],
     "phases": [
       {
@@ -24436,12 +24016,8 @@
   "char_148_nearl": {
     "name": "Nearl",
     "skills": [
-      {
-        "skillId": "skchr_nearl_1"
-      },
-      {
-        "skillId": "skchr_nearl_2"
-      }
+      "skchr_nearl_1",
+      "skchr_nearl_2"
     ],
     "phases": [
       {
@@ -24655,12 +24231,8 @@
   "char_226_hmau": {
     "name": "Hung",
     "skills": [
-      {
-        "skillId": "skchr_hmau_1"
-      },
-      {
-        "skillId": "skchr_hmau_2"
-      }
+      "skchr_hmau_1",
+      "skchr_hmau_2"
     ],
     "phases": [
       {
@@ -24874,12 +24446,8 @@
   "char_144_red": {
     "name": "Projekt Red",
     "skills": [
-      {
-        "skillId": "skchr_red_1"
-      },
-      {
-        "skillId": "skchr_red_2"
-      }
+      "skchr_red_1",
+      "skchr_red_2"
     ],
     "phases": [
       {
@@ -25093,12 +24661,8 @@
   "char_243_waaifu": {
     "name": "Waai Fu",
     "skills": [
-      {
-        "skillId": "skchr_waaifu_1"
-      },
-      {
-        "skillId": "skchr_waaifu_2"
-      }
+      "skchr_waaifu_1",
+      "skchr_waaifu_2"
     ],
     "phases": [
       {
@@ -25312,12 +24876,8 @@
   "char_214_kafka": {
     "name": "Kafka",
     "skills": [
-      {
-        "skillId": "skchr_kafka_1"
-      },
-      {
-        "skillId": "skchr_kafka_2"
-      }
+      "skchr_kafka_1",
+      "skchr_kafka_2"
     ],
     "phases": [
       {
@@ -25531,12 +25091,8 @@
   "char_455_nothin": {
     "name": "Mr. Nothing",
     "skills": [
-      {
-        "skillId": "skchr_nothin_1"
-      },
-      {
-        "skillId": "skchr_nothin_2"
-      }
+      "skchr_nothin_1",
+      "skchr_nothin_2"
     ],
     "phases": [
       {
@@ -25750,12 +25306,8 @@
   "char_107_liskam": {
     "name": "Liskarm",
     "skills": [
-      {
-        "skillId": "skchr_liskam_1"
-      },
-      {
-        "skillId": "skchr_liskam_2"
-      }
+      "skchr_liskam_1",
+      "skchr_liskam_2"
     ],
     "phases": [
       {
@@ -25969,12 +25521,8 @@
   "char_201_moeshd": {
     "name": "Croissant",
     "skills": [
-      {
-        "skillId": "skchr_moeshd_1"
-      },
-      {
-        "skillId": "skchr_moeshd_2"
-      }
+      "skchr_moeshd_1",
+      "skchr_moeshd_2"
     ],
     "phases": [
       {
@@ -26188,12 +25736,8 @@
   "char_325_bison": {
     "name": "Bison",
     "skills": [
-      {
-        "skillId": "skcom_def_up[3]"
-      },
-      {
-        "skillId": "skchr_bison_2"
-      }
+      "skcom_def_up[3]",
+      "skchr_bison_2"
     ],
     "phases": [
       {
@@ -26407,12 +25951,8 @@
   "char_163_hpsts": {
     "name": "Vulcan",
     "skills": [
-      {
-        "skillId": "skchr_hpsts_1"
-      },
-      {
-        "skillId": "skchr_hpsts_2"
-      }
+      "skchr_hpsts_1",
+      "skchr_hpsts_2"
     ],
     "phases": [
       {
@@ -26626,12 +26166,8 @@
   "char_378_asbest": {
     "name": "Asbestos",
     "skills": [
-      {
-        "skillId": "skchr_asbest_1"
-      },
-      {
-        "skillId": "skchr_asbest_2"
-      }
+      "skchr_asbest_1",
+      "skchr_asbest_2"
     ],
     "phases": [
       {
@@ -26845,12 +26381,8 @@
   "char_457_blitz": {
     "name": "Blitz",
     "skills": [
-      {
-        "skillId": "skchr_blitz_1"
-      },
-      {
-        "skillId": "skchr_blitz_2"
-      }
+      "skchr_blitz_1",
+      "skchr_blitz_2"
     ],
     "phases": [
       {
@@ -27064,12 +26596,8 @@
   "char_304_zebra": {
     "name": "Heavyrain",
     "skills": [
-      {
-        "skillId": "skchr_zebra_1"
-      },
-      {
-        "skillId": "skchr_zebra_2"
-      }
+      "skchr_zebra_1",
+      "skchr_zebra_2"
     ],
     "phases": [
       {
@@ -27283,12 +26811,8 @@
   "char_145_prove": {
     "name": "Provence",
     "skills": [
-      {
-        "skillId": "skchr_prove_1"
-      },
-      {
-        "skillId": "skchr_prove_2"
-      }
+      "skchr_prove_1",
+      "skchr_prove_2"
     ],
     "phases": [
       {
@@ -27502,12 +27026,8 @@
   "char_158_milu": {
     "name": "Firewatch",
     "skills": [
-      {
-        "skillId": "skchr_milu_1"
-      },
-      {
-        "skillId": "skchr_milu_2"
-      }
+      "skchr_milu_1",
+      "skchr_milu_2"
     ],
     "phases": [
       {
@@ -27721,12 +27241,8 @@
   "char_218_cuttle": {
     "name": "Andreana",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_cuttle_2"
-      }
+      "skcom_atk_up[3]",
+      "skchr_cuttle_2"
     ],
     "phases": [
       {
@@ -27940,12 +27456,8 @@
   "char_363_toddi": {
     "name": "Toddifons",
     "skills": [
-      {
-        "skillId": "skchr_toddi_1"
-      },
-      {
-        "skillId": "skchr_toddi_2"
-      }
+      "skchr_toddi_1",
+      "skchr_toddi_2"
     ],
     "phases": [
       {
@@ -28159,12 +27671,8 @@
   "char_173_slchan": {
     "name": "Cliffheart",
     "skills": [
-      {
-        "skillId": "skchr_slchan_1"
-      },
-      {
-        "skillId": "skchr_slchan_2"
-      }
+      "skchr_slchan_1",
+      "skchr_slchan_2"
     ],
     "phases": [
       {
@@ -28378,12 +27886,8 @@
   "char_383_snsant": {
     "name": "Snowsant",
     "skills": [
-      {
-        "skillId": "skchr_snsant_1"
-      },
-      {
-        "skillId": "skchr_snsant_2"
-      }
+      "skchr_snsant_1",
+      "skchr_snsant_2"
     ],
     "phases": [
       {
@@ -28597,12 +28101,8 @@
   "char_174_slbell": {
     "name": "Pramanix",
     "skills": [
-      {
-        "skillId": "skchr_slbell_1"
-      },
-      {
-        "skillId": "skchr_slbell_2"
-      }
+      "skchr_slbell_1",
+      "skchr_slbell_2"
     ],
     "phases": [
       {
@@ -28816,12 +28316,8 @@
   "char_254_vodfox": {
     "name": "Shamare",
     "skills": [
-      {
-        "skillId": "skchr_vodfox_1"
-      },
-      {
-        "skillId": "skchr_vodfox_2"
-      }
+      "skchr_vodfox_1",
+      "skchr_vodfox_2"
     ],
     "phases": [
       {
@@ -29035,12 +28531,8 @@
   "char_195_glassb": {
     "name": "Istina",
     "skills": [
-      {
-        "skillId": "skchr_glassb_1"
-      },
-      {
-        "skillId": "skchr_glassb_2"
-      }
+      "skchr_glassb_1",
+      "skchr_glassb_2"
     ],
     "phases": [
       {
@@ -29254,12 +28746,8 @@
   "char_326_glacus": {
     "name": "Glaucus",
     "skills": [
-      {
-        "skillId": "skchr_glacus_1"
-      },
-      {
-        "skillId": "skchr_glacus_2"
-      }
+      "skchr_glacus_1",
+      "skchr_glacus_2"
     ],
     "phases": [
       {
@@ -29473,12 +28961,8 @@
   "char_101_sora": {
     "name": "Sora",
     "skills": [
-      {
-        "skillId": "skchr_sora_1"
-      },
-      {
-        "skillId": "skchr_sora_2"
-      }
+      "skchr_sora_1",
+      "skchr_sora_2"
     ],
     "phases": [
       {
@@ -29692,12 +29176,8 @@
   "char_343_tknogi": {
     "name": "Tsukinogi",
     "skills": [
-      {
-        "skillId": "skchr_tknogi_1"
-      },
-      {
-        "skillId": "skchr_tknogi_2"
-      }
+      "skchr_tknogi_1",
+      "skchr_tknogi_2"
     ],
     "phases": [
       {
@@ -29911,12 +29391,8 @@
   "char_215_mantic": {
     "name": "Manticore",
     "skills": [
-      {
-        "skillId": "skchr_mantic_1"
-      },
-      {
-        "skillId": "skchr_mantic_2"
-      }
+      "skchr_mantic_1",
+      "skchr_mantic_2"
     ],
     "phases": [
       {
@@ -30130,12 +29606,8 @@
   "char_478_kirara": {
     "name": "Kirara",
     "skills": [
-      {
-        "skillId": "skchr_kirara_1"
-      },
-      {
-        "skillId": "skchr_kirara_2"
-      }
+      "skchr_kirara_1",
+      "skchr_kirara_2"
     ],
     "phases": [
       {
@@ -30349,12 +29821,8 @@
   "char_241_panda": {
     "name": "FEater",
     "skills": [
-      {
-        "skillId": "skchr_panda_1"
-      },
-      {
-        "skillId": "skchr_panda_2"
-      }
+      "skchr_panda_1",
+      "skchr_panda_2"
     ],
     "phases": [
       {
@@ -30568,12 +30036,8 @@
   "char_451_robin": {
     "name": "Robin",
     "skills": [
-      {
-        "skillId": "skchr_robin_1"
-      },
-      {
-        "skillId": "skchr_robin_2"
-      }
+      "skchr_robin_1",
+      "skchr_robin_2"
     ],
     "phases": [
       {
@@ -30787,12 +30251,8 @@
   "char_458_rfrost": {
     "name": "Frost",
     "skills": [
-      {
-        "skillId": "skchr_rfrost_1"
-      },
-      {
-        "skillId": "skchr_rfrost_2"
-      }
+      "skchr_rfrost_1",
+      "skchr_rfrost_2"
     ],
     "phases": [
       {
@@ -31006,12 +30466,8 @@
   "char_369_bena": {
     "name": "Bena",
     "skills": [
-      {
-        "skillId": "skchr_bena_1"
-      },
-      {
-        "skillId": "skchr_bena_2"
-      }
+      "skchr_bena_1",
+      "skchr_bena_2"
     ],
     "phases": [
       {
@@ -31225,15 +30681,9 @@
   "char_103_angel": {
     "name": "Exusiai",
     "skills": [
-      {
-        "skillId": "skchr_angel_1"
-      },
-      {
-        "skillId": "skchr_angel_2"
-      },
-      {
-        "skillId": "skchr_angel_3"
-      }
+      "skchr_angel_1",
+      "skchr_angel_2",
+      "skchr_angel_3"
     ],
     "phases": [
       {
@@ -31447,15 +30897,9 @@
   "char_332_archet": {
     "name": "Archetto",
     "skills": [
-      {
-        "skillId": "skchr_archet_1"
-      },
-      {
-        "skillId": "skchr_archet_2"
-      },
-      {
-        "skillId": "skchr_archet_3"
-      }
+      "skchr_archet_1",
+      "skchr_archet_2",
+      "skchr_archet_3"
     ],
     "phases": [
       {
@@ -31669,15 +31113,9 @@
   "char_456_ash": {
     "name": "Ash",
     "skills": [
-      {
-        "skillId": "skchr_ash_1"
-      },
-      {
-        "skillId": "skchr_ash_2"
-      },
-      {
-        "skillId": "skchr_ash_3"
-      }
+      "skchr_ash_1",
+      "skchr_ash_2",
+      "skchr_ash_3"
     ],
     "phases": [
       {
@@ -31891,15 +31329,9 @@
   "char_340_shwaz": {
     "name": "Schwarz",
     "skills": [
-      {
-        "skillId": "skchr_shwaz_1"
-      },
-      {
-        "skillId": "skchr_shwaz_2"
-      },
-      {
-        "skillId": "skchr_shwaz_3"
-      }
+      "skchr_shwaz_1",
+      "skchr_shwaz_2",
+      "skchr_shwaz_3"
     ],
     "phases": [
       {
@@ -32113,15 +31545,9 @@
   "char_113_cqbw": {
     "name": "W",
     "skills": [
-      {
-        "skillId": "skchr_cqbw_1"
-      },
-      {
-        "skillId": "skchr_cqbw_2"
-      },
-      {
-        "skillId": "skchr_cqbw_3"
-      }
+      "skchr_cqbw_1",
+      "skchr_cqbw_2",
+      "skchr_cqbw_3"
     ],
     "phases": [
       {
@@ -32335,15 +31761,9 @@
   "char_197_poca": {
     "name": "Rosa",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_poca_2"
-      },
-      {
-        "skillId": "skchr_poca_3"
-      }
+      "skcom_atk_up[3]",
+      "skchr_poca_2",
+      "skchr_poca_3"
     ],
     "phases": [
       {
@@ -32557,15 +31977,9 @@
   "char_391_rosmon": {
     "name": "Rosmontis",
     "skills": [
-      {
-        "skillId": "skchr_rosmon_1"
-      },
-      {
-        "skillId": "skchr_rosmon_2"
-      },
-      {
-        "skillId": "skchr_rosmon_3"
-      }
+      "skchr_rosmon_1",
+      "skchr_rosmon_2",
+      "skchr_rosmon_3"
     ],
     "phases": [
       {
@@ -32779,15 +32193,9 @@
   "char_1013_chen2": {
     "name": "Ch'en the Holungday",
     "skills": [
-      {
-        "skillId": "skchr_chen2_1"
-      },
-      {
-        "skillId": "skchr_chen2_2"
-      },
-      {
-        "skillId": "skchr_chen2_3"
-      }
+      "skchr_chen2_1",
+      "skchr_chen2_2",
+      "skchr_chen2_3"
     ],
     "phases": [
       {
@@ -33001,15 +32409,9 @@
   "char_112_siege": {
     "name": "Siege",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[3]"
-      },
-      {
-        "skillId": "skchr_siege_2"
-      },
-      {
-        "skillId": "skchr_siege_3"
-      }
+      "skcom_charge_cost[3]",
+      "skchr_siege_2",
+      "skchr_siege_3"
     ],
     "phases": [
       {
@@ -33223,15 +32625,9 @@
   "char_222_bpipe": {
     "name": "Bagpipe",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[3]"
-      },
-      {
-        "skillId": "skchr_bpipe_2"
-      },
-      {
-        "skillId": "skchr_bpipe_3"
-      }
+      "skcom_quickattack[3]",
+      "skchr_bpipe_2",
+      "skchr_bpipe_3"
     ],
     "phases": [
       {
@@ -33445,15 +32841,9 @@
   "char_362_saga": {
     "name": "Saga",
     "skills": [
-      {
-        "skillId": "skcom_charge_cost[3]"
-      },
-      {
-        "skillId": "skchr_saga_2"
-      },
-      {
-        "skillId": "skchr_saga_3"
-      }
+      "skcom_charge_cost[3]",
+      "skchr_saga_2",
+      "skchr_saga_3"
     ],
     "phases": [
       {
@@ -33667,15 +33057,9 @@
   "char_134_ifrit": {
     "name": "Ifrit",
     "skills": [
-      {
-        "skillId": "skchr_ifrit_1"
-      },
-      {
-        "skillId": "skchr_ifrit_2"
-      },
-      {
-        "skillId": "skchr_ifrit_3"
-      }
+      "skchr_ifrit_1",
+      "skchr_ifrit_2",
+      "skchr_ifrit_3"
     ],
     "phases": [
       {
@@ -33889,15 +33273,9 @@
   "char_213_mostma": {
     "name": "Mostima",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_mostma_2"
-      },
-      {
-        "skillId": "skchr_mostma_3"
-      }
+      "skcom_atk_up[3]",
+      "skchr_mostma_2",
+      "skchr_mostma_3"
     ],
     "phases": [
       {
@@ -34111,15 +33489,9 @@
   "char_180_amgoat": {
     "name": "Eyjafjalla",
     "skills": [
-      {
-        "skillId": "skchr_amgoat_1"
-      },
-      {
-        "skillId": "skchr_amgoat_2"
-      },
-      {
-        "skillId": "skchr_amgoat_3"
-      }
+      "skchr_amgoat_1",
+      "skchr_amgoat_2",
+      "skchr_amgoat_3"
     ],
     "phases": [
       {
@@ -34333,15 +33705,9 @@
   "char_2013_cerber": {
     "name": "Ceobe",
     "skills": [
-      {
-        "skillId": "skchr_cerber_1"
-      },
-      {
-        "skillId": "skchr_cerber_2"
-      },
-      {
-        "skillId": "skchr_cerber_3"
-      }
+      "skchr_cerber_1",
+      "skchr_cerber_2",
+      "skchr_cerber_3"
     ],
     "phases": [
       {
@@ -34555,15 +33921,9 @@
   "char_2015_dusk": {
     "name": "Dusk",
     "skills": [
-      {
-        "skillId": "skchr_dusk_1"
-      },
-      {
-        "skillId": "skchr_dusk_2"
-      },
-      {
-        "skillId": "skchr_dusk_3"
-      }
+      "skchr_dusk_1",
+      "skchr_dusk_2",
+      "skchr_dusk_3"
     ],
     "phases": [
       {
@@ -34777,15 +34137,9 @@
   "char_472_pasngr": {
     "name": "Passenger",
     "skills": [
-      {
-        "skillId": "skchr_pasngr_1"
-      },
-      {
-        "skillId": "skchr_pasngr_2"
-      },
-      {
-        "skillId": "skchr_pasngr_3"
-      }
+      "skchr_pasngr_1",
+      "skchr_pasngr_2",
+      "skchr_pasngr_3"
     ],
     "phases": [
       {
@@ -34999,15 +34353,9 @@
   "char_426_billro": {
     "name": "Carnelian",
     "skills": [
-      {
-        "skillId": "skchr_billro_1"
-      },
-      {
-        "skillId": "skchr_billro_2"
-      },
-      {
-        "skillId": "skchr_billro_3"
-      }
+      "skchr_billro_1",
+      "skchr_billro_2",
+      "skchr_billro_3"
     ],
     "phases": [
       {
@@ -35221,15 +34569,9 @@
   "char_291_aglina": {
     "name": "Angelina",
     "skills": [
-      {
-        "skillId": "skchr_aglina_1"
-      },
-      {
-        "skillId": "skchr_aglina_2"
-      },
-      {
-        "skillId": "skchr_aglina_3"
-      }
+      "skchr_aglina_1",
+      "skchr_aglina_2",
+      "skchr_aglina_3"
     ],
     "phases": [
       {
@@ -35443,15 +34785,9 @@
   "char_358_lisa": {
     "name": "Suzuran",
     "skills": [
-      {
-        "skillId": "skchr_lisa_1"
-      },
-      {
-        "skillId": "skchr_lisa_2"
-      },
-      {
-        "skillId": "skchr_lisa_3"
-      }
+      "skchr_lisa_1",
+      "skchr_lisa_2",
+      "skchr_lisa_3"
     ],
     "phases": [
       {
@@ -35665,15 +35001,9 @@
   "char_248_mgllan": {
     "name": "Magallan",
     "skills": [
-      {
-        "skillId": "skchr_mgllan_1"
-      },
-      {
-        "skillId": "skchr_mgllan_2"
-      },
-      {
-        "skillId": "skchr_mgllan_3"
-      }
+      "skchr_mgllan_1",
+      "skchr_mgllan_2",
+      "skchr_mgllan_3"
     ],
     "phases": [
       {
@@ -35887,15 +35217,9 @@
   "char_1012_skadi2": {
     "name": "Skadi the Corrupting Heart",
     "skills": [
-      {
-        "skillId": "skchr_skadi2_1"
-      },
-      {
-        "skillId": "skchr_skadi2_2"
-      },
-      {
-        "skillId": "skchr_skadi2_3"
-      }
+      "skchr_skadi2_1",
+      "skchr_skadi2_2",
+      "skchr_skadi2_3"
     ],
     "phases": [
       {
@@ -36109,15 +35433,9 @@
   "char_250_phatom": {
     "name": "Phantom",
     "skills": [
-      {
-        "skillId": "skchr_phatom_1"
-      },
-      {
-        "skillId": "skchr_phatom_2"
-      },
-      {
-        "skillId": "skchr_phatom_3"
-      }
+      "skchr_phatom_1",
+      "skchr_phatom_2",
+      "skchr_phatom_3"
     ],
     "phases": [
       {
@@ -36331,15 +35649,9 @@
   "char_400_weedy": {
     "name": "Weedy",
     "skills": [
-      {
-        "skillId": "skchr_weedy_1"
-      },
-      {
-        "skillId": "skchr_weedy_2"
-      },
-      {
-        "skillId": "skchr_weedy_3"
-      }
+      "skchr_weedy_1",
+      "skchr_weedy_2",
+      "skchr_weedy_3"
     ],
     "phases": [
       {
@@ -36553,15 +35865,9 @@
   "char_225_haak": {
     "name": "Aak",
     "skills": [
-      {
-        "skillId": "skchr_haak_1"
-      },
-      {
-        "skillId": "skchr_haak_2"
-      },
-      {
-        "skillId": "skchr_haak_3"
-      }
+      "skchr_haak_1",
+      "skchr_haak_2",
+      "skchr_haak_3"
     ],
     "phases": [
       {
@@ -36775,15 +36081,9 @@
   "char_474_glady": {
     "name": "Gladiia",
     "skills": [
-      {
-        "skillId": "skchr_glady_1"
-      },
-      {
-        "skillId": "skchr_glady_2"
-      },
-      {
-        "skillId": "skchr_glady_3"
-      }
+      "skchr_glady_1",
+      "skchr_glady_2",
+      "skchr_glady_3"
     ],
     "phases": [
       {
@@ -36997,15 +36297,9 @@
   "char_437_mizuki": {
     "name": "Mizuki",
     "skills": [
-      {
-        "skillId": "skchr_mizuki_1"
-      },
-      {
-        "skillId": "skchr_mizuki_2"
-      },
-      {
-        "skillId": "skchr_mizuki_3"
-      }
+      "skchr_mizuki_1",
+      "skchr_mizuki_2",
+      "skchr_mizuki_3"
     ],
     "phases": [
       {
@@ -37219,15 +36513,9 @@
   "char_147_shining": {
     "name": "Shining",
     "skills": [
-      {
-        "skillId": "skchr_shining_1"
-      },
-      {
-        "skillId": "skchr_shining_2"
-      },
-      {
-        "skillId": "skchr_shining_3"
-      }
+      "skchr_shining_1",
+      "skchr_shining_2",
+      "skchr_shining_3"
     ],
     "phases": [
       {
@@ -37441,15 +36729,9 @@
   "char_179_cgbird": {
     "name": "Nightingale",
     "skills": [
-      {
-        "skillId": "skcom_heal_up[3]"
-      },
-      {
-        "skillId": "skchr_cgbird_2"
-      },
-      {
-        "skillId": "skchr_cgbird_3"
-      }
+      "skcom_heal_up[3]",
+      "skchr_cgbird_2",
+      "skchr_cgbird_3"
     ],
     "phases": [
       {
@@ -37663,15 +36945,9 @@
   "char_003_kalts": {
     "name": "Kal'tsit",
     "skills": [
-      {
-        "skillId": "skchr_kalts_1"
-      },
-      {
-        "skillId": "skchr_kalts_2"
-      },
-      {
-        "skillId": "skchr_kalts_3"
-      }
+      "skchr_kalts_1",
+      "skchr_kalts_2",
+      "skchr_kalts_3"
     ],
     "phases": [
       {
@@ -37885,15 +37161,9 @@
   "char_136_hsguma": {
     "name": "Hoshiguma",
     "skills": [
-      {
-        "skillId": "skchr_hsguma_1"
-      },
-      {
-        "skillId": "skchr_hsguma_2"
-      },
-      {
-        "skillId": "skchr_hsguma_3"
-      }
+      "skchr_hsguma_1",
+      "skchr_hsguma_2",
+      "skchr_hsguma_3"
     ],
     "phases": [
       {
@@ -38107,15 +37377,9 @@
   "char_202_demkni": {
     "name": "Saria",
     "skills": [
-      {
-        "skillId": "skchr_demkni_1"
-      },
-      {
-        "skillId": "skchr_demkni_2"
-      },
-      {
-        "skillId": "skchr_demkni_3"
-      }
+      "skchr_demkni_1",
+      "skchr_demkni_2",
+      "skchr_demkni_3"
     ],
     "phases": [
       {
@@ -38329,15 +37593,9 @@
   "char_423_blemsh": {
     "name": "Blemishine",
     "skills": [
-      {
-        "skillId": "skchr_blemsh_1"
-      },
-      {
-        "skillId": "skchr_blemsh_2"
-      },
-      {
-        "skillId": "skchr_blemsh_3"
-      }
+      "skchr_blemsh_1",
+      "skchr_blemsh_2",
+      "skchr_blemsh_3"
     ],
     "phases": [
       {
@@ -38551,15 +37809,9 @@
   "char_2014_nian": {
     "name": "Nian",
     "skills": [
-      {
-        "skillId": "skchr_nian_1"
-      },
-      {
-        "skillId": "skchr_nian_2"
-      },
-      {
-        "skillId": "skchr_nian_3"
-      }
+      "skchr_nian_1",
+      "skchr_nian_2",
+      "skchr_nian_3"
     ],
     "phases": [
       {
@@ -38773,15 +38025,9 @@
   "char_311_mudrok": {
     "name": "Mudrock",
     "skills": [
-      {
-        "skillId": "skcom_def_up[3]"
-      },
-      {
-        "skillId": "skchr_mudrok_2"
-      },
-      {
-        "skillId": "skchr_mudrok_3"
-      }
+      "skcom_def_up[3]",
+      "skchr_mudrok_2",
+      "skchr_mudrok_3"
     ],
     "phases": [
       {
@@ -38995,15 +38241,9 @@
   "char_416_zumama": {
     "name": "Eunectes",
     "skills": [
-      {
-        "skillId": "skchr_zumama_1"
-      },
-      {
-        "skillId": "skchr_zumama_2"
-      },
-      {
-        "skillId": "skchr_zumama_3"
-      }
+      "skchr_zumama_1",
+      "skchr_zumama_2",
+      "skchr_zumama_3"
     ],
     "phases": [
       {
@@ -39217,15 +38457,9 @@
   "char_264_f12yin": {
     "name": "Mountain",
     "skills": [
-      {
-        "skillId": "skchr_f12yin_1"
-      },
-      {
-        "skillId": "skchr_f12yin_2"
-      },
-      {
-        "skillId": "skchr_f12yin_3"
-      }
+      "skchr_f12yin_1",
+      "skchr_f12yin_2",
+      "skchr_f12yin_3"
     ],
     "phases": [
       {
@@ -39439,15 +38673,9 @@
   "char_172_svrash": {
     "name": "SilverAsh",
     "skills": [
-      {
-        "skillId": "skchr_svrash_1"
-      },
-      {
-        "skillId": "skchr_svrash_2"
-      },
-      {
-        "skillId": "skchr_svrash_3"
-      }
+      "skchr_svrash_1",
+      "skchr_svrash_2",
+      "skchr_svrash_3"
     ],
     "phases": [
       {
@@ -39661,15 +38889,9 @@
   "char_293_thorns": {
     "name": "Thorns",
     "skills": [
-      {
-        "skillId": "skcom_atk_up[3]"
-      },
-      {
-        "skillId": "skchr_thorns_2"
-      },
-      {
-        "skillId": "skchr_thorns_3"
-      }
+      "skcom_atk_up[3]",
+      "skchr_thorns_2",
+      "skchr_thorns_3"
     ],
     "phases": [
       {
@@ -39883,15 +39105,9 @@
   "char_010_chen": {
     "name": "Ch'en",
     "skills": [
-      {
-        "skillId": "skchr_chen_1"
-      },
-      {
-        "skillId": "skchr_chen_2"
-      },
-      {
-        "skillId": "skchr_chen_3"
-      }
+      "skchr_chen_1",
+      "skchr_chen_2",
+      "skchr_chen_3"
     ],
     "phases": [
       {
@@ -40105,15 +39321,9 @@
   "char_017_huang": {
     "name": "Blaze",
     "skills": [
-      {
-        "skillId": "skchr_huang_1"
-      },
-      {
-        "skillId": "skchr_huang_2"
-      },
-      {
-        "skillId": "skchr_huang_3"
-      }
+      "skchr_huang_1",
+      "skchr_huang_2",
+      "skchr_huang_3"
     ],
     "phases": [
       {
@@ -40327,15 +39537,9 @@
   "char_350_surtr": {
     "name": "Surtr",
     "skills": [
-      {
-        "skillId": "skchr_surtr_1"
-      },
-      {
-        "skillId": "skchr_surtr_2"
-      },
-      {
-        "skillId": "skchr_surtr_3"
-      }
+      "skchr_surtr_1",
+      "skchr_surtr_2",
+      "skchr_surtr_3"
     ],
     "phases": [
       {
@@ -40549,15 +39753,9 @@
   "char_188_helage": {
     "name": "Hellagur",
     "skills": [
-      {
-        "skillId": "skchr_helage_1"
-      },
-      {
-        "skillId": "skchr_helage_2"
-      },
-      {
-        "skillId": "skchr_helage_3"
-      }
+      "skchr_helage_1",
+      "skchr_helage_2",
+      "skchr_helage_3"
     ],
     "phases": [
       {
@@ -40771,15 +39969,9 @@
   "char_485_pallas": {
     "name": "Pallas",
     "skills": [
-      {
-        "skillId": "skchr_pallas_1"
-      },
-      {
-        "skillId": "skchr_pallas_2"
-      },
-      {
-        "skillId": "skchr_pallas_3"
-      }
+      "skchr_pallas_1",
+      "skchr_pallas_2",
+      "skchr_pallas_3"
     ],
     "phases": [
       {
@@ -40993,12 +40185,8 @@
   "char_230_savage": {
     "name": "Savage",
     "skills": [
-      {
-        "skillId": "skchr_savage_1"
-      },
-      {
-        "skillId": "skchr_savage_2"
-      }
+      "skchr_savage_1",
+      "skchr_savage_2"
     ],
     "phases": [
       {
@@ -41212,9 +40400,7 @@
   "char_282_catap": {
     "name": "Catapult",
     "skills": [
-      {
-        "skillId": "skchr_catap_1"
-      }
+      "skchr_catap_1"
     ],
     "phases": [
       {
@@ -41338,9 +40524,7 @@
   "char_283_midn": {
     "name": "Midnight",
     "skills": [
-      {
-        "skillId": "skchr_midn_1"
-      }
+      "skchr_midn_1"
     ],
     "phases": [
       {
@@ -41464,12 +40648,8 @@
   "char_137_brownb": {
     "name": "Beehunter",
     "skills": [
-      {
-        "skillId": "skchr_brownb_1"
-      },
-      {
-        "skillId": "skchr_brownb_2"
-      }
+      "skchr_brownb_1",
+      "skchr_brownb_2"
     ],
     "phases": [
       {
@@ -41683,12 +40863,8 @@
   "char_347_jaksel": {
     "name": "Jackie",
     "skills": [
-      {
-        "skillId": "skchr_jaksel_1"
-      },
-      {
-        "skillId": "skchr_jaksel_2"
-      }
+      "skchr_jaksel_1",
+      "skchr_jaksel_2"
     ],
     "phases": [
       {
@@ -41902,12 +41078,8 @@
   "char_164_nightm": {
     "name": "Nightmare",
     "skills": [
-      {
-        "skillId": "skchr_nightm_1"
-      },
-      {
-        "skillId": "skchr_nightm_2"
-      }
+      "skchr_nightm_1",
+      "skchr_nightm_2"
     ],
     "phases": [
       {
@@ -42121,12 +41293,8 @@
   "char_220_grani": {
     "name": "Grani",
     "skills": [
-      {
-        "skillId": "skcom_def_up[3]"
-      },
-      {
-        "skillId": "skchr_grani_2"
-      }
+      "skcom_def_up[3]",
+      "skchr_grani_2"
     ],
     "phases": [
       {
@@ -42340,15 +41508,9 @@
   "char_263_skadi": {
     "name": "Skadi",
     "skills": [
-      {
-        "skillId": "skcom_quickattack[3]"
-      },
-      {
-        "skillId": "skchr_skadi_2"
-      },
-      {
-        "skillId": "skchr_skadi_3"
-      }
+      "skcom_quickattack[3]",
+      "skchr_skadi_2",
+      "skchr_skadi_3"
     ],
     "phases": [
       {
