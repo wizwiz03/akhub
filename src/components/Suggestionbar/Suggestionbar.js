@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import './Suggestionbar.css';
 
-const Suggestionbar = ({ suggestions }) => {
+const Suggestionbar = ({ suggestions, userInput, setUserInput }) => {
   const [activeSuggestion, setActiveSuggestion] = useState(0);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [userInput, setUserInput] = useState('');
 
 
   const onChange = e => {
@@ -36,7 +35,6 @@ const Suggestionbar = ({ suggestions }) => {
       setActiveSuggestion(0);
     }
     else if (e.keyCode === 38) {
-      console.log(e.currentTarget.offsetTop, e.currentTarget.offsetParent.scrollTop);
       if (activeSuggestion === 0) {
         return;
       }
