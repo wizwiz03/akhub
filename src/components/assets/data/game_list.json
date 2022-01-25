@@ -1,14 +1,15 @@
 [
   {
     "title": "Skill Icon Quiz",
-    "descr": "Can you guess to which Operator this Skill Icon belongs to?",
+    "descr": "Can you guess which Operator this Skill Icon belongs to?",
     "rules": [
       "See a random icon of a skill",
       "Guess which operator the skill belongs too",
       "Get a point for each correct guess",
       "The game ends if you guessed wrong"
     ],
-    "img": "placeholder"
+    "img": "placeholder",
+    "sub": "skill_icon_quiz"
   },
   {
     "title": "Skill Icon Quiz",
@@ -19,7 +20,8 @@
       "Get a point for each correct guess",
       "The game ends if you guessed wrong"
     ],
-    "img": "placeholder"
+    "img": "placeholder",
+    "sub": "skill_icon_quiz"
   },
   {
     "title": "Skill Icon Quiz",
@@ -30,6 +32,7 @@
       "Get a point for each correct guess",
       "The game ends if you guessed wrong"
     ],
-    "img": "placeholder"
+    "img": "placeholder",
+    "sub": "skill_icon_quiz"
   }
 ]
