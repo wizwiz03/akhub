@@ -21,11 +21,9 @@ const GameBoard = () => {
 
   // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const char_img_paths = importAll(require.context('../assets/images/characters', false, /\.(png|jpe?g|svg)$/));
-  console.log(char_img_paths);
   
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
   const skill_img_paths = importAll(require.context('../assets/images/skills_new', false, /\.(png|jpe?g|svg)$/));
-  console.log(skill_img_paths);
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);

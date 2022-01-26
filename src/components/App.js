@@ -1,19 +1,25 @@
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import CssBaseline from '@mui/material/CssBaseline';
 
 import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
-
-import './Base.css';
+import Home from './Home/Home';
+import Games from './Games/Games';
+import GameBoard from './GameBoard/GameBoard';
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
+      <CssBaseline />
       <Navbar />
-      <div id='main-outlet'>
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/games' element={<Games />} />
+        <Route path='/games/:sub' element={<GameBoard />} />
+        <Route path='*' element={<main><p>There's nothing here</p></main>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
