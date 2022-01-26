@@ -24,7 +24,7 @@ const GameBoard = () => {
   console.log(char_img_paths);
   
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
-  const skill_img_paths = importAll(require.context('../assets/images/skills', false, /\.(png|jpe?g|svg)$/));
+  const skill_img_paths = importAll(require.context('../assets/images/skills_new', false, /\.(png|jpe?g|svg)$/));
   console.log(skill_img_paths);
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
