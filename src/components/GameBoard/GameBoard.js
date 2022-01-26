@@ -15,11 +15,19 @@ const GameBoard = () => {
   const { sub } = useParams();
   const game = game_list.find(el => el['sub'] === sub)
 
+  // ['Myrtle', 'Bagpipe', ...]
   const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
   const char_names_lc = char_names.map(name => name.toLowerCase());
+
+  // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const char_img_paths = importAll(require.context('../assets/images/characters', false, /\.(png|jpe?g|svg)$/));
+  console.log(char_img_paths);
+  
+  // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
   const skill_img_paths = importAll(require.context('../assets/images/skills', false, /\.(png|jpe?g|svg)$/));
-  const skill_img_names = Object.keys(skill_img_paths);
+  console.log(skill_img_paths);
+
+  // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
   
   const [userInput, setUserInput] = useState('');
@@ -28,16 +36,14 @@ const GameBoard = () => {
   const [curScore, setCurScore] = useState(0);
 
   useEffect(() => {
-    const random_number = parseInt(skill_img_names.length * Math.random());
+    const random_number = parseInt(skill_code_names.length * Math.random());
     setRandNum(random_number);
-    let [,,...codeStr] = skill_img_names[random_number].split('_');
-    codeStr = codeStr.join('').split('.')[0];
-    setCurSkillCode(codeStr);
+    setCurSkillCode(skill_code_names[random_number]);
   }, []);
   
   function importAll(r) {
     return r.keys().reduce((prev, cur) => {
-      prev[cur.replace('./', '')] = r(cur);
+      prev[cur.replace('./', '').replace('.png', '')] = r(cur);
       return prev;
     }, {})
   }
@@ -67,7 +73,7 @@ const GameBoard = () => {
     <div className='gameboard-container'>
       <h1>{game.title}</h1>
       <h2>{game.descr}</h2>
-      <img src={skill_img_paths[skill_img_names[randNum]]} alt='todo'/>
+      <img src={skill_img_paths[skill_code_names[randNum]]} alt='todo'/>
       <Suggestionbar suggestions={char_names} userInput={userInput} setUserInput={setUserInput} />
       <button onClick={onClick}>Submit</button>
     </div>
