@@ -1,380 +1,3466 @@
 {
-  "skcom_charge_cost[1]": "Charge α",
-  "skcom_charge_cost[2]": "Charge β",
-  "skcom_charge_cost[3]": "Charge γ",
-  "skcom_assist_cost[2]": "Support β",
-  "skcom_assist_cost[3]": "Support γ",
-  "skcom_atk_up[1]": "ATK Up α",
-  "skcom_atk_up[2]": "ATK Up β",
-  "skcom_atk_up[3]": "ATK Up γ",
-  "skcom_def_up[1]": "DEF Up α",
-  "skcom_def_up[2]": "DEF Up β",
-  "skcom_def_up[3]": "DEF Up γ",
-  "skcom_magic_rage[1]": "Tactical Chant α",
-  "skcom_magic_rage[2]": "Tactical Chant β",
-  "skcom_magic_rage[3]": "Tactical Chant γ",
-  "skcom_quickattack[1]": "Swift Strike α",
-  "skcom_quickattack[3]": "Swift Strike γ",
-  "skcom_heal_up[1]": "Healing Up α",
-  "skcom_heal_up[2]": "Healing Up β",
-  "skcom_heal_up[3]": "Healing Up γ",
-  "skcom_range_extend": "Healing Range Up",
-  "skcom_heal_self[1]": "Regeneration α",
-  "skcom_heal_self[2]": "Regeneration β",
-  "skcom_heal_self[3]": "Regeneration γ",
-  "skchr_wyvern_1": "Command - Reinforcement",
-  "skchr_kroos_1": "Double Tap - Auto",
-  "skchr_spot_1": "Secondary Healing Mode",
-  "skchr_nights_2": "Crimson Eyes",
-  "skchr_fmout_2": "Destiny",
-  "skchr_greyy_2": "Electrostatic Discharge",
-  "skchr_cammou_2": "Synchronized Attack",
-  "skchr_indigo_1": "Lighthouse Guardian",
-  "skchr_indigo_2": "Labyrinth of Light",
-  "skchr_jesica_2": "Smokescreen",
-  "skchr_shotst_1": "Armor Breaker",
-  "skchr_shotst_2": "Armor Breaker - Spread",
-  "skchr_clour_2": "Double Shot",
-  "skchr_mm_1": "Paralyzing Shell",
-  "skchr_mm_2": "Binding Shock",
-  "skchr_yuki_1": "Shuriken",
-  "skchr_yuki_2": "Fatal Shuriken",
-  "skchr_pinecn_1": "RMA Spikes",
-  "skchr_pinecn_2": "Electrical Overcharge",
-  "skchr_glaze_1": "Snaring Shell",
-  "skchr_glaze_2": "Radar Sweep",
-  "skchr_acdrop_1": "Fancy Shot",
-  "skchr_acdrop_2": "Trigger Time",
-  "skchr_blackd_2": "Command - Defense",
-  "skchr_scave_2": "Command - Attack",
-  "skchr_vigna_2": "Hammer-On",
-  "skchr_myrtle_2": "Healing Wings",
-  "skchr_bstalk_1": "Sentinel Command",
-  "skchr_bstalk_2": "'Everyone Together!'",
-  "skchr_doberm_2": "Spur",
-  "skchr_gyuki_2": "Demonic Power",
-  "skchr_peacok_1": "Judgment",
-  "skchr_peacok_2": "Genesis",
-  "skchr_frostl_1": "Frost Tomahawk",
-  "skchr_frostl_2": "Ice Tomahawk",
-  "skchr_spikes_1": "Just Kidding",
-  "skchr_spikes_2": "Deadly Prank",
-  "skchr_estell_2": "Sacrificial Strike",
-  "skchr_frncat_1": "Scratch",
-  "skchr_frncat_2": "Fury",
-  "skchr_brownb_1": "Flexibility",
-  "skchr_brownb_2": "Soaring Fists",
-  "skchr_jaksel_1": "Grit Those Teeth!",
-  "skchr_jaksel_2": "Pay Close Attention!",
-  "skchr_cutter_1": "Redshift",
-  "skchr_cutter_2": "Crimson Crescent",
-  "skchr_utage_1": "Space Out",
-  "skchr_utage_2": "Descending Strike - Earth Splitter",
-  "skchr_gravel_1": "Shadow Assault",
-  "skchr_gravel_2": "Rat Swarm",
-  "skchr_strong_1": "Shell Splitter",
-  "skchr_strong_2": "Sashimi Platter",
-  "skchr_nothin_1": "Cautious Retreat",
-  "skchr_nothin_2": "Wax and Wane",
-  "skchr_rope_1": "Hook Shot",
-  "skchr_rope_2": "Double Hook",
-  "skchr_myrrh_1": "Dual Healing",
-  "skchr_myrrh_2": "Medic Field",
-  "skchr_ccheal_1": "Vitality Restoration",
-  "skchr_ccheal_2": "Vitality Restoration - Wide Range",
-  "skchr_susuro_2": "Deep Healing",
-  "skchr_flower_2": "Fine Blending",
-  "skchr_finlpp_1": "Healing Waves",
-  "skchr_finlpp_2": "Lifespring",
-  "skchr_plosis_2": "Enkephalin",
-  "skchr_breeze_1": "Cluster Therapy",
-  "skchr_breeze_2": "Widespread Therapy",
-  "skchr_headbr_2": "Ursus's Roar",
-  "skchr_snakek_2": "Shell Defense",
-  "skchr_bubble_2": "'Beaten Up'",
-  "skchr_yak_1": "Stamina Enhancement",
-  "skchr_yak_2": "Cold Resistance",
-  "skchr_sunbr_1": "Provisions",
-  "skchr_sunbr_2": "Cooking",
-  "skchr_durnar_2": "Shielded Counterattack",
-  "skchr_texas_2": "Sword Rain",
-  "skchr_chiave_2": "Blazing Wire Stripper",
-  "skchr_grani_2": "Press the Attack!",
-  "skchr_sddrag_2": "Soul Spark",
-  "skchr_elysm_2": "Monitor",
-  "skchr_swire_1": "Command and Dispatch",
-  "skchr_swire_2": "Cooperative Combat",
-  "skchr_sophia_1": "Motivational Skills",
-  "skchr_sophia_2": "Whip Sword",
-  "skchr_franka_2": "Vorpal Edge",
-  "skchr_flameb_1": "Blood Pact",
-  "skchr_flameb_2": "Blade Demon",
-  "skchr_aguard_1": "Drawing Sword",
-  "skchr_tiger_1": "Armorcrusher",
-  "skchr_tiger_2": "Sundered Soul",
-  "skchr_flint_1": "Relentless",
-  "skchr_flint_2": "Display of Might",
-  "skchr_whitew_1": "Sundial",
-  "skchr_whitew_2": "Wolf Spirit",
-  "skchr_ayer_1": "Shrapnel Burst",
-  "skchr_ayer_2": "Activate Phase Blades",
-  "skchr_bibeak_1": "Plumage Pins",
-  "skchr_bibeak_2": "Blade Swap",
-  "skchr_tachak_1": "Incendiary Grenade",
-  "skchr_tachak_2": "Spray and Pray",
-  "skchr_ghost_2": "Bone Fracture",
-  "skchr_broca_1": "Galvanize",
-  "skchr_broca_2": "High-Voltage Current",
-  "skchr_savage_2": "Precise Blast",
-  "skchr_astesi_1": "Astral Protection",
-  "skchr_astesi_2": "Astral Sword",
-  "skchr_sidero_2": "Restorative Surge",
-  "skchr_akafyu_1": "Nobukage-ryu - Kaminari Gatana no Zei",
-  "skchr_akafyu_2": "Nobukage-ryu - Juumonji Masaru",
-  "skchr_crow_1": "Rapid Slashing",
-  "skchr_crow_2": "Reap",
-  "skchr_takila_1": "Decisive Action",
-  "skchr_takila_2": "Esoteric Bladework",
-  "skchr_bluep_1": "Twinshot - Auto",
-  "skchr_bluep_2": "Venom Spray",
-  "skchr_platnm_2": "Pegasian Sight",
-  "skchr_swllow_1": "Flying Feathers",
-  "skchr_swllow_2": "Counterflow",
-  "skchr_asnipe_1": "Spiral Arm",
-  "skchr_aprl_1": "Precise Shooting",
-  "skchr_aprl_2": "Flexible Camouflage",
-  "skchr_meteo_1": "Buckshot",
-  "skchr_meteo_2": "High-Explosive Shell",
-  "skchr_sesa_2": "Delayed Concussive Parts",
-  "skchr_excu_1": "Muzzle's Elegy",
-  "skchr_excu_2": "Final Journey",
-  "skchr_aosta_2": "Shadow Nails",
-  "skchr_amiya_2": "Spirit Burst",
-  "skchr_amiya_3": "Chimera",
-  "skchr_nightm_1": "Drain Soul",
-  "skchr_nightm_2": "Night Phantom",
-  "skchr_absin_1": "Enforcement Mode",
-  "skchr_absin_2": "Ultimatum",
-  "skchr_tomimi_1": "Tribal Techniques",
-  "skchr_tomimi_2": "Gavial's Protection Plan",
-  "skchr_skfire_2": "Fire of Heaven",
-  "skchr_acast_1": "'All For Me'",
-  "skchr_leizi_2": "Thunderclap",
-  "skchr_beewax_1": "Growing Sandstorm",
-  "skchr_beewax_2": "Guardian Obelisk",
-  "skchr_mint_1": "Wind Whispers",
-  "skchr_mint_2": "Swirling Vortex",
-  "skchr_iris_1": "Fairytale Guardian",
-  "skchr_iris_2": "Dreamland's Cradle",
-  "skchr_lionhd_2": "Deconstruct and Detonate",
-  "skchr_lava2_1": "Flame Quenched Dagger",
-  "skchr_lava2_2": "Ring of Hellfire",
-  "skchr_otter_1": "Bionic Device",
-  "skchr_otter_2": "Detonate and Recycle",
-  "skchr_folivo_1": "Protective Camouflage",
-  "skchr_folivo_2": "Panoramic Overload",
-  "skchr_silent_2": "Medical Drone",
-  "skchr_bldsk_1": "Emergency Triage",
-  "skchr_bldsk_2": "Unstable Plasma",
-  "skchr_folnic_1": "Max-Dosage Infusion",
-  "skchr_folnic_2": "Compound Drug Shell",
-  "skchr_tuye_1": "Aqua Loop",
-  "skchr_tuye_2": "Cardiac Stimulant",
-  "skchr_amedic_1": "Apocalyptic Scene",
-  "skchr_ceylon_1": "Concentrated Hydrotherapy",
-  "skchr_ceylon_2": "Water Blessing",
-  "skchr_whispr_1": "Oriented Diagnosis",
-  "skchr_whispr_2": "Pain Suppression",
-  "skchr_deepcl_1": "Shadow Tentacle",
-  "skchr_deepcl_2": "Visual Trap",
-  "skchr_skgoat_2": "Quicksand Conversion",
-  "skchr_podego_1": "Aromatherapy",
-  "skchr_podego_2": "Spread Spores",
-  "skchr_ethan_1": "Fancy Maneuvers",
-  "skchr_ethan_2": "Suspended Cross",
-  "skchr_sqrrel_1": "Steam Pump",
-  "skchr_sqrrel_2": "High-Pressure Water Cannon",
-  "skchr_nearl_1": "First Aid",
-  "skchr_nearl_2": "First Aid Mode",
-  "skchr_hmau_1": "Treatment Countermeasure",
-  "skchr_hmau_2": "Medical Mode Countermeasure",
-  "skchr_red_1": "Execution Mode",
-  "skchr_red_2": "Wolfpack",
-  "skchr_waaifu_1": "One-inch Punch",
-  "skchr_waaifu_2": "Seven-styles Kick",
-  "skchr_kafka_1": "Cube of Absurdism",
-  "skchr_kafka_2": "Shears of Surrealism",
-  "skchr_liskam_1": "Charged Defense",
-  "skchr_liskam_2": "Counter Arc",
-  "skchr_moeshd_1": "Auto Defense",
-  "skchr_moeshd_2": "Magnetic Hammer",
-  "skchr_bison_2": "Intensified Defense",
-  "skchr_hpsts_1": "Guardian Mode",
-  "skchr_hpsts_2": "Combat Mode",
-  "skchr_asbest_1": "Resilient Mode",
-  "skchr_asbest_2": "Thermal Power Mode",
-  "skchr_blitz_1": "Flash Shield",
-  "skchr_blitz_2": "Shield Bash",
-  "skchr_zebra_1": "Emergency Camouflage",
-  "skchr_zebra_2": "Group Camouflage",
-  "skchr_prove_1": "Wolf's Eye",
-  "skchr_prove_2": "Prey Seeker",
-  "skchr_milu_1": "Camouflage",
-  "skchr_milu_2": "Tactical Transceiver",
-  "skchr_cuttle_2": "Interdictive Sniping Tactics",
-  "skchr_toddi_1": "Signal Arrow",
-  "skchr_toddi_2": "Portable Fortcracker Arrows",
-  "skchr_slchan_1": "Chain Hook",
-  "skchr_slchan_2": "Binding Chains",
-  "skchr_snsant_1": "Barbed Clawhook",
-  "skchr_snsant_2": "Telescoping Electric Net",
-  "skchr_slbell_1": "Echolocation",
-  "skchr_slbell_2": "Natural Deterrent",
-  "skchr_vodfox_1": "Malediction",
-  "skchr_vodfox_2": "Cursed Doll",
-  "skchr_glassb_1": "Concentration",
-  "skchr_glassb_2": "Literature Storm",
-  "skchr_glacus_1": "Binary Reload",
-  "skchr_glacus_2": "Counter EMP",
-  "skchr_sora_1": "Hymn of Respite",
-  "skchr_sora_2": "Hymn of Battle",
-  "skchr_tknogi_1": "Without a Trace",
-  "skchr_tknogi_2": "Forest's Embrace",
-  "skchr_mantic_1": "Scorpion Venom",
-  "skchr_mantic_2": "Toxic Overload",
-  "skchr_kirara_1": "Anchor Strike",
-  "skchr_kirara_2": "Anchor Point Snap",
-  "skchr_panda_1": "Raging Iron Fist",
-  "skchr_panda_2": "Destructive Fist",
-  "skchr_robin_1": "Binding 'Clip'",
-  "skchr_robin_2": "Launching 'Clip'",
-  "skchr_rfrost_1": "Trap Deployment",
-  "skchr_rfrost_2": "Incapacitated Prey",
-  "skchr_bena_1": "Fervent Trimming",
-  "skchr_bena_2": "Rapid Trimming",
-  "skchr_angel_1": "Charging Mode",
-  "skchr_angel_2": "Shooting Mode",
-  "skchr_angel_3": "Overloading Mode",
-  "skchr_archet_1": "Dispersing Arrows",
-  "skchr_archet_2": "Pursuing Arrows",
-  "skchr_archet_3": "Thundering Arrows",
-  "skchr_ash_1": "Supporting Fire",
-  "skchr_ash_2": "Assault Tactics",
-  "skchr_ash_3": "Breaching Rounds",
-  "skchr_shwaz_1": "Charged Shot",
-  "skchr_shwaz_2": "Sharp Eye",
-  "skchr_shwaz_3": "Final Tactics",
-  "skchr_cqbw_1": "King of Hearts",
-  "skchr_cqbw_2": "Jack in the Box",
-  "skchr_cqbw_3": "D12",
-  "skchr_poca_2": "Split Shot",
-  "skchr_poca_3": "Avalanche Breaker",
-  "skchr_rosmon_1": "Expanded Cognition",
-  "skchr_rosmon_2": "Nociceptor Inhibition",
-  "skchr_rosmon_3": "'As You Wish'",
-  "skchr_chen2_1": "High-Pressure Splash",
-  "skchr_chen2_2": "'Night of Violet'",
-  "skchr_chen2_3": "'Holiday Storm'",
-  "skchr_siege_2": "Aerial Hammer",
-  "skchr_siege_3": "Skull Breaker",
-  "skchr_saga_2": "Cleansing Evil",
-  "skchr_saga_3": "Fierce Glare",
-  "skchr_bpipe_2": "High-Impact Assault",
-  "skchr_bpipe_3": "Locked Breech Burst",
-  "skchr_ifrit_1": "Fanaticism",
-  "skchr_ifrit_2": "Pyroclasm",
-  "skchr_ifrit_3": "Scorched Earth",
-  "skchr_mostma_2": "Lock of Shattered Time",
-  "skchr_mostma_3": "Key of Chronology",
-  "skchr_dusk_1": "Transcendental Stroke",
-  "skchr_dusk_2": "Flowing Ink",
-  "skchr_dusk_3": "Image over Form",
-  "skchr_amgoat_1": "Duetto",
-  "skchr_amgoat_2": "Ignition",
-  "skchr_amgoat_3": "Volcano",
-  "skchr_cerber_1": "'Really Cold Axe'",
-  "skchr_cerber_2": "'Really Hot Knives'",
-  "skchr_cerber_3": "'Really Heavy Spear'",
-  "skchr_pasngr_1": "Touch of Static",
-  "skchr_pasngr_2": "Focus Command",
-  "skchr_pasngr_3": "Glorious Shards",
-  "skchr_billro_1": "Sandstorm Guardian",
-  "skchr_billro_2": "Sand Fetters",
-  "skchr_billro_3": "Mark of Gluttony",
-  "skchr_aglina_1": "Arcane Staff - Quick Charge Mode",
-  "skchr_aglina_2": "Arcane Staff - Particle Mode",
-  "skchr_aglina_3": "Arcane Staff - Anti-Gravity Mode",
-  "skchr_lisa_1": "I'll Do My Best",
-  "skchr_lisa_2": "Childhood Frolic",
-  "skchr_lisa_3": "Foxfire Haze",
-  "skchr_mgllan_1": "High-Efficiency Freezing Module",
-  "skchr_mgllan_2": "Laser Mining Module",
-  "skchr_mgllan_3": "Armed Combat Module",
-  "skchr_skadi2_1": "Chant of Returning by Varied Paths",
-  "skchr_skadi2_2": "Wish of Burial Beyond the Light",
-  "skchr_skadi2_3": "'The Tide Surges, The Tide Recedes'",
-  "skchr_phatom_1": "Phantom of the Night",
-  "skchr_phatom_2": "Bloody Opus",
-  "skchr_phatom_3": "Night Raid",
-  "skchr_weedy_1": "Barrel Burst",
-  "skchr_weedy_2": "Hydraulics Mode",
-  "skchr_weedy_3": "Liquid Nitrogen Cannon",
-  "skchr_haak_1": "Rapid Fire",
-  "skchr_haak_2": "Type-γ Stimpack",
-  "skchr_haak_3": "Durian-Flavored Stimpack",
-  "skchr_glady_1": "Waterless Parting of the Great Ocean",
-  "skchr_glady_2": "Waterless Grasp of the Raging Seas",
-  "skchr_glady_3": "Waterless Dance of the Shattered Maelstrom",
-  "skchr_mizuki_1": "Awaken",
-  "skchr_mizuki_2": "Prisoner's Dilemma",
-  "skchr_mizuki_3": "Moon in the Water",
-  "skchr_shining_1": "Creed",
-  "skchr_shining_2": "Auto Protect",
-  "skchr_shining_3": "Creed Field",
-  "skchr_kalts_1": "Command: Structural Fortification",
-  "skchr_kalts_2": "Command: Tactical Coordination",
-  "skchr_kalts_3": "Command: Meltdown",
-  "skchr_cgbird_2": "Arts Shield",
-  "skchr_cgbird_3": "Sanctuary",
-  "skchr_hsguma_1": "Warpath",
-  "skchr_hsguma_2": "Thorns",
-  "skchr_hsguma_3": "Saw of Strength",
-  "skchr_demkni_1": "First Aid",
-  "skchr_demkni_2": "Medicine Dispensing",
-  "skchr_demkni_3": "Calcification",
-  "skchr_blemsh_1": "Surging Brilliance",
-  "skchr_blemsh_2": "Deterring Radiance",
-  "skchr_blemsh_3": "Divine Avatar",
-  "skchr_nian_1": "Tin Burning",
-  "skchr_nian_2": "Copper Seal",
-  "skchr_nian_3": "Iron Defense",
-  "skchr_mudrok_2": "Crag Splitter",
-  "skchr_mudrok_3": "Bloodline of Desecrated Earth",
-  "skchr_zumama_1": "Tomahawk",
-  "skchr_zumama_2": "Menacing Slash",
-  "skchr_zumama_3": "Iron Will",
-  "skchr_skadi_2": "Wave Strike",
-  "skchr_skadi_3": "Tidal Elegy",
-  "skchr_f12yin_1": "Left Hook",
-  "skchr_f12yin_2": "Sweeping Stance",
-  "skchr_f12yin_3": "Earth-Shattering Smash",
-  "skchr_svrash_2": "Rules of Survival",
-  "skchr_svrash_3": "Truesilver Slash",
-  "skchr_thorns_2": "Protective Spikes",
-  "skchr_thorns_3": "Destreza",
-  "skchr_chen_1": "Sheathed Strike",
-  "skchr_chen_2": "Chi Xiao - Unsheath",
-  "skchr_chen_3": "Chi Xiao - Shadowless",
-  "skchr_huang_2": "Chainsaw Extension Module",
-  "skchr_huang_3": "Boiling Burst",
-  "skchr_surtr_1": "Laevatain",
-  "skchr_surtr_2": "Molten Giant",
-  "skchr_surtr_3": "Twilight",
-  "skchr_helage_1": "Crescent Moon",
-  "skchr_helage_2": "Half Moon",
-  "skchr_helage_3": "Full Moon",
-  "skchr_pallas_1": "Strikes of Victory",
-  "skchr_pallas_2": "Whip of Conviction",
-  "skchr_pallas_3": "Blessing of Heroism",
-  "skcom_withdraw": "Self-Destruct"
+  "skcom_charge_cost[1]": {
+    "name": "Charge α",
+    "op_codes": [
+      "char_123_fang"
+    ],
+    "op_names": [
+      "Fang"
+    ]
+  },
+  "skcom_charge_cost[2]": {
+    "name": "Charge β",
+    "op_codes": [
+      "char_198_blackd",
+      "char_149_scave"
+    ],
+    "op_names": [
+      "Courier",
+      "Scavenger"
+    ]
+  },
+  "skcom_charge_cost[3]": {
+    "name": "Charge γ",
+    "op_codes": [
+      "char_115_headbr",
+      "char_102_texas",
+      "char_349_chiave",
+      "char_112_siege",
+      "char_362_saga"
+    ],
+    "op_names": [
+      "Zima",
+      "Texas",
+      "Chiave",
+      "Siege",
+      "Saga"
+    ]
+  },
+  "skcom_assist_cost[2]": {
+    "name": "Support β",
+    "op_codes": [
+      "char_151_myrtle"
+    ],
+    "op_names": [
+      "Myrtle"
+    ]
+  },
+  "skcom_assist_cost[3]": {
+    "name": "Support γ",
+    "op_codes": [
+      "char_401_elysm"
+    ],
+    "op_names": [
+      "Elysium"
+    ]
+  },
+  "skcom_atk_up[1]": {
+    "name": "ATK Up α",
+    "op_codes": [
+      "char_208_melan",
+      "char_281_popka",
+      "char_211_adnach"
+    ],
+    "op_names": [
+      "Melantha",
+      "Popukar",
+      "Adnachiel"
+    ]
+  },
+  "skcom_atk_up[2]": {
+    "name": "ATK Up β",
+    "op_codes": [
+      "char_141_nights",
+      "char_328_cammou",
+      "char_190_clour",
+      "char_127_estell",
+      "char_260_durnar",
+      "char_183_skgoat"
+    ],
+    "op_names": [
+      "Haze",
+      "Click",
+      "Vermeil",
+      "Estelle",
+      "Dur-nar",
+      "Earthspirit"
+    ]
+  },
+  "skcom_atk_up[3]": {
+    "name": "ATK Up γ",
+    "op_codes": [
+      "char_143_ghost",
+      "char_204_platnm",
+      "char_379_sesa",
+      "char_166_skfire",
+      "char_306_leizi",
+      "char_373_lionhd",
+      "char_218_cuttle",
+      "char_197_poca",
+      "char_213_mostma",
+      "char_293_thorns"
+    ],
+    "op_names": [
+      "Specter",
+      "Platinum",
+      "Sesa",
+      "Skyfire",
+      "Leizi",
+      "Leonhardt",
+      "Andreana",
+      "Rosa",
+      "Mostima",
+      "Thorns"
+    ]
+  },
+  "skcom_def_up[1]": {
+    "name": "DEF Up α",
+    "op_codes": [
+      "char_122_beagle"
+    ],
+    "op_names": [
+      "Beagle"
+    ]
+  },
+  "skcom_def_up[2]": {
+    "name": "DEF Up β",
+    "op_codes": [
+      "char_150_snakek",
+      "char_381_bubble"
+    ],
+    "op_names": [
+      "Cuora",
+      "Bubble"
+    ]
+  },
+  "skcom_def_up[3]": {
+    "name": "DEF Up γ",
+    "op_codes": [
+      "char_325_bison",
+      "char_311_mudrok",
+      "char_220_grani"
+    ],
+    "op_names": [
+      "Bison",
+      "Mudrock",
+      "Grani"
+    ]
+  },
+  "skcom_magic_rage[1]": {
+    "name": "Tactical Chant α",
+    "op_codes": [
+      "char_121_lava"
+    ],
+    "op_names": [
+      "Lava"
+    ]
+  },
+  "skcom_magic_rage[2]": {
+    "name": "Tactical Chant β",
+    "op_codes": [
+      "char_109_fmout",
+      "char_253_greyy"
+    ],
+    "op_names": [
+      "Gitano",
+      "Greyy"
+    ]
+  },
+  "skcom_magic_rage[3]": {
+    "name": "Tactical Chant γ",
+    "op_codes": [
+      "char_002_amiya"
+    ],
+    "op_names": [
+      "Amiya"
+    ]
+  },
+  "skcom_quickattack[1]": {
+    "name": "Swift Strike α",
+    "op_codes": [
+      "char_192_falco",
+      "char_278_orchid"
+    ],
+    "op_names": [
+      "Plume",
+      "Orchid"
+    ]
+  },
+  "skcom_quickattack[3]": {
+    "name": "Swift Strike γ",
+    "op_codes": [
+      "char_261_sddrag",
+      "char_106_franka",
+      "char_346_aosta",
+      "char_222_bpipe",
+      "char_263_skadi"
+    ],
+    "op_names": [
+      "Reed",
+      "Franka",
+      "Aosta",
+      "Bagpipe",
+      "Skadi"
+    ]
+  },
+  "skcom_heal_up[1]": {
+    "name": "Healing Up α",
+    "op_codes": [
+      "char_120_hibisc"
+    ],
+    "op_names": [
+      "Hibiscus"
+    ]
+  },
+  "skcom_heal_up[2]": {
+    "name": "Healing Up β",
+    "op_codes": [
+      "char_298_susuro",
+      "char_181_flower"
+    ],
+    "op_names": [
+      "Sussurro",
+      "Perfumer"
+    ]
+  },
+  "skcom_heal_up[3]": {
+    "name": "Healing Up γ",
+    "op_codes": [
+      "char_128_plosis",
+      "char_108_silent",
+      "char_179_cgbird"
+    ],
+    "op_names": [
+      "Ptilopsis",
+      "Silence",
+      "Nightingale"
+    ]
+  },
+  "skcom_range_extend": {
+    "name": "Healing Range Up",
+    "op_codes": [
+      "char_212_ansel"
+    ],
+    "op_names": [
+      "Ansel"
+    ]
+  },
+  "skcom_heal_self[1]": {
+    "name": "Regeneration α",
+    "op_codes": [
+      "char_209_ardign"
+    ],
+    "op_names": [
+      "Cardigan"
+    ]
+  },
+  "skcom_heal_self[2]": {
+    "name": "Regeneration β",
+    "op_codes": [
+      "char_289_gyuki"
+    ],
+    "op_names": [
+      "Matoimaru"
+    ]
+  },
+  "skcom_heal_self[3]": {
+    "name": "Regeneration γ",
+    "op_codes": [
+      "char_333_sidero"
+    ],
+    "op_names": [
+      "Sideroca"
+    ]
+  },
+  "skchr_wyvern_1": {
+    "name": "Command - Reinforcement",
+    "op_codes": [
+      "char_240_wyvern"
+    ],
+    "op_names": [
+      "Vanilla"
+    ]
+  },
+  "skchr_kroos_1": {
+    "name": "Double Tap - Auto",
+    "op_codes": [
+      "char_124_kroos"
+    ],
+    "op_names": [
+      "Kroos"
+    ]
+  },
+  "skchr_spot_1": {
+    "name": "Secondary Healing Mode",
+    "op_codes": [
+      "char_284_spot"
+    ],
+    "op_names": [
+      "Spot"
+    ]
+  },
+  "skchr_nights_2": {
+    "name": "Crimson Eyes",
+    "op_codes": [
+      "char_141_nights"
+    ],
+    "op_names": [
+      "Haze"
+    ]
+  },
+  "skchr_fmout_2": {
+    "name": "Destiny",
+    "op_codes": [
+      "char_109_fmout"
+    ],
+    "op_names": [
+      "Gitano"
+    ]
+  },
+  "skchr_greyy_2": {
+    "name": "Electrostatic Discharge",
+    "op_codes": [
+      "char_253_greyy"
+    ],
+    "op_names": [
+      "Greyy"
+    ]
+  },
+  "skchr_cammou_2": {
+    "name": "Synchronized Attack",
+    "op_codes": [
+      "char_328_cammou"
+    ],
+    "op_names": [
+      "Click"
+    ]
+  },
+  "skchr_indigo_1": {
+    "name": "Lighthouse Guardian",
+    "op_codes": [
+      "char_469_indigo"
+    ],
+    "op_names": [
+      "Indigo"
+    ]
+  },
+  "skchr_indigo_2": {
+    "name": "Labyrinth of Light",
+    "op_codes": [
+      "char_469_indigo"
+    ],
+    "op_names": [
+      "Indigo"
+    ]
+  },
+  "skchr_jesica_2": {
+    "name": "Smokescreen",
+    "op_codes": [
+      "char_235_jesica"
+    ],
+    "op_names": [
+      "Jessica"
+    ]
+  },
+  "skchr_shotst_1": {
+    "name": "Armor Breaker",
+    "op_codes": [
+      "char_126_shotst"
+    ],
+    "op_names": [
+      "Meteor"
+    ]
+  },
+  "skchr_shotst_2": {
+    "name": "Armor Breaker - Spread",
+    "op_codes": [
+      "char_126_shotst"
+    ],
+    "op_names": [
+      "Meteor"
+    ]
+  },
+  "skchr_clour_2": {
+    "name": "Double Shot",
+    "op_codes": [
+      "char_190_clour"
+    ],
+    "op_names": [
+      "Vermeil"
+    ]
+  },
+  "skchr_mm_1": {
+    "name": "Paralyzing Shell",
+    "op_codes": [
+      "char_133_mm"
+    ],
+    "op_names": [
+      "May"
+    ]
+  },
+  "skchr_mm_2": {
+    "name": "Binding Shock",
+    "op_codes": [
+      "char_133_mm"
+    ],
+    "op_names": [
+      "May"
+    ]
+  },
+  "skchr_yuki_1": {
+    "name": "Shuriken",
+    "op_codes": [
+      "char_118_yuki"
+    ],
+    "op_names": [
+      "Shirayuki"
+    ]
+  },
+  "skchr_yuki_2": {
+    "name": "Fatal Shuriken",
+    "op_codes": [
+      "char_118_yuki"
+    ],
+    "op_names": [
+      "Shirayuki"
+    ]
+  },
+  "skchr_pinecn_1": {
+    "name": "RMA Spikes",
+    "op_codes": [
+      "char_440_pinecn"
+    ],
+    "op_names": [
+      "Pinecone"
+    ]
+  },
+  "skchr_pinecn_2": {
+    "name": "Electrical Overcharge",
+    "op_codes": [
+      "char_440_pinecn"
+    ],
+    "op_names": [
+      "Pinecone"
+    ]
+  },
+  "skchr_glaze_1": {
+    "name": "Snaring Shell",
+    "op_codes": [
+      "char_302_glaze"
+    ],
+    "op_names": [
+      "Ambriel"
+    ]
+  },
+  "skchr_glaze_2": {
+    "name": "Radar Sweep",
+    "op_codes": [
+      "char_302_glaze"
+    ],
+    "op_names": [
+      "Ambriel"
+    ]
+  },
+  "skchr_acdrop_1": {
+    "name": "Fancy Shot",
+    "op_codes": [
+      "char_366_acdrop"
+    ],
+    "op_names": [
+      "Aciddrop"
+    ]
+  },
+  "skchr_acdrop_2": {
+    "name": "Trigger Time",
+    "op_codes": [
+      "char_366_acdrop"
+    ],
+    "op_names": [
+      "Aciddrop"
+    ]
+  },
+  "skchr_blackd_2": {
+    "name": "Command - Defense",
+    "op_codes": [
+      "char_198_blackd"
+    ],
+    "op_names": [
+      "Courier"
+    ]
+  },
+  "skchr_scave_2": {
+    "name": "Command - Attack",
+    "op_codes": [
+      "char_149_scave"
+    ],
+    "op_names": [
+      "Scavenger"
+    ]
+  },
+  "skchr_vigna_2": {
+    "name": "Hammer-On",
+    "op_codes": [
+      "char_290_vigna"
+    ],
+    "op_names": [
+      "Vigna"
+    ]
+  },
+  "skchr_myrtle_2": {
+    "name": "Healing Wings",
+    "op_codes": [
+      "char_151_myrtle"
+    ],
+    "op_names": [
+      "Myrtle"
+    ]
+  },
+  "skchr_bstalk_1": {
+    "name": "Sentinel Command",
+    "op_codes": [
+      "char_452_bstalk"
+    ],
+    "op_names": [
+      "Beanstalk"
+    ]
+  },
+  "skchr_bstalk_2": {
+    "name": "'Everyone Together!'",
+    "op_codes": [
+      "char_452_bstalk"
+    ],
+    "op_names": [
+      "Beanstalk"
+    ]
+  },
+  "skchr_doberm_2": {
+    "name": "Spur",
+    "op_codes": [
+      "char_130_doberm"
+    ],
+    "op_names": [
+      "Dobermann"
+    ]
+  },
+  "skchr_gyuki_2": {
+    "name": "Demonic Power",
+    "op_codes": [
+      "char_289_gyuki"
+    ],
+    "op_names": [
+      "Matoimaru"
+    ]
+  },
+  "skchr_peacok_1": {
+    "name": "Judgment",
+    "op_codes": [
+      "char_159_peacok"
+    ],
+    "op_names": [
+      "Conviction"
+    ]
+  },
+  "skchr_peacok_2": {
+    "name": "Genesis",
+    "op_codes": [
+      "char_159_peacok"
+    ],
+    "op_names": [
+      "Conviction"
+    ]
+  },
+  "skchr_frostl_1": {
+    "name": "Frost Tomahawk",
+    "op_codes": [
+      "char_193_frostl"
+    ],
+    "op_names": [
+      "Frostleaf"
+    ]
+  },
+  "skchr_frostl_2": {
+    "name": "Ice Tomahawk",
+    "op_codes": [
+      "char_193_frostl"
+    ],
+    "op_names": [
+      "Frostleaf"
+    ]
+  },
+  "skchr_spikes_1": {
+    "name": "Just Kidding",
+    "op_codes": [
+      "char_271_spikes"
+    ],
+    "op_names": [
+      "Arene"
+    ]
+  },
+  "skchr_spikes_2": {
+    "name": "Deadly Prank",
+    "op_codes": [
+      "char_271_spikes"
+    ],
+    "op_names": [
+      "Arene"
+    ]
+  },
+  "skchr_estell_2": {
+    "name": "Sacrificial Strike",
+    "op_codes": [
+      "char_127_estell"
+    ],
+    "op_names": [
+      "Estelle"
+    ]
+  },
+  "skchr_frncat_1": {
+    "name": "Scratch",
+    "op_codes": [
+      "char_185_frncat"
+    ],
+    "op_names": [
+      "Mousse"
+    ]
+  },
+  "skchr_frncat_2": {
+    "name": "Fury",
+    "op_codes": [
+      "char_185_frncat"
+    ],
+    "op_names": [
+      "Mousse"
+    ]
+  },
+  "skchr_brownb_1": {
+    "name": "Flexibility",
+    "op_codes": [
+      "char_137_brownb"
+    ],
+    "op_names": [
+      "Beehunter"
+    ]
+  },
+  "skchr_brownb_2": {
+    "name": "Soaring Fists",
+    "op_codes": [
+      "char_137_brownb"
+    ],
+    "op_names": [
+      "Beehunter"
+    ]
+  },
+  "skchr_jaksel_1": {
+    "name": "Grit Those Teeth!",
+    "op_codes": [
+      "char_347_jaksel"
+    ],
+    "op_names": [
+      "Jackie"
+    ]
+  },
+  "skchr_jaksel_2": {
+    "name": "Pay Close Attention!",
+    "op_codes": [
+      "char_347_jaksel"
+    ],
+    "op_names": [
+      "Jackie"
+    ]
+  },
+  "skchr_cutter_1": {
+    "name": "Redshift",
+    "op_codes": [
+      "char_301_cutter"
+    ],
+    "op_names": [
+      "Cutter"
+    ]
+  },
+  "skchr_cutter_2": {
+    "name": "Crimson Crescent",
+    "op_codes": [
+      "char_301_cutter"
+    ],
+    "op_names": [
+      "Cutter"
+    ]
+  },
+  "skchr_utage_1": {
+    "name": "Space Out",
+    "op_codes": [
+      "char_337_utage"
+    ],
+    "op_names": [
+      "Utage"
+    ]
+  },
+  "skchr_utage_2": {
+    "name": "Descending Strike - Earth Splitter",
+    "op_codes": [
+      "char_337_utage"
+    ],
+    "op_names": [
+      "Utage"
+    ]
+  },
+  "skchr_gravel_1": {
+    "name": "Shadow Assault",
+    "op_codes": [
+      "char_237_gravel"
+    ],
+    "op_names": [
+      "Gravel"
+    ]
+  },
+  "skchr_gravel_2": {
+    "name": "Rat Swarm",
+    "op_codes": [
+      "char_237_gravel"
+    ],
+    "op_names": [
+      "Gravel"
+    ]
+  },
+  "skchr_strong_1": {
+    "name": "Shell Splitter",
+    "op_codes": [
+      "char_272_strong"
+    ],
+    "op_names": [
+      "Jaye"
+    ]
+  },
+  "skchr_strong_2": {
+    "name": "Sashimi Platter",
+    "op_codes": [
+      "char_272_strong"
+    ],
+    "op_names": [
+      "Jaye"
+    ]
+  },
+  "skchr_nothin_1": {
+    "name": "Cautious Retreat",
+    "op_codes": [
+      "char_455_nothin"
+    ],
+    "op_names": [
+      "Mr. Nothing"
+    ]
+  },
+  "skchr_nothin_2": {
+    "name": "Wax and Wane",
+    "op_codes": [
+      "char_455_nothin"
+    ],
+    "op_names": [
+      "Mr. Nothing"
+    ]
+  },
+  "skchr_rope_1": {
+    "name": "Hook Shot",
+    "op_codes": [
+      "char_236_rope"
+    ],
+    "op_names": [
+      "Rope"
+    ]
+  },
+  "skchr_rope_2": {
+    "name": "Double Hook",
+    "op_codes": [
+      "char_236_rope"
+    ],
+    "op_names": [
+      "Rope"
+    ]
+  },
+  "skchr_myrrh_1": {
+    "name": "Dual Healing",
+    "op_codes": [
+      "char_117_myrrh"
+    ],
+    "op_names": [
+      "Myrrh"
+    ]
+  },
+  "skchr_myrrh_2": {
+    "name": "Medic Field",
+    "op_codes": [
+      "char_117_myrrh"
+    ],
+    "op_names": [
+      "Myrrh"
+    ]
+  },
+  "skchr_ccheal_1": {
+    "name": "Vitality Restoration",
+    "op_codes": [
+      "char_187_ccheal"
+    ],
+    "op_names": [
+      "Gavial"
+    ]
+  },
+  "skchr_ccheal_2": {
+    "name": "Vitality Restoration - Wide Range",
+    "op_codes": [
+      "char_187_ccheal"
+    ],
+    "op_names": [
+      "Gavial"
+    ]
+  },
+  "skchr_susuro_2": {
+    "name": "Deep Healing",
+    "op_codes": [
+      "char_298_susuro"
+    ],
+    "op_names": [
+      "Sussurro"
+    ]
+  },
+  "skchr_flower_2": {
+    "name": "Fine Blending",
+    "op_codes": [
+      "char_181_flower"
+    ],
+    "op_names": [
+      "Perfumer"
+    ]
+  },
+  "skchr_finlpp_1": {
+    "name": "Healing Waves",
+    "op_codes": [
+      "char_385_finlpp"
+    ],
+    "op_names": [
+      "Purestream"
+    ]
+  },
+  "skchr_finlpp_2": {
+    "name": "Lifespring",
+    "op_codes": [
+      "char_385_finlpp"
+    ],
+    "op_names": [
+      "Purestream"
+    ]
+  },
+  "skchr_plosis_2": {
+    "name": "Enkephalin",
+    "op_codes": [
+      "char_128_plosis"
+    ],
+    "op_names": [
+      "Ptilopsis"
+    ]
+  },
+  "skchr_breeze_1": {
+    "name": "Cluster Therapy",
+    "op_codes": [
+      "char_275_breeze"
+    ],
+    "op_names": [
+      "Breeze"
+    ]
+  },
+  "skchr_breeze_2": {
+    "name": "Widespread Therapy",
+    "op_codes": [
+      "char_275_breeze"
+    ],
+    "op_names": [
+      "Breeze"
+    ]
+  },
+  "skchr_headbr_2": {
+    "name": "Ursus's Roar",
+    "op_codes": [
+      "char_115_headbr"
+    ],
+    "op_names": [
+      "Zima"
+    ]
+  },
+  "skchr_snakek_2": {
+    "name": "Shell Defense",
+    "op_codes": [
+      "char_150_snakek"
+    ],
+    "op_names": [
+      "Cuora"
+    ]
+  },
+  "skchr_bubble_2": {
+    "name": "'Beaten Up'",
+    "op_codes": [
+      "char_381_bubble"
+    ],
+    "op_names": [
+      "Bubble"
+    ]
+  },
+  "skchr_yak_1": {
+    "name": "Stamina Enhancement",
+    "op_codes": [
+      "char_199_yak"
+    ],
+    "op_names": [
+      "Matterhorn"
+    ]
+  },
+  "skchr_yak_2": {
+    "name": "Cold Resistance",
+    "op_codes": [
+      "char_199_yak"
+    ],
+    "op_names": [
+      "Matterhorn"
+    ]
+  },
+  "skchr_sunbr_1": {
+    "name": "Provisions",
+    "op_codes": [
+      "char_196_sunbr"
+    ],
+    "op_names": [
+      "Gummy"
+    ]
+  },
+  "skchr_sunbr_2": {
+    "name": "Cooking",
+    "op_codes": [
+      "char_196_sunbr"
+    ],
+    "op_names": [
+      "Gummy"
+    ]
+  },
+  "skchr_durnar_2": {
+    "name": "Shielded Counterattack",
+    "op_codes": [
+      "char_260_durnar"
+    ],
+    "op_names": [
+      "Dur-nar"
+    ]
+  },
+  "skchr_texas_2": {
+    "name": "Sword Rain",
+    "op_codes": [
+      "char_102_texas"
+    ],
+    "op_names": [
+      "Texas"
+    ]
+  },
+  "skchr_chiave_2": {
+    "name": "Blazing Wire Stripper",
+    "op_codes": [
+      "char_349_chiave"
+    ],
+    "op_names": [
+      "Chiave"
+    ]
+  },
+  "skchr_grani_2": {
+    "name": "Press the Attack!",
+    "op_codes": [
+      "char_220_grani"
+    ],
+    "op_names": [
+      "Grani"
+    ]
+  },
+  "skchr_sddrag_2": {
+    "name": "Soul Spark",
+    "op_codes": [
+      "char_261_sddrag"
+    ],
+    "op_names": [
+      "Reed"
+    ]
+  },
+  "skchr_elysm_2": {
+    "name": "Monitor",
+    "op_codes": [
+      "char_401_elysm"
+    ],
+    "op_names": [
+      "Elysium"
+    ]
+  },
+  "skchr_swire_1": {
+    "name": "Command and Dispatch",
+    "op_codes": [
+      "char_308_swire"
+    ],
+    "op_names": [
+      "Swire"
+    ]
+  },
+  "skchr_swire_2": {
+    "name": "Cooperative Combat",
+    "op_codes": [
+      "char_308_swire"
+    ],
+    "op_names": [
+      "Swire"
+    ]
+  },
+  "skchr_sophia_1": {
+    "name": "Motivational Skills",
+    "op_codes": [
+      "char_265_sophia"
+    ],
+    "op_names": [
+      "Whislash"
+    ]
+  },
+  "skchr_sophia_2": {
+    "name": "Whip Sword",
+    "op_codes": [
+      "char_265_sophia"
+    ],
+    "op_names": [
+      "Whislash"
+    ]
+  },
+  "skchr_franka_2": {
+    "name": "Vorpal Edge",
+    "op_codes": [
+      "char_106_franka"
+    ],
+    "op_names": [
+      "Franka"
+    ]
+  },
+  "skchr_flameb_1": {
+    "name": "Blood Pact",
+    "op_codes": [
+      "char_131_flameb"
+    ],
+    "op_names": [
+      "Flamebringer"
+    ]
+  },
+  "skchr_flameb_2": {
+    "name": "Blade Demon",
+    "op_codes": [
+      "char_131_flameb"
+    ],
+    "op_names": [
+      "Flamebringer"
+    ]
+  },
+  "skchr_aguard_1": {
+    "name": "Drawing Sword",
+    "op_codes": [
+      "char_508_aguard"
+    ],
+    "op_names": [
+      "Sharp"
+    ]
+  },
+  "skchr_tiger_1": {
+    "name": "Armorcrusher",
+    "op_codes": [
+      "char_155_tiger"
+    ],
+    "op_names": [
+      "Indra"
+    ]
+  },
+  "skchr_tiger_2": {
+    "name": "Sundered Soul",
+    "op_codes": [
+      "char_155_tiger"
+    ],
+    "op_names": [
+      "Indra"
+    ]
+  },
+  "skchr_flint_1": {
+    "name": "Relentless",
+    "op_codes": [
+      "char_415_flint"
+    ],
+    "op_names": [
+      "Flint"
+    ]
+  },
+  "skchr_flint_2": {
+    "name": "Display of Might",
+    "op_codes": [
+      "char_415_flint"
+    ],
+    "op_names": [
+      "Flint"
+    ]
+  },
+  "skchr_whitew_1": {
+    "name": "Sundial",
+    "op_codes": [
+      "char_140_whitew"
+    ],
+    "op_names": [
+      "Lappland"
+    ]
+  },
+  "skchr_whitew_2": {
+    "name": "Wolf Spirit",
+    "op_codes": [
+      "char_140_whitew"
+    ],
+    "op_names": [
+      "Lappland"
+    ]
+  },
+  "skchr_ayer_1": {
+    "name": "Shrapnel Burst",
+    "op_codes": [
+      "char_294_ayer"
+    ],
+    "op_names": [
+      "Ayerscarpe"
+    ]
+  },
+  "skchr_ayer_2": {
+    "name": "Activate Phase Blades",
+    "op_codes": [
+      "char_294_ayer"
+    ],
+    "op_names": [
+      "Ayerscarpe"
+    ]
+  },
+  "skchr_bibeak_1": {
+    "name": "Plumage Pins",
+    "op_codes": [
+      "char_252_bibeak"
+    ],
+    "op_names": [
+      "Bibeak"
+    ]
+  },
+  "skchr_bibeak_2": {
+    "name": "Blade Swap",
+    "op_codes": [
+      "char_252_bibeak"
+    ],
+    "op_names": [
+      "Bibeak"
+    ]
+  },
+  "skchr_tachak_1": {
+    "name": "Incendiary Grenade",
+    "op_codes": [
+      "char_459_tachak"
+    ],
+    "op_names": [
+      "Tachanka"
+    ]
+  },
+  "skchr_tachak_2": {
+    "name": "Spray and Pray",
+    "op_codes": [
+      "char_459_tachak"
+    ],
+    "op_names": [
+      "Tachanka"
+    ]
+  },
+  "skchr_ghost_2": {
+    "name": "Bone Fracture",
+    "op_codes": [
+      "char_143_ghost"
+    ],
+    "op_names": [
+      "Specter"
+    ]
+  },
+  "skchr_broca_1": {
+    "name": "Galvanize",
+    "op_codes": [
+      "char_356_broca"
+    ],
+    "op_names": [
+      "Broca"
+    ]
+  },
+  "skchr_broca_2": {
+    "name": "High-Voltage Current",
+    "op_codes": [
+      "char_356_broca"
+    ],
+    "op_names": [
+      "Broca"
+    ]
+  },
+  "skchr_savage_2": {
+    "name": "Precise Blast",
+    "op_codes": [
+      "char_230_savage"
+    ],
+    "op_names": [
+      "Savage"
+    ]
+  },
+  "skchr_astesi_1": {
+    "name": "Astral Protection",
+    "op_codes": [
+      "char_274_astesi"
+    ],
+    "op_names": [
+      "Astesia"
+    ]
+  },
+  "skchr_astesi_2": {
+    "name": "Astral Sword",
+    "op_codes": [
+      "char_274_astesi"
+    ],
+    "op_names": [
+      "Astesia"
+    ]
+  },
+  "skchr_sidero_2": {
+    "name": "Restorative Surge",
+    "op_codes": [
+      "char_333_sidero"
+    ],
+    "op_names": [
+      "Sideroca"
+    ]
+  },
+  "skchr_akafyu_1": {
+    "name": "Nobukage-ryu - Kaminari Gatana no Zei",
+    "op_codes": [
+      "char_475_akafyu"
+    ],
+    "op_names": [
+      "Akafuyu"
+    ]
+  },
+  "skchr_akafyu_2": {
+    "name": "Nobukage-ryu - Juumonji Masaru",
+    "op_codes": [
+      "char_475_akafyu"
+    ],
+    "op_names": [
+      "Akafuyu"
+    ]
+  },
+  "skchr_crow_1": {
+    "name": "Rapid Slashing",
+    "op_codes": [
+      "char_421_crow"
+    ],
+    "op_names": [
+      "La Pluma"
+    ]
+  },
+  "skchr_crow_2": {
+    "name": "Reap",
+    "op_codes": [
+      "char_421_crow"
+    ],
+    "op_names": [
+      "La Pluma"
+    ]
+  },
+  "skchr_takila_1": {
+    "name": "Decisive Action",
+    "op_codes": [
+      "char_486_takila"
+    ],
+    "op_names": [
+      "Tequila"
+    ]
+  },
+  "skchr_takila_2": {
+    "name": "Esoteric Bladework",
+    "op_codes": [
+      "char_486_takila"
+    ],
+    "op_names": [
+      "Tequila"
+    ]
+  },
+  "skchr_bluep_1": {
+    "name": "Twinshot - Auto",
+    "op_codes": [
+      "char_129_bluep"
+    ],
+    "op_names": [
+      "Blue Poison"
+    ]
+  },
+  "skchr_bluep_2": {
+    "name": "Venom Spray",
+    "op_codes": [
+      "char_129_bluep"
+    ],
+    "op_names": [
+      "Blue Poison"
+    ]
+  },
+  "skchr_platnm_2": {
+    "name": "Pegasian Sight",
+    "op_codes": [
+      "char_204_platnm"
+    ],
+    "op_names": [
+      "Platinum"
+    ]
+  },
+  "skchr_swllow_1": {
+    "name": "Flying Feathers",
+    "op_codes": [
+      "char_367_swllow"
+    ],
+    "op_names": [
+      "GreyThroat"
+    ]
+  },
+  "skchr_swllow_2": {
+    "name": "Counterflow",
+    "op_codes": [
+      "char_367_swllow"
+    ],
+    "op_names": [
+      "GreyThroat"
+    ]
+  },
+  "skchr_asnipe_1": {
+    "name": "Spiral Arm",
+    "op_codes": [
+      "char_511_asnipe"
+    ],
+    "op_names": [
+      "Stormeye"
+    ]
+  },
+  "skchr_aprl_1": {
+    "name": "Precise Shooting",
+    "op_codes": [
+      "char_365_aprl"
+    ],
+    "op_names": [
+      "April"
+    ]
+  },
+  "skchr_aprl_2": {
+    "name": "Flexible Camouflage",
+    "op_codes": [
+      "char_365_aprl"
+    ],
+    "op_names": [
+      "April"
+    ]
+  },
+  "skchr_meteo_1": {
+    "name": "Buckshot",
+    "op_codes": [
+      "char_219_meteo"
+    ],
+    "op_names": [
+      "Meteorite"
+    ]
+  },
+  "skchr_meteo_2": {
+    "name": "High-Explosive Shell",
+    "op_codes": [
+      "char_219_meteo"
+    ],
+    "op_names": [
+      "Meteorite"
+    ]
+  },
+  "skchr_sesa_2": {
+    "name": "Delayed Concussive Parts",
+    "op_codes": [
+      "char_379_sesa"
+    ],
+    "op_names": [
+      "Sesa"
+    ]
+  },
+  "skchr_excu_1": {
+    "name": "Muzzle's Elegy",
+    "op_codes": [
+      "char_279_excu"
+    ],
+    "op_names": [
+      "Executor"
+    ]
+  },
+  "skchr_excu_2": {
+    "name": "Final Journey",
+    "op_codes": [
+      "char_279_excu"
+    ],
+    "op_names": [
+      "Executor"
+    ]
+  },
+  "skchr_aosta_2": {
+    "name": "Shadow Nails",
+    "op_codes": [
+      "char_346_aosta"
+    ],
+    "op_names": [
+      "Aosta"
+    ]
+  },
+  "skchr_amiya_2": {
+    "name": "Spirit Burst",
+    "op_codes": [
+      "char_002_amiya"
+    ],
+    "op_names": [
+      "Amiya"
+    ]
+  },
+  "skchr_amiya_3": {
+    "name": "Chimera",
+    "op_codes": [
+      "char_002_amiya"
+    ],
+    "op_names": [
+      "Amiya"
+    ]
+  },
+  "skchr_nightm_1": {
+    "name": "Drain Soul",
+    "op_codes": [
+      "char_164_nightm"
+    ],
+    "op_names": [
+      "Nightmare"
+    ]
+  },
+  "skchr_nightm_2": {
+    "name": "Night Phantom",
+    "op_codes": [
+      "char_164_nightm"
+    ],
+    "op_names": [
+      "Nightmare"
+    ]
+  },
+  "skchr_absin_1": {
+    "name": "Enforcement Mode",
+    "op_codes": [
+      "char_405_absin"
+    ],
+    "op_names": [
+      "Absinthe"
+    ]
+  },
+  "skchr_absin_2": {
+    "name": "Ultimatum",
+    "op_codes": [
+      "char_405_absin"
+    ],
+    "op_names": [
+      "Absinthe"
+    ]
+  },
+  "skchr_tomimi_1": {
+    "name": "Tribal Techniques",
+    "op_codes": [
+      "char_411_tomimi"
+    ],
+    "op_names": [
+      "Tomimi"
+    ]
+  },
+  "skchr_tomimi_2": {
+    "name": "Gavial's Protection Plan",
+    "op_codes": [
+      "char_411_tomimi"
+    ],
+    "op_names": [
+      "Tomimi"
+    ]
+  },
+  "skchr_skfire_2": {
+    "name": "Fire of Heaven",
+    "op_codes": [
+      "char_166_skfire"
+    ],
+    "op_names": [
+      "Skyfire"
+    ]
+  },
+  "skchr_acast_1": {
+    "name": "'All For Me'",
+    "op_codes": [
+      "char_509_acast"
+    ],
+    "op_names": [
+      "Pith"
+    ]
+  },
+  "skchr_leizi_2": {
+    "name": "Thunderclap",
+    "op_codes": [
+      "char_306_leizi"
+    ],
+    "op_names": [
+      "Leizi"
+    ]
+  },
+  "skchr_beewax_1": {
+    "name": "Growing Sandstorm",
+    "op_codes": [
+      "char_344_beewax"
+    ],
+    "op_names": [
+      "Beeswax"
+    ]
+  },
+  "skchr_beewax_2": {
+    "name": "Guardian Obelisk",
+    "op_codes": [
+      "char_344_beewax"
+    ],
+    "op_names": [
+      "Beeswax"
+    ]
+  },
+  "skchr_mint_1": {
+    "name": "Wind Whispers",
+    "op_codes": [
+      "char_388_mint"
+    ],
+    "op_names": [
+      "Mint"
+    ]
+  },
+  "skchr_mint_2": {
+    "name": "Swirling Vortex",
+    "op_codes": [
+      "char_388_mint"
+    ],
+    "op_names": [
+      "Mint"
+    ]
+  },
+  "skchr_iris_1": {
+    "name": "Fairytale Guardian",
+    "op_codes": [
+      "char_338_iris"
+    ],
+    "op_names": [
+      "Iris"
+    ]
+  },
+  "skchr_iris_2": {
+    "name": "Dreamland's Cradle",
+    "op_codes": [
+      "char_338_iris"
+    ],
+    "op_names": [
+      "Iris"
+    ]
+  },
+  "skchr_lionhd_2": {
+    "name": "Deconstruct and Detonate",
+    "op_codes": [
+      "char_373_lionhd"
+    ],
+    "op_names": [
+      "Leonhardt"
+    ]
+  },
+  "skchr_lava2_1": {
+    "name": "Flame Quenched Dagger",
+    "op_codes": [
+      "char_1011_lava2"
+    ],
+    "op_names": [
+      "Lava the Purgatory"
+    ]
+  },
+  "skchr_lava2_2": {
+    "name": "Ring of Hellfire",
+    "op_codes": [
+      "char_1011_lava2"
+    ],
+    "op_names": [
+      "Lava the Purgatory"
+    ]
+  },
+  "skchr_otter_1": {
+    "name": "Bionic Device",
+    "op_codes": [
+      "char_242_otter"
+    ],
+    "op_names": [
+      "Mayer"
+    ]
+  },
+  "skchr_otter_2": {
+    "name": "Detonate and Recycle",
+    "op_codes": [
+      "char_242_otter"
+    ],
+    "op_names": [
+      "Mayer"
+    ]
+  },
+  "skchr_folivo_1": {
+    "name": "Protective Camouflage",
+    "op_codes": [
+      "char_336_folivo"
+    ],
+    "op_names": [
+      "Scene"
+    ]
+  },
+  "skchr_folivo_2": {
+    "name": "Panoramic Overload",
+    "op_codes": [
+      "char_336_folivo"
+    ],
+    "op_names": [
+      "Scene"
+    ]
+  },
+  "skchr_silent_2": {
+    "name": "Medical Drone",
+    "op_codes": [
+      "char_108_silent"
+    ],
+    "op_names": [
+      "Silence"
+    ]
+  },
+  "skchr_bldsk_1": {
+    "name": "Emergency Triage",
+    "op_codes": [
+      "char_171_bldsk"
+    ],
+    "op_names": [
+      "Warfarin"
+    ]
+  },
+  "skchr_bldsk_2": {
+    "name": "Unstable Plasma",
+    "op_codes": [
+      "char_171_bldsk"
+    ],
+    "op_names": [
+      "Warfarin"
+    ]
+  },
+  "skchr_folnic_1": {
+    "name": "Max-Dosage Infusion",
+    "op_codes": [
+      "char_345_folnic"
+    ],
+    "op_names": [
+      "Folinic"
+    ]
+  },
+  "skchr_folnic_2": {
+    "name": "Compound Drug Shell",
+    "op_codes": [
+      "char_345_folnic"
+    ],
+    "op_names": [
+      "Folinic"
+    ]
+  },
+  "skchr_tuye_1": {
+    "name": "Aqua Loop",
+    "op_codes": [
+      "char_402_tuye"
+    ],
+    "op_names": [
+      "Tuye"
+    ]
+  },
+  "skchr_tuye_2": {
+    "name": "Cardiac Stimulant",
+    "op_codes": [
+      "char_402_tuye"
+    ],
+    "op_names": [
+      "Tuye"
+    ]
+  },
+  "skchr_amedic_1": {
+    "name": "Apocalyptic Scene",
+    "op_codes": [
+      "char_510_amedic"
+    ],
+    "op_names": [
+      "Touch"
+    ]
+  },
+  "skchr_ceylon_1": {
+    "name": "Concentrated Hydrotherapy",
+    "op_codes": [
+      "char_348_ceylon"
+    ],
+    "op_names": [
+      "Ceylon"
+    ]
+  },
+  "skchr_ceylon_2": {
+    "name": "Water Blessing",
+    "op_codes": [
+      "char_348_ceylon"
+    ],
+    "op_names": [
+      "Ceylon"
+    ]
+  },
+  "skchr_whispr_1": {
+    "name": "Oriented Diagnosis",
+    "op_codes": [
+      "char_436_whispr"
+    ],
+    "op_names": [
+      "Whisperain"
+    ]
+  },
+  "skchr_whispr_2": {
+    "name": "Pain Suppression",
+    "op_codes": [
+      "char_436_whispr"
+    ],
+    "op_names": [
+      "Whisperain"
+    ]
+  },
+  "skchr_deepcl_1": {
+    "name": "Shadow Tentacle",
+    "op_codes": [
+      "char_110_deepcl"
+    ],
+    "op_names": [
+      "Deepcolor"
+    ]
+  },
+  "skchr_deepcl_2": {
+    "name": "Visual Trap",
+    "op_codes": [
+      "char_110_deepcl"
+    ],
+    "op_names": [
+      "Deepcolor"
+    ]
+  },
+  "skchr_skgoat_2": {
+    "name": "Quicksand Conversion",
+    "op_codes": [
+      "char_183_skgoat"
+    ],
+    "op_names": [
+      "Earthspirit"
+    ]
+  },
+  "skchr_podego_1": {
+    "name": "Aromatherapy",
+    "op_codes": [
+      "char_258_podego"
+    ],
+    "op_names": [
+      "Podenco"
+    ]
+  },
+  "skchr_podego_2": {
+    "name": "Spread Spores",
+    "op_codes": [
+      "char_258_podego"
+    ],
+    "op_names": [
+      "Podenco"
+    ]
+  },
+  "skchr_ethan_1": {
+    "name": "Fancy Maneuvers",
+    "op_codes": [
+      "char_355_ethan"
+    ],
+    "op_names": [
+      "Ethan"
+    ]
+  },
+  "skchr_ethan_2": {
+    "name": "Suspended Cross",
+    "op_codes": [
+      "char_355_ethan"
+    ],
+    "op_names": [
+      "Ethan"
+    ]
+  },
+  "skchr_sqrrel_1": {
+    "name": "Steam Pump",
+    "op_codes": [
+      "char_277_sqrrel"
+    ],
+    "op_names": [
+      "Shaw"
+    ]
+  },
+  "skchr_sqrrel_2": {
+    "name": "High-Pressure Water Cannon",
+    "op_codes": [
+      "char_277_sqrrel"
+    ],
+    "op_names": [
+      "Shaw"
+    ]
+  },
+  "skchr_nearl_1": {
+    "name": "First Aid",
+    "op_codes": [
+      "char_148_nearl"
+    ],
+    "op_names": [
+      "Nearl"
+    ]
+  },
+  "skchr_nearl_2": {
+    "name": "First Aid Mode",
+    "op_codes": [
+      "char_148_nearl"
+    ],
+    "op_names": [
+      "Nearl"
+    ]
+  },
+  "skchr_hmau_1": {
+    "name": "Treatment Countermeasure",
+    "op_codes": [
+      "char_226_hmau"
+    ],
+    "op_names": [
+      "Hung"
+    ]
+  },
+  "skchr_hmau_2": {
+    "name": "Medical Mode Countermeasure",
+    "op_codes": [
+      "char_226_hmau"
+    ],
+    "op_names": [
+      "Hung"
+    ]
+  },
+  "skchr_red_1": {
+    "name": "Execution Mode",
+    "op_codes": [
+      "char_144_red"
+    ],
+    "op_names": [
+      "Projekt Red"
+    ]
+  },
+  "skchr_red_2": {
+    "name": "Wolfpack",
+    "op_codes": [
+      "char_144_red"
+    ],
+    "op_names": [
+      "Projekt Red"
+    ]
+  },
+  "skchr_waaifu_1": {
+    "name": "One-inch Punch",
+    "op_codes": [
+      "char_243_waaifu"
+    ],
+    "op_names": [
+      "Waai Fu"
+    ]
+  },
+  "skchr_waaifu_2": {
+    "name": "Seven-styles Kick",
+    "op_codes": [
+      "char_243_waaifu"
+    ],
+    "op_names": [
+      "Waai Fu"
+    ]
+  },
+  "skchr_kafka_1": {
+    "name": "Cube of Absurdism",
+    "op_codes": [
+      "char_214_kafka"
+    ],
+    "op_names": [
+      "Kafka"
+    ]
+  },
+  "skchr_kafka_2": {
+    "name": "Shears of Surrealism",
+    "op_codes": [
+      "char_214_kafka"
+    ],
+    "op_names": [
+      "Kafka"
+    ]
+  },
+  "skchr_liskam_1": {
+    "name": "Charged Defense",
+    "op_codes": [
+      "char_107_liskam"
+    ],
+    "op_names": [
+      "Liskarm"
+    ]
+  },
+  "skchr_liskam_2": {
+    "name": "Counter Arc",
+    "op_codes": [
+      "char_107_liskam"
+    ],
+    "op_names": [
+      "Liskarm"
+    ]
+  },
+  "skchr_moeshd_1": {
+    "name": "Auto Defense",
+    "op_codes": [
+      "char_201_moeshd"
+    ],
+    "op_names": [
+      "Croissant"
+    ]
+  },
+  "skchr_moeshd_2": {
+    "name": "Magnetic Hammer",
+    "op_codes": [
+      "char_201_moeshd"
+    ],
+    "op_names": [
+      "Croissant"
+    ]
+  },
+  "skchr_bison_2": {
+    "name": "Intensified Defense",
+    "op_codes": [
+      "char_325_bison"
+    ],
+    "op_names": [
+      "Bison"
+    ]
+  },
+  "skchr_hpsts_1": {
+    "name": "Guardian Mode",
+    "op_codes": [
+      "char_163_hpsts"
+    ],
+    "op_names": [
+      "Vulcan"
+    ]
+  },
+  "skchr_hpsts_2": {
+    "name": "Combat Mode",
+    "op_codes": [
+      "char_163_hpsts"
+    ],
+    "op_names": [
+      "Vulcan"
+    ]
+  },
+  "skchr_asbest_1": {
+    "name": "Resilient Mode",
+    "op_codes": [
+      "char_378_asbest"
+    ],
+    "op_names": [
+      "Asbestos"
+    ]
+  },
+  "skchr_asbest_2": {
+    "name": "Thermal Power Mode",
+    "op_codes": [
+      "char_378_asbest"
+    ],
+    "op_names": [
+      "Asbestos"
+    ]
+  },
+  "skchr_blitz_1": {
+    "name": "Flash Shield",
+    "op_codes": [
+      "char_457_blitz"
+    ],
+    "op_names": [
+      "Blitz"
+    ]
+  },
+  "skchr_blitz_2": {
+    "name": "Shield Bash",
+    "op_codes": [
+      "char_457_blitz"
+    ],
+    "op_names": [
+      "Blitz"
+    ]
+  },
+  "skchr_zebra_1": {
+    "name": "Emergency Camouflage",
+    "op_codes": [
+      "char_304_zebra"
+    ],
+    "op_names": [
+      "Heavyrain"
+    ]
+  },
+  "skchr_zebra_2": {
+    "name": "Group Camouflage",
+    "op_codes": [
+      "char_304_zebra"
+    ],
+    "op_names": [
+      "Heavyrain"
+    ]
+  },
+  "skchr_prove_1": {
+    "name": "Wolf's Eye",
+    "op_codes": [
+      "char_145_prove"
+    ],
+    "op_names": [
+      "Provence"
+    ]
+  },
+  "skchr_prove_2": {
+    "name": "Prey Seeker",
+    "op_codes": [
+      "char_145_prove"
+    ],
+    "op_names": [
+      "Provence"
+    ]
+  },
+  "skchr_milu_1": {
+    "name": "Camouflage",
+    "op_codes": [
+      "char_158_milu"
+    ],
+    "op_names": [
+      "Firewatch"
+    ]
+  },
+  "skchr_milu_2": {
+    "name": "Tactical Transceiver",
+    "op_codes": [
+      "char_158_milu"
+    ],
+    "op_names": [
+      "Firewatch"
+    ]
+  },
+  "skchr_cuttle_2": {
+    "name": "Interdictive Sniping Tactics",
+    "op_codes": [
+      "char_218_cuttle"
+    ],
+    "op_names": [
+      "Andreana"
+    ]
+  },
+  "skchr_toddi_1": {
+    "name": "Signal Arrow",
+    "op_codes": [
+      "char_363_toddi"
+    ],
+    "op_names": [
+      "Toddifons"
+    ]
+  },
+  "skchr_toddi_2": {
+    "name": "Portable Fortcracker Arrows",
+    "op_codes": [
+      "char_363_toddi"
+    ],
+    "op_names": [
+      "Toddifons"
+    ]
+  },
+  "skchr_slchan_1": {
+    "name": "Chain Hook",
+    "op_codes": [
+      "char_173_slchan"
+    ],
+    "op_names": [
+      "Cliffheart"
+    ]
+  },
+  "skchr_slchan_2": {
+    "name": "Binding Chains",
+    "op_codes": [
+      "char_173_slchan"
+    ],
+    "op_names": [
+      "Cliffheart"
+    ]
+  },
+  "skchr_snsant_1": {
+    "name": "Barbed Clawhook",
+    "op_codes": [
+      "char_383_snsant"
+    ],
+    "op_names": [
+      "Snowsant"
+    ]
+  },
+  "skchr_snsant_2": {
+    "name": "Telescoping Electric Net",
+    "op_codes": [
+      "char_383_snsant"
+    ],
+    "op_names": [
+      "Snowsant"
+    ]
+  },
+  "skchr_slbell_1": {
+    "name": "Echolocation",
+    "op_codes": [
+      "char_174_slbell"
+    ],
+    "op_names": [
+      "Pramanix"
+    ]
+  },
+  "skchr_slbell_2": {
+    "name": "Natural Deterrent",
+    "op_codes": [
+      "char_174_slbell"
+    ],
+    "op_names": [
+      "Pramanix"
+    ]
+  },
+  "skchr_vodfox_1": {
+    "name": "Malediction",
+    "op_codes": [
+      "char_254_vodfox"
+    ],
+    "op_names": [
+      "Shamare"
+    ]
+  },
+  "skchr_vodfox_2": {
+    "name": "Cursed Doll",
+    "op_codes": [
+      "char_254_vodfox"
+    ],
+    "op_names": [
+      "Shamare"
+    ]
+  },
+  "skchr_glassb_1": {
+    "name": "Concentration",
+    "op_codes": [
+      "char_195_glassb"
+    ],
+    "op_names": [
+      "Istina"
+    ]
+  },
+  "skchr_glassb_2": {
+    "name": "Literature Storm",
+    "op_codes": [
+      "char_195_glassb"
+    ],
+    "op_names": [
+      "Istina"
+    ]
+  },
+  "skchr_glacus_1": {
+    "name": "Binary Reload",
+    "op_codes": [
+      "char_326_glacus"
+    ],
+    "op_names": [
+      "Glaucus"
+    ]
+  },
+  "skchr_glacus_2": {
+    "name": "Counter EMP",
+    "op_codes": [
+      "char_326_glacus"
+    ],
+    "op_names": [
+      "Glaucus"
+    ]
+  },
+  "skchr_sora_1": {
+    "name": "Hymn of Respite",
+    "op_codes": [
+      "char_101_sora"
+    ],
+    "op_names": [
+      "Sora"
+    ]
+  },
+  "skchr_sora_2": {
+    "name": "Hymn of Battle",
+    "op_codes": [
+      "char_101_sora"
+    ],
+    "op_names": [
+      "Sora"
+    ]
+  },
+  "skchr_tknogi_1": {
+    "name": "Without a Trace",
+    "op_codes": [
+      "char_343_tknogi"
+    ],
+    "op_names": [
+      "Tsukinogi"
+    ]
+  },
+  "skchr_tknogi_2": {
+    "name": "Forest's Embrace",
+    "op_codes": [
+      "char_343_tknogi"
+    ],
+    "op_names": [
+      "Tsukinogi"
+    ]
+  },
+  "skchr_mantic_1": {
+    "name": "Scorpion Venom",
+    "op_codes": [
+      "char_215_mantic"
+    ],
+    "op_names": [
+      "Manticore"
+    ]
+  },
+  "skchr_mantic_2": {
+    "name": "Toxic Overload",
+    "op_codes": [
+      "char_215_mantic"
+    ],
+    "op_names": [
+      "Manticore"
+    ]
+  },
+  "skchr_kirara_1": {
+    "name": "Anchor Strike",
+    "op_codes": [
+      "char_478_kirara"
+    ],
+    "op_names": [
+      "Kirara"
+    ]
+  },
+  "skchr_kirara_2": {
+    "name": "Anchor Point Snap",
+    "op_codes": [
+      "char_478_kirara"
+    ],
+    "op_names": [
+      "Kirara"
+    ]
+  },
+  "skchr_panda_1": {
+    "name": "Raging Iron Fist",
+    "op_codes": [
+      "char_241_panda"
+    ],
+    "op_names": [
+      "FEater"
+    ]
+  },
+  "skchr_panda_2": {
+    "name": "Destructive Fist",
+    "op_codes": [
+      "char_241_panda"
+    ],
+    "op_names": [
+      "FEater"
+    ]
+  },
+  "skchr_robin_1": {
+    "name": "Binding 'Clip'",
+    "op_codes": [
+      "char_451_robin"
+    ],
+    "op_names": [
+      "Robin"
+    ]
+  },
+  "skchr_robin_2": {
+    "name": "Launching 'Clip'",
+    "op_codes": [
+      "char_451_robin"
+    ],
+    "op_names": [
+      "Robin"
+    ]
+  },
+  "skchr_rfrost_1": {
+    "name": "Trap Deployment",
+    "op_codes": [
+      "char_458_rfrost"
+    ],
+    "op_names": [
+      "Frost"
+    ]
+  },
+  "skchr_rfrost_2": {
+    "name": "Incapacitated Prey",
+    "op_codes": [
+      "char_458_rfrost"
+    ],
+    "op_names": [
+      "Frost"
+    ]
+  },
+  "skchr_bena_1": {
+    "name": "Fervent Trimming",
+    "op_codes": [
+      "char_369_bena"
+    ],
+    "op_names": [
+      "Bena"
+    ]
+  },
+  "skchr_bena_2": {
+    "name": "Rapid Trimming",
+    "op_codes": [
+      "char_369_bena"
+    ],
+    "op_names": [
+      "Bena"
+    ]
+  },
+  "skchr_angel_1": {
+    "name": "Charging Mode",
+    "op_codes": [
+      "char_103_angel"
+    ],
+    "op_names": [
+      "Exusiai"
+    ]
+  },
+  "skchr_angel_2": {
+    "name": "Shooting Mode",
+    "op_codes": [
+      "char_103_angel"
+    ],
+    "op_names": [
+      "Exusiai"
+    ]
+  },
+  "skchr_angel_3": {
+    "name": "Overloading Mode",
+    "op_codes": [
+      "char_103_angel"
+    ],
+    "op_names": [
+      "Exusiai"
+    ]
+  },
+  "skchr_archet_1": {
+    "name": "Dispersing Arrows",
+    "op_codes": [
+      "char_332_archet"
+    ],
+    "op_names": [
+      "Archetto"
+    ]
+  },
+  "skchr_archet_2": {
+    "name": "Pursuing Arrows",
+    "op_codes": [
+      "char_332_archet"
+    ],
+    "op_names": [
+      "Archetto"
+    ]
+  },
+  "skchr_archet_3": {
+    "name": "Thundering Arrows",
+    "op_codes": [
+      "char_332_archet"
+    ],
+    "op_names": [
+      "Archetto"
+    ]
+  },
+  "skchr_ash_1": {
+    "name": "Supporting Fire",
+    "op_codes": [
+      "char_456_ash"
+    ],
+    "op_names": [
+      "Ash"
+    ]
+  },
+  "skchr_ash_2": {
+    "name": "Assault Tactics",
+    "op_codes": [
+      "char_456_ash"
+    ],
+    "op_names": [
+      "Ash"
+    ]
+  },
+  "skchr_ash_3": {
+    "name": "Breaching Rounds",
+    "op_codes": [
+      "char_456_ash"
+    ],
+    "op_names": [
+      "Ash"
+    ]
+  },
+  "skchr_shwaz_1": {
+    "name": "Charged Shot",
+    "op_codes": [
+      "char_340_shwaz"
+    ],
+    "op_names": [
+      "Schwarz"
+    ]
+  },
+  "skchr_shwaz_2": {
+    "name": "Sharp Eye",
+    "op_codes": [
+      "char_340_shwaz"
+    ],
+    "op_names": [
+      "Schwarz"
+    ]
+  },
+  "skchr_shwaz_3": {
+    "name": "Final Tactics",
+    "op_codes": [
+      "char_340_shwaz"
+    ],
+    "op_names": [
+      "Schwarz"
+    ]
+  },
+  "skchr_cqbw_1": {
+    "name": "King of Hearts",
+    "op_codes": [
+      "char_113_cqbw"
+    ],
+    "op_names": [
+      "W"
+    ]
+  },
+  "skchr_cqbw_2": {
+    "name": "Jack in the Box",
+    "op_codes": [
+      "char_113_cqbw"
+    ],
+    "op_names": [
+      "W"
+    ]
+  },
+  "skchr_cqbw_3": {
+    "name": "D12",
+    "op_codes": [
+      "char_113_cqbw"
+    ],
+    "op_names": [
+      "W"
+    ]
+  },
+  "skchr_poca_2": {
+    "name": "Split Shot",
+    "op_codes": [
+      "char_197_poca"
+    ],
+    "op_names": [
+      "Rosa"
+    ]
+  },
+  "skchr_poca_3": {
+    "name": "Avalanche Breaker",
+    "op_codes": [
+      "char_197_poca"
+    ],
+    "op_names": [
+      "Rosa"
+    ]
+  },
+  "skchr_rosmon_1": {
+    "name": "Expanded Cognition",
+    "op_codes": [
+      "char_391_rosmon"
+    ],
+    "op_names": [
+      "Rosmontis"
+    ]
+  },
+  "skchr_rosmon_2": {
+    "name": "Nociceptor Inhibition",
+    "op_codes": [
+      "char_391_rosmon"
+    ],
+    "op_names": [
+      "Rosmontis"
+    ]
+  },
+  "skchr_rosmon_3": {
+    "name": "'As You Wish'",
+    "op_codes": [
+      "char_391_rosmon"
+    ],
+    "op_names": [
+      "Rosmontis"
+    ]
+  },
+  "skchr_chen2_1": {
+    "name": "High-Pressure Splash",
+    "op_codes": [
+      "char_1013_chen2"
+    ],
+    "op_names": [
+      "Ch'en the Holungday"
+    ]
+  },
+  "skchr_chen2_2": {
+    "name": "'Night of Violet'",
+    "op_codes": [
+      "char_1013_chen2"
+    ],
+    "op_names": [
+      "Ch'en the Holungday"
+    ]
+  },
+  "skchr_chen2_3": {
+    "name": "'Holiday Storm'",
+    "op_codes": [
+      "char_1013_chen2"
+    ],
+    "op_names": [
+      "Ch'en the Holungday"
+    ]
+  },
+  "skchr_siege_2": {
+    "name": "Aerial Hammer",
+    "op_codes": [
+      "char_112_siege"
+    ],
+    "op_names": [
+      "Siege"
+    ]
+  },
+  "skchr_siege_3": {
+    "name": "Skull Breaker",
+    "op_codes": [
+      "char_112_siege"
+    ],
+    "op_names": [
+      "Siege"
+    ]
+  },
+  "skchr_saga_2": {
+    "name": "Cleansing Evil",
+    "op_codes": [
+      "char_362_saga"
+    ],
+    "op_names": [
+      "Saga"
+    ]
+  },
+  "skchr_saga_3": {
+    "name": "Fierce Glare",
+    "op_codes": [
+      "char_362_saga"
+    ],
+    "op_names": [
+      "Saga"
+    ]
+  },
+  "skchr_bpipe_2": {
+    "name": "High-Impact Assault",
+    "op_codes": [
+      "char_222_bpipe"
+    ],
+    "op_names": [
+      "Bagpipe"
+    ]
+  },
+  "skchr_bpipe_3": {
+    "name": "Locked Breech Burst",
+    "op_codes": [
+      "char_222_bpipe"
+    ],
+    "op_names": [
+      "Bagpipe"
+    ]
+  },
+  "skchr_ifrit_1": {
+    "name": "Fanaticism",
+    "op_codes": [
+      "char_134_ifrit"
+    ],
+    "op_names": [
+      "Ifrit"
+    ]
+  },
+  "skchr_ifrit_2": {
+    "name": "Pyroclasm",
+    "op_codes": [
+      "char_134_ifrit"
+    ],
+    "op_names": [
+      "Ifrit"
+    ]
+  },
+  "skchr_ifrit_3": {
+    "name": "Scorched Earth",
+    "op_codes": [
+      "char_134_ifrit"
+    ],
+    "op_names": [
+      "Ifrit"
+    ]
+  },
+  "skchr_mostma_2": {
+    "name": "Lock of Shattered Time",
+    "op_codes": [
+      "char_213_mostma"
+    ],
+    "op_names": [
+      "Mostima"
+    ]
+  },
+  "skchr_mostma_3": {
+    "name": "Key of Chronology",
+    "op_codes": [
+      "char_213_mostma"
+    ],
+    "op_names": [
+      "Mostima"
+    ]
+  },
+  "skchr_dusk_1": {
+    "name": "Transcendental Stroke",
+    "op_codes": [
+      "char_2015_dusk"
+    ],
+    "op_names": [
+      "Dusk"
+    ]
+  },
+  "skchr_dusk_2": {
+    "name": "Flowing Ink",
+    "op_codes": [
+      "char_2015_dusk"
+    ],
+    "op_names": [
+      "Dusk"
+    ]
+  },
+  "skchr_dusk_3": {
+    "name": "Image over Form",
+    "op_codes": [
+      "char_2015_dusk"
+    ],
+    "op_names": [
+      "Dusk"
+    ]
+  },
+  "skchr_amgoat_1": {
+    "name": "Duetto",
+    "op_codes": [
+      "char_180_amgoat"
+    ],
+    "op_names": [
+      "Eyjafjalla"
+    ]
+  },
+  "skchr_amgoat_2": {
+    "name": "Ignition",
+    "op_codes": [
+      "char_180_amgoat"
+    ],
+    "op_names": [
+      "Eyjafjalla"
+    ]
+  },
+  "skchr_amgoat_3": {
+    "name": "Volcano",
+    "op_codes": [
+      "char_180_amgoat"
+    ],
+    "op_names": [
+      "Eyjafjalla"
+    ]
+  },
+  "skchr_cerber_1": {
+    "name": "'Really Cold Axe'",
+    "op_codes": [
+      "char_2013_cerber"
+    ],
+    "op_names": [
+      "Ceobe"
+    ]
+  },
+  "skchr_cerber_2": {
+    "name": "'Really Hot Knives'",
+    "op_codes": [
+      "char_2013_cerber"
+    ],
+    "op_names": [
+      "Ceobe"
+    ]
+  },
+  "skchr_cerber_3": {
+    "name": "'Really Heavy Spear'",
+    "op_codes": [
+      "char_2013_cerber"
+    ],
+    "op_names": [
+      "Ceobe"
+    ]
+  },
+  "skchr_pasngr_1": {
+    "name": "Touch of Static",
+    "op_codes": [
+      "char_472_pasngr"
+    ],
+    "op_names": [
+      "Passenger"
+    ]
+  },
+  "skchr_pasngr_2": {
+    "name": "Focus Command",
+    "op_codes": [
+      "char_472_pasngr"
+    ],
+    "op_names": [
+      "Passenger"
+    ]
+  },
+  "skchr_pasngr_3": {
+    "name": "Glorious Shards",
+    "op_codes": [
+      "char_472_pasngr"
+    ],
+    "op_names": [
+      "Passenger"
+    ]
+  },
+  "skchr_billro_1": {
+    "name": "Sandstorm Guardian",
+    "op_codes": [
+      "char_426_billro"
+    ],
+    "op_names": [
+      "Carnelian"
+    ]
+  },
+  "skchr_billro_2": {
+    "name": "Sand Fetters",
+    "op_codes": [
+      "char_426_billro"
+    ],
+    "op_names": [
+      "Carnelian"
+    ]
+  },
+  "skchr_billro_3": {
+    "name": "Mark of Gluttony",
+    "op_codes": [
+      "char_426_billro"
+    ],
+    "op_names": [
+      "Carnelian"
+    ]
+  },
+  "skchr_aglina_1": {
+    "name": "Arcane Staff - Quick Charge Mode",
+    "op_codes": [
+      "char_291_aglina"
+    ],
+    "op_names": [
+      "Angelina"
+    ]
+  },
+  "skchr_aglina_2": {
+    "name": "Arcane Staff - Particle Mode",
+    "op_codes": [
+      "char_291_aglina"
+    ],
+    "op_names": [
+      "Angelina"
+    ]
+  },
+  "skchr_aglina_3": {
+    "name": "Arcane Staff - Anti-Gravity Mode",
+    "op_codes": [
+      "char_291_aglina"
+    ],
+    "op_names": [
+      "Angelina"
+    ]
+  },
+  "skchr_lisa_1": {
+    "name": "I'll Do My Best",
+    "op_codes": [
+      "char_358_lisa"
+    ],
+    "op_names": [
+      "Suzuran"
+    ]
+  },
+  "skchr_lisa_2": {
+    "name": "Childhood Frolic",
+    "op_codes": [
+      "char_358_lisa"
+    ],
+    "op_names": [
+      "Suzuran"
+    ]
+  },
+  "skchr_lisa_3": {
+    "name": "Foxfire Haze",
+    "op_codes": [
+      "char_358_lisa"
+    ],
+    "op_names": [
+      "Suzuran"
+    ]
+  },
+  "skchr_mgllan_1": {
+    "name": "High-Efficiency Freezing Module",
+    "op_codes": [
+      "char_248_mgllan"
+    ],
+    "op_names": [
+      "Magallan"
+    ]
+  },
+  "skchr_mgllan_2": {
+    "name": "Laser Mining Module",
+    "op_codes": [
+      "char_248_mgllan"
+    ],
+    "op_names": [
+      "Magallan"
+    ]
+  },
+  "skchr_mgllan_3": {
+    "name": "Armed Combat Module",
+    "op_codes": [
+      "char_248_mgllan"
+    ],
+    "op_names": [
+      "Magallan"
+    ]
+  },
+  "skchr_skadi2_1": {
+    "name": "Chant of Returning by Varied Paths",
+    "op_codes": [
+      "char_1012_skadi2"
+    ],
+    "op_names": [
+      "Skadi the Corrupting Heart"
+    ]
+  },
+  "skchr_skadi2_2": {
+    "name": "Wish of Burial Beyond the Light",
+    "op_codes": [
+      "char_1012_skadi2"
+    ],
+    "op_names": [
+      "Skadi the Corrupting Heart"
+    ]
+  },
+  "skchr_skadi2_3": {
+    "name": "'The Tide Surges, The Tide Recedes'",
+    "op_codes": [
+      "char_1012_skadi2"
+    ],
+    "op_names": [
+      "Skadi the Corrupting Heart"
+    ]
+  },
+  "skchr_phatom_1": {
+    "name": "Phantom of the Night",
+    "op_codes": [
+      "char_250_phatom"
+    ],
+    "op_names": [
+      "Phantom"
+    ]
+  },
+  "skchr_phatom_2": {
+    "name": "Bloody Opus",
+    "op_codes": [
+      "char_250_phatom"
+    ],
+    "op_names": [
+      "Phantom"
+    ]
+  },
+  "skchr_phatom_3": {
+    "name": "Night Raid",
+    "op_codes": [
+      "char_250_phatom"
+    ],
+    "op_names": [
+      "Phantom"
+    ]
+  },
+  "skchr_weedy_1": {
+    "name": "Barrel Burst",
+    "op_codes": [
+      "char_400_weedy"
+    ],
+    "op_names": [
+      "Weedy"
+    ]
+  },
+  "skchr_weedy_2": {
+    "name": "Hydraulics Mode",
+    "op_codes": [
+      "char_400_weedy"
+    ],
+    "op_names": [
+      "Weedy"
+    ]
+  },
+  "skchr_weedy_3": {
+    "name": "Liquid Nitrogen Cannon",
+    "op_codes": [
+      "char_400_weedy"
+    ],
+    "op_names": [
+      "Weedy"
+    ]
+  },
+  "skchr_haak_1": {
+    "name": "Rapid Fire",
+    "op_codes": [
+      "char_225_haak"
+    ],
+    "op_names": [
+      "Aak"
+    ]
+  },
+  "skchr_haak_2": {
+    "name": "Type-γ Stimpack",
+    "op_codes": [
+      "char_225_haak"
+    ],
+    "op_names": [
+      "Aak"
+    ]
+  },
+  "skchr_haak_3": {
+    "name": "Durian-Flavored Stimpack",
+    "op_codes": [
+      "char_225_haak"
+    ],
+    "op_names": [
+      "Aak"
+    ]
+  },
+  "skchr_glady_1": {
+    "name": "Waterless Parting of the Great Ocean",
+    "op_codes": [
+      "char_474_glady"
+    ],
+    "op_names": [
+      "Gladiia"
+    ]
+  },
+  "skchr_glady_2": {
+    "name": "Waterless Grasp of the Raging Seas",
+    "op_codes": [
+      "char_474_glady"
+    ],
+    "op_names": [
+      "Gladiia"
+    ]
+  },
+  "skchr_glady_3": {
+    "name": "Waterless Dance of the Shattered Maelstrom",
+    "op_codes": [
+      "char_474_glady"
+    ],
+    "op_names": [
+      "Gladiia"
+    ]
+  },
+  "skchr_mizuki_1": {
+    "name": "Awaken",
+    "op_codes": [
+      "char_437_mizuki"
+    ],
+    "op_names": [
+      "Mizuki"
+    ]
+  },
+  "skchr_mizuki_2": {
+    "name": "Prisoner's Dilemma",
+    "op_codes": [
+      "char_437_mizuki"
+    ],
+    "op_names": [
+      "Mizuki"
+    ]
+  },
+  "skchr_mizuki_3": {
+    "name": "Moon in the Water",
+    "op_codes": [
+      "char_437_mizuki"
+    ],
+    "op_names": [
+      "Mizuki"
+    ]
+  },
+  "skchr_shining_1": {
+    "name": "Creed",
+    "op_codes": [
+      "char_147_shining"
+    ],
+    "op_names": [
+      "Shining"
+    ]
+  },
+  "skchr_shining_2": {
+    "name": "Auto Protect",
+    "op_codes": [
+      "char_147_shining"
+    ],
+    "op_names": [
+      "Shining"
+    ]
+  },
+  "skchr_shining_3": {
+    "name": "Creed Field",
+    "op_codes": [
+      "char_147_shining"
+    ],
+    "op_names": [
+      "Shining"
+    ]
+  },
+  "skchr_kalts_1": {
+    "name": "Command: Structural Fortification",
+    "op_codes": [
+      "char_003_kalts"
+    ],
+    "op_names": [
+      "Kal'tsit"
+    ]
+  },
+  "skchr_kalts_2": {
+    "name": "Command: Tactical Coordination",
+    "op_codes": [
+      "char_003_kalts"
+    ],
+    "op_names": [
+      "Kal'tsit"
+    ]
+  },
+  "skchr_kalts_3": {
+    "name": "Command: Meltdown",
+    "op_codes": [
+      "char_003_kalts"
+    ],
+    "op_names": [
+      "Kal'tsit"
+    ]
+  },
+  "skchr_cgbird_2": {
+    "name": "Arts Shield",
+    "op_codes": [
+      "char_179_cgbird"
+    ],
+    "op_names": [
+      "Nightingale"
+    ]
+  },
+  "skchr_cgbird_3": {
+    "name": "Sanctuary",
+    "op_codes": [
+      "char_179_cgbird"
+    ],
+    "op_names": [
+      "Nightingale"
+    ]
+  },
+  "skchr_hsguma_1": {
+    "name": "Warpath",
+    "op_codes": [
+      "char_136_hsguma"
+    ],
+    "op_names": [
+      "Hoshiguma"
+    ]
+  },
+  "skchr_hsguma_2": {
+    "name": "Thorns",
+    "op_codes": [
+      "char_136_hsguma"
+    ],
+    "op_names": [
+      "Hoshiguma"
+    ]
+  },
+  "skchr_hsguma_3": {
+    "name": "Saw of Strength",
+    "op_codes": [
+      "char_136_hsguma"
+    ],
+    "op_names": [
+      "Hoshiguma"
+    ]
+  },
+  "skchr_demkni_1": {
+    "name": "First Aid",
+    "op_codes": [
+      "char_202_demkni"
+    ],
+    "op_names": [
+      "Saria"
+    ]
+  },
+  "skchr_demkni_2": {
+    "name": "Medicine Dispensing",
+    "op_codes": [
+      "char_202_demkni"
+    ],
+    "op_names": [
+      "Saria"
+    ]
+  },
+  "skchr_demkni_3": {
+    "name": "Calcification",
+    "op_codes": [
+      "char_202_demkni"
+    ],
+    "op_names": [
+      "Saria"
+    ]
+  },
+  "skchr_blemsh_1": {
+    "name": "Surging Brilliance",
+    "op_codes": [
+      "char_423_blemsh"
+    ],
+    "op_names": [
+      "Blemishine"
+    ]
+  },
+  "skchr_blemsh_2": {
+    "name": "Deterring Radiance",
+    "op_codes": [
+      "char_423_blemsh"
+    ],
+    "op_names": [
+      "Blemishine"
+    ]
+  },
+  "skchr_blemsh_3": {
+    "name": "Divine Avatar",
+    "op_codes": [
+      "char_423_blemsh"
+    ],
+    "op_names": [
+      "Blemishine"
+    ]
+  },
+  "skchr_nian_1": {
+    "name": "Tin Burning",
+    "op_codes": [
+      "char_2014_nian"
+    ],
+    "op_names": [
+      "Nian"
+    ]
+  },
+  "skchr_nian_2": {
+    "name": "Copper Seal",
+    "op_codes": [
+      "char_2014_nian"
+    ],
+    "op_names": [
+      "Nian"
+    ]
+  },
+  "skchr_nian_3": {
+    "name": "Iron Defense",
+    "op_codes": [
+      "char_2014_nian"
+    ],
+    "op_names": [
+      "Nian"
+    ]
+  },
+  "skchr_mudrok_2": {
+    "name": "Crag Splitter",
+    "op_codes": [
+      "char_311_mudrok"
+    ],
+    "op_names": [
+      "Mudrock"
+    ]
+  },
+  "skchr_mudrok_3": {
+    "name": "Bloodline of Desecrated Earth",
+    "op_codes": [
+      "char_311_mudrok"
+    ],
+    "op_names": [
+      "Mudrock"
+    ]
+  },
+  "skchr_zumama_1": {
+    "name": "Tomahawk",
+    "op_codes": [
+      "char_416_zumama"
+    ],
+    "op_names": [
+      "Eunectes"
+    ]
+  },
+  "skchr_zumama_2": {
+    "name": "Menacing Slash",
+    "op_codes": [
+      "char_416_zumama"
+    ],
+    "op_names": [
+      "Eunectes"
+    ]
+  },
+  "skchr_zumama_3": {
+    "name": "Iron Will",
+    "op_codes": [
+      "char_416_zumama"
+    ],
+    "op_names": [
+      "Eunectes"
+    ]
+  },
+  "skchr_skadi_2": {
+    "name": "Wave Strike",
+    "op_codes": [
+      "char_263_skadi"
+    ],
+    "op_names": [
+      "Skadi"
+    ]
+  },
+  "skchr_skadi_3": {
+    "name": "Tidal Elegy",
+    "op_codes": [
+      "char_263_skadi"
+    ],
+    "op_names": [
+      "Skadi"
+    ]
+  },
+  "skchr_f12yin_1": {
+    "name": "Left Hook",
+    "op_codes": [
+      "char_264_f12yin"
+    ],
+    "op_names": [
+      "Mountain"
+    ]
+  },
+  "skchr_f12yin_2": {
+    "name": "Sweeping Stance",
+    "op_codes": [
+      "char_264_f12yin"
+    ],
+    "op_names": [
+      "Mountain"
+    ]
+  },
+  "skchr_f12yin_3": {
+    "name": "Earth-Shattering Smash",
+    "op_codes": [
+      "char_264_f12yin"
+    ],
+    "op_names": [
+      "Mountain"
+    ]
+  },
+  "skchr_svrash_2": {
+    "name": "Rules of Survival",
+    "op_codes": [
+      "char_172_svrash"
+    ],
+    "op_names": [
+      "SilverAsh"
+    ]
+  },
+  "skchr_svrash_3": {
+    "name": "Truesilver Slash",
+    "op_codes": [
+      "char_172_svrash"
+    ],
+    "op_names": [
+      "SilverAsh"
+    ]
+  },
+  "skchr_thorns_2": {
+    "name": "Protective Spikes",
+    "op_codes": [
+      "char_293_thorns"
+    ],
+    "op_names": [
+      "Thorns"
+    ]
+  },
+  "skchr_thorns_3": {
+    "name": "Destreza",
+    "op_codes": [
+      "char_293_thorns"
+    ],
+    "op_names": [
+      "Thorns"
+    ]
+  },
+  "skchr_chen_1": {
+    "name": "Sheathed Strike",
+    "op_codes": [
+      "char_010_chen"
+    ],
+    "op_names": [
+      "Ch'en"
+    ]
+  },
+  "skchr_chen_2": {
+    "name": "Chi Xiao - Unsheath",
+    "op_codes": [
+      "char_010_chen"
+    ],
+    "op_names": [
+      "Ch'en"
+    ]
+  },
+  "skchr_chen_3": {
+    "name": "Chi Xiao - Shadowless",
+    "op_codes": [
+      "char_010_chen"
+    ],
+    "op_names": [
+      "Ch'en"
+    ]
+  },
+  "skchr_huang_2": {
+    "name": "Chainsaw Extension Module",
+    "op_codes": [
+      "char_017_huang"
+    ],
+    "op_names": [
+      "Blaze"
+    ]
+  },
+  "skchr_huang_3": {
+    "name": "Boiling Burst",
+    "op_codes": [
+      "char_017_huang"
+    ],
+    "op_names": [
+      "Blaze"
+    ]
+  },
+  "skchr_surtr_1": {
+    "name": "Laevatain",
+    "op_codes": [
+      "char_350_surtr"
+    ],
+    "op_names": [
+      "Surtr"
+    ]
+  },
+  "skchr_surtr_2": {
+    "name": "Molten Giant",
+    "op_codes": [
+      "char_350_surtr"
+    ],
+    "op_names": [
+      "Surtr"
+    ]
+  },
+  "skchr_surtr_3": {
+    "name": "Twilight",
+    "op_codes": [
+      "char_350_surtr"
+    ],
+    "op_names": [
+      "Surtr"
+    ]
+  },
+  "skchr_helage_1": {
+    "name": "Crescent Moon",
+    "op_codes": [
+      "char_188_helage"
+    ],
+    "op_names": [
+      "Hellagur"
+    ]
+  },
+  "skchr_helage_2": {
+    "name": "Half Moon",
+    "op_codes": [
+      "char_188_helage"
+    ],
+    "op_names": [
+      "Hellagur"
+    ]
+  },
+  "skchr_helage_3": {
+    "name": "Full Moon",
+    "op_codes": [
+      "char_188_helage"
+    ],
+    "op_names": [
+      "Hellagur"
+    ]
+  },
+  "skchr_pallas_1": {
+    "name": "Strikes of Victory",
+    "op_codes": [
+      "char_485_pallas"
+    ],
+    "op_names": [
+      "Pallas"
+    ]
+  },
+  "skchr_pallas_2": {
+    "name": "Whip of Conviction",
+    "op_codes": [
+      "char_485_pallas"
+    ],
+    "op_names": [
+      "Pallas"
+    ]
+  },
+  "skchr_pallas_3": {
+    "name": "Blessing of Heroism",
+    "op_codes": [
+      "char_485_pallas"
+    ],
+    "op_names": [
+      "Pallas"
+    ]
+  },
+  "skcom_withdraw": {
+    "name": "Self-Destruct",
+    "op_codes": [],
+    "op_names": []
+  }
 }

@@ -12,7 +12,6 @@ import character_table from '../assets/data/character_table.json';
 import skill_table from '../assets/data/skill_table.json';
 import opname_to_code from '../assets/data/opname_to_code.json';
 
-
 const GameBoard = () => {
   const { sub } = useParams();
   const game = game_list.find(el => el['sub'] === sub)
@@ -25,14 +24,14 @@ const GameBoard = () => {
   const char_img_paths = importAll(require.context('../assets/images/characters', false, /\.(png|jpe?g|svg)$/));
 
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
-  const skill_img_paths = importAll(require.context('../assets/images/skills_new', false, /\.(png|jpe?g|svg)$/));
+  const skill_img_paths = importAll(require.context('../assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
 
   const [userInput, setUserInput] = useState('');
   const [randNum, setRandNum] = useState();
-  const [curSkillCode, setCurSkillCode] = useState();
+  const [curSkillCode, setCurSkillCode] = useState('skchr_absin_1');
   const [curScore, setCurScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
@@ -90,7 +89,7 @@ const GameBoard = () => {
           mb={2}
         />
         <Typography component='div' sx={{ mb: 2, display: showResult ? 'block' : 'none' }}>
-          {skill_table[curSkillCode]}
+          {skill_table[curSkillCode]['name']}
         </Typography>
         <Box>
           <Autocomplete
