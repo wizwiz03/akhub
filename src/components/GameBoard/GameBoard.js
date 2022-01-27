@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useCookies } from 'react-cookie';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -14,6 +15,7 @@ import skill_table from '../assets/data/skill_table.json';
 import opname_to_code from '../assets/data/opname_to_code.json';
 
 const GameBoard = () => {
+  const [cookies, setCookie] = useCookies(['hs_siq']);
   const { sub } = useParams();
   const game = game_list.find(el => el['sub'] === sub)
 
@@ -35,6 +37,7 @@ const GameBoard = () => {
   const [curSkillCode, setCurSkillCode] = useState('skchr_absin_1');
   const [curSkillName, setCurSkillName] = useState('');
   const [curScore, setCurScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
   const [showSolution, setShowSolution] = useState(false);
   const [roundResult, setRoundResult] = useState(-1);
 
@@ -47,6 +50,9 @@ const GameBoard = () => {
 
   useEffect(() => {
     set_rand_skill()
+    if (cookies.hs_siq) {
+      setHighScore(cookies.hs_siq);
+    }
   }, []);
 
   const load_new_round = () => {
@@ -90,6 +96,10 @@ const GameBoard = () => {
     }
     else {
       setRoundResult(0);
+      if (curScore > highScore) {
+        setHighScore(curScore);
+        setCookie('hs_siq', curScore, { path: '/' });
+      }
     }
   }
 
@@ -144,6 +154,9 @@ const GameBoard = () => {
           <Typography component='div' variant='h6'>
             Current Score: {curScore}
           </Typography>
+          <Typography component='div' variant='h6'>
+            Your High Score: {highScore}
+          </Typography>
         </Box>
         <Box sx={{ display: roundResult ? 'none' : 'block' }}>
           <Typography component='div'>
@@ -151,6 +164,9 @@ const GameBoard = () => {
           </Typography>
           <Typography component='div'>
             Your final score: {curScore}
+          </Typography>
+          <Typography component='div'>
+            Your high score: {highScore}
           </Typography>
           <Button onClick={onClickPlay}>Play Again</Button>
         </Box>
