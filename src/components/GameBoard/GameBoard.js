@@ -52,7 +52,6 @@ const GameBoard = () => {
   const load_new_round = () => {
     setShowSolution(false);
     setUserInput(null);
-    setCurScore(curScore + 1);
     set_rand_skill();
     setRoundResult(-1);
   }
@@ -61,6 +60,7 @@ const GameBoard = () => {
     let timer = null;
     if (roundResult === 1) {
       console.log('Timeout triggered');
+      setCurScore(curScore + 1);
       timer = setTimeout(load_new_round, 3000);
     }
     return () => clearTimeout(timer);
@@ -73,20 +73,19 @@ const GameBoard = () => {
     }, {})
   }
 
-  const checkWinCon = () => {
-    if (!char_names_lc.includes(userInput.toLowerCase())) {
+  const checkWinCon = (val) => {
+    if (!char_names_lc.includes(val.toLowerCase())) {
       return false;
     }
-    const user_char = char_names[char_names_lc.indexOf(userInput.toLowerCase())];
+    const user_char = char_names[char_names_lc.indexOf(val.toLowerCase())];
     return character_table[opname_to_code[user_char]]['skills'].includes(curSkillCode);
   };
 
-  // if lose: show skill name, replace form with end screen + buttons
-  const processRound = () => {
+  const processRound = (val) => {
     setCurSkillName(skill_table[curSkillCode]['name']);
-    const win_con = checkWinCon();
+    setShowSolution(true);
+    const win_con = checkWinCon(val);
     if (win_con) {
-      setShowSolution(true);
       setRoundResult(1);
     }
     else {
@@ -94,21 +93,16 @@ const GameBoard = () => {
     }
   }
 
-  const onSubmit = e => {
-    if (!userInput) {
-      return;
+  const onSubmit = (e, val) => {
+    if (val) {
+      setUserInput(val);
+      processRound(val);
     }
-    processRound();
   }
 
-  const onSubmitEnter = e => {
-    if (e.keyCode === 13) {
-      if (!userInput) {
-        return;
-      }
-      console.log(userInput);
-      processRound();
-    }
+  const onClickPlay = () => {
+    load_new_round();
+    setCurScore(0);
   }
 
   return (
@@ -139,16 +133,14 @@ const GameBoard = () => {
         <Box sx={{ display: roundResult ? 'block' : 'none' }}>
           <Autocomplete
             value={userInput}
-            onChange={(e, new_val) => setUserInput(new_val)}
+            onChange={onSubmit}
             disablePortal
             autoHighlight
-            autoSelect
+            clearOnEscape
             options={char_names}
             sx={{ width: 300 }}
-            onKeyDown={onSubmitEnter}
             renderInput={tfProps => <TextField {...tfProps} label='Operator' />}
           />
-          <Button variant='outlined' onClick={onSubmit}>Submit</Button>
           <Typography component='div' variant='h6'>
             Current Score: {curScore}
           </Typography>
@@ -160,7 +152,7 @@ const GameBoard = () => {
           <Typography component='div'>
             Your final score: {curScore}
           </Typography>
-          <Button>Play Again</Button>
+          <Button onClick={onClickPlay}>Play Again</Button>
         </Box>
       </Box>
     </>
