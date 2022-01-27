@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -35,6 +34,7 @@ const GameBoard = () => {
   const [randNum, setRandNum] = useState();
   const [curSkillCode, setCurSkillCode] = useState();
   const [curScore, setCurScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
 
   useEffect(() => {
     const random_number = parseInt(skill_code_names.length * Math.random());
@@ -57,24 +57,21 @@ const GameBoard = () => {
     return character_table[opname_to_code[user_char]]['skills'].includes(curSkillCode);
   };
 
-  const onSubmit = e => {
-    if (userInput === '') {
-      return;
-    }
+  const processRound = () => {
     const win_con = checkWinCon();
+    console.log(win_con);
     if (win_con) {
       setCurScore(curScore + 1);
-      
-    }
-    else {
-
+      setShowResult(true);
     }
   }
 
-  const onKeyDown = e => {
-    if (e.keyCode === 13) {
-      return
+  const onSubmit = e => {
+    console.log(userInput);
+    if (!userInput) {
+      return;
     }
+    processRound();
   }
 
   return (
@@ -82,28 +79,32 @@ const GameBoard = () => {
       <Typography variant='h3' component='div' textAlign='center' gutterBottom>
         {game.title}
       </Typography>
-      <Container>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography variant='h6' component='div' gutterBottom>
-            {game.descr}
-          </Typography>
-          <Box
-            component='img'
-            src={skill_img_paths[skill_code_names[randNum]]}
-            alt='skill icon to guess'
-            mb={2}
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Typography variant='h6' component='div' gutterBottom>
+          {game.descr}
+        </Typography>
+        <Box
+          component='img'
+          src={skill_img_paths[skill_code_names[randNum]]}
+          alt='skill icon to guess'
+          mb={2}
+        />
+        <Typography component='div' sx={{ mb: 2, display: showResult ? 'block' : 'none' }}>
+          {skill_table[curSkillCode]}
+        </Typography>
+        <Box>
+          <Autocomplete
+            inputValue={userInput}
+            onInputChange={(e, new_val) => setUserInput(new_val)}
+            freeSolo
+            disablePortal
+            options={char_names}
+            sx={{ width: 300 }}
+            renderInput={tfProps => <TextField {...tfProps} label='Operator' />}
           />
-          <Box>
-            <Autocomplete
-              disablePortal
-              options={char_names}
-              sx={{ width: 300 }}
-              renderInput={tfProps => <TextField value={userInput} {...tfProps} label='Operator' />}
-            />
-            <Button variant='outlined' onClick={onSubmit}>Submit</Button>
-          </Box>
+          <Button variant='outlined' onClick={onSubmit}>Submit</Button>
         </Box>
-      </Container>
+      </Box>
     </>
   )
 }
