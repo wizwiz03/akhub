@@ -1,9 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import Suggestionbar from '../Suggestionbar/Suggestionbar';
-
-import './GameBoard.css';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 import game_list from '../assets/data/game_list.json';
 import character_table from '../assets/data/character_table.json';
@@ -21,13 +24,13 @@ const GameBoard = () => {
 
   // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const char_img_paths = importAll(require.context('../assets/images/characters', false, /\.(png|jpe?g|svg)$/));
-  
+
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
   const skill_img_paths = importAll(require.context('../assets/images/skills_new', false, /\.(png|jpe?g|svg)$/));
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
-  
+
   const [userInput, setUserInput] = useState('');
   const [randNum, setRandNum] = useState();
   const [curSkillCode, setCurSkillCode] = useState();
@@ -38,7 +41,7 @@ const GameBoard = () => {
     setRandNum(random_number);
     setCurSkillCode(skill_code_names[random_number]);
   }, []);
-  
+
   function importAll(r) {
     return r.keys().reduce((prev, cur) => {
       prev[cur.replace('./', '').replace('.png', '')] = r(cur);
@@ -54,28 +57,55 @@ const GameBoard = () => {
     return character_table[opname_to_code[user_char]]['skills'].includes(curSkillCode);
   };
 
-  const onClick = e => {
+  const onSubmit = e => {
     if (userInput === '') {
       return;
     }
     const win_con = checkWinCon();
     if (win_con) {
-
+      setCurScore(curScore + 1);
+      
     }
     else {
 
     }
   }
 
+  const onKeyDown = e => {
+    if (e.keyCode === 13) {
+      return
+    }
+  }
+
   return (
-    <div className='gameboard-container'>
-      <h1>{game.title}</h1>
-      <h2>{game.descr}</h2>
-      <img src={skill_img_paths[skill_code_names[randNum]]} alt='todo'/>
-      <Suggestionbar suggestions={char_names} userInput={userInput} setUserInput={setUserInput} />
-      <button onClick={onClick}>Submit</button>
-    </div>
-  );
-};
+    <>
+      <Typography variant='h3' component='div' textAlign='center' gutterBottom>
+        {game.title}
+      </Typography>
+      <Container>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Typography variant='h6' component='div' gutterBottom>
+            {game.descr}
+          </Typography>
+          <Box
+            component='img'
+            src={skill_img_paths[skill_code_names[randNum]]}
+            alt='skill icon to guess'
+            mb={2}
+          />
+          <Box>
+            <Autocomplete
+              disablePortal
+              options={char_names}
+              sx={{ width: 300 }}
+              renderInput={tfProps => <TextField value={userInput} {...tfProps} label='Operator' />}
+            />
+            <Button variant='outlined' onClick={onSubmit}>Submit</Button>
+          </Box>
+        </Box>
+      </Container>
+    </>
+  )
+}
 
 export default GameBoard;
