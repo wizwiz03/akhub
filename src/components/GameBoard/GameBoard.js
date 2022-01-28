@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
@@ -8,6 +7,12 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grow from '@mui/material/Grow';
+import Slide from '@mui/material/Slide';
+import Collapse from '@mui/material/Collapse';
+import Zoom from '@mui/material/Zoom';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import game_list from '../assets/data/game_list.json';
 import character_table from '../assets/data/character_table.json';
@@ -15,22 +20,29 @@ import skill_table from '../assets/data/skill_table.json';
 import opname_to_code from '../assets/data/opname_to_code.json';
 
 const GameBoard = () => {
-  const [cookies, setCookie] = useCookies(['hs_siq']);
-  const { sub } = useParams();
-  const game = game_list.find(el => el['sub'] === sub)
+  const [cookies, setCookie] = useCookies(['hs_sq']);
+  const game = game_list.find(el => el['sub'] === 'skill_quiz');
+
+
+  const importAll = (r) => {
+    return r.keys().reduce((prev, cur) => {
+      prev[cur.replace('./', '').replace('.png', '')] = r(cur);
+      return prev;
+    }, {})
+  }
 
   // ['Myrtle', 'Bagpipe', ...]
   const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
-  const char_names_lc = char_names.map(name => name.toLowerCase());
 
   // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
-  const char_img_paths = importAll(require.context('../assets/images/characters', false, /\.(png|jpe?g|svg)$/));
+  const avatar_img_paths = importAll(require.context('../assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
 
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
   const skill_img_paths = importAll(require.context('../assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
+
 
   const [userInput, setUserInput] = useState(null);
   const [randNum, setRandNum] = useState(0);
@@ -40,18 +52,20 @@ const GameBoard = () => {
   const [highScore, setHighScore] = useState(0);
   const [showSolution, setShowSolution] = useState(false);
   const [roundResult, setRoundResult] = useState(-1);
+  const [operatorName, setOperatorName] = useState('');
 
   const set_rand_skill = () => {
     const random_number = parseInt(skill_code_names.length * Math.random());
     setRandNum(random_number);
     setCurSkillCode(skill_code_names[random_number]);
+    setCurSkillName(skill_table[skill_code_names[random_number]]['name']);
     console.log(skill_table[skill_code_names[random_number]]['op_names'][0]);
   }
 
   useEffect(() => {
-    set_rand_skill()
-    if (cookies.hs_siq) {
-      setHighScore(cookies.hs_siq);
+    set_rand_skill();
+    if (cookies.hs_sq) {
+      setHighScore(cookies.hs_sq);
     }
   }, []);
 
@@ -72,33 +86,19 @@ const GameBoard = () => {
     return () => clearTimeout(timer);
   }, [roundResult])
 
-  function importAll(r) {
-    return r.keys().reduce((prev, cur) => {
-      prev[cur.replace('./', '').replace('.png', '')] = r(cur);
-      return prev;
-    }, {})
-  }
-
-  const checkWinCon = (val) => {
-    if (!char_names_lc.includes(val.toLowerCase())) {
-      return false;
-    }
-    const user_char = char_names[char_names_lc.indexOf(val.toLowerCase())];
-    return character_table[opname_to_code[user_char]]['skills'].includes(curSkillCode);
-  };
-
   const processRound = (val) => {
-    setCurSkillName(skill_table[curSkillCode]['name']);
     setShowSolution(true);
-    const win_con = checkWinCon(val);
+    const win_con = character_table[opname_to_code[val]]['skills'].includes(curSkillCode);
     if (win_con) {
+      setOperatorName(val);
       setRoundResult(1);
     }
     else {
+      setOperatorName(skill_table[curSkillCode]['op_names'][0]);
       setRoundResult(0);
       if (curScore > highScore) {
         setHighScore(curScore);
-        setCookie('hs_siq', curScore, { path: '/' });
+        setCookie('hs_sq', curScore, { path: '/' });
       }
     }
   }
@@ -124,22 +124,50 @@ const GameBoard = () => {
         <Typography variant='h6' component='div' gutterBottom>
           {game.descr}
         </Typography>
-        <Box
-          component='img'
-          src={skill_img_paths[skill_code_names[randNum]]}
-          alt='skill icon to guess'
-          mb={2}
-        />
-        <Grow
-          unmountOnExit
-          in={showSolution}
-          sx={{ transformOrigin: '0 0 0', mb: 2 }}
-          {...(showSolution ? { timeout: 1000 } : {})}
+        <Paper
+          elevation={24}
+          sx={{ minWidth: '200px', p: '16px', mb: '16px' }}
         >
-          <Typography component='div'>
-            {curSkillName}
-          </Typography>
-        </Grow>
+          <TransitionGroup
+            component={Stack}
+            justifyContent='center'
+            alignItems='center'
+          >
+            {showSolution && (
+              <Collapse>
+                <Box>
+                  <Box
+                    component='img'
+                    src={avatar_img_paths[opname_to_code[operatorName]]}
+                    alt='image of operator solution'
+                    sx={{width: '128px', height: '128px'}}
+                  >
+                  </Box>
+                  <Typography variant='h6'>
+                    {operatorName}
+                  </Typography>
+                </Box>
+              </Collapse>
+            )}
+            <Collapse in={true}>
+              <Box
+                component={Stack}
+                justifyContent='center'
+                alignItems='center'
+              >
+                <Box
+                  component='img'
+                  src={skill_img_paths[skill_code_names[randNum]]}
+                  alt='skill icon to guess'
+                  mb={2}
+                />
+                <Typography component='div'>
+                  {curSkillName}
+                </Typography>
+              </Box>
+            </Collapse>
+          </TransitionGroup>
+        </Paper>
         <Box sx={{ display: roundResult ? 'block' : 'none' }}>
           <Autocomplete
             value={userInput}

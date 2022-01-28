@@ -3457,10 +3457,5 @@
     "op_names": [
       "Pallas"
     ]
-  },
-  "skcom_withdraw": {
-    "name": "Self-Destruct",
-    "op_codes": [],
-    "op_names": []
   }
 }

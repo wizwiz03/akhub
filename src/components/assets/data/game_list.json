@@ -1,7 +1,7 @@
 [
   {
-    "title": "Skill Icon Quiz",
-    "descr": "Can you guess which Operator this Skill Icon belongs to?",
+    "title": "Skill Quiz",
+    "descr": "Can you guess which Operator this Skill belongs to?",
     "rules": [
       "See a random icon of a skill",
       "Guess which operator the skill belongs too",
@@ -9,8 +9,8 @@
       "The game ends if you guessed wrong"
     ],
     "img": "placeholder",
-    "sub": "skill_icon_quiz",
-    "alt": "preview of skill icon quiz game"
+    "sub": "skill_quiz",
+    "alt": "preview of skill quiz game"
   },
   {
     "title": "Skill Icon Quiz",
