@@ -20,7 +20,7 @@ const Games = () => {
         {
           game_list.map((game, i) => (
             <Grid key={i} item xs={10} md={5} container justifyContent='center'>
-              <Card component={Link} to={`/games/${game.sub}`} sx={{ width: 450, height: 300, textDecoration: 'none' }}>
+              <Card component={Link} to={`/games/${game.sub}`} sx={{ width: 450, height: 300, textDecoration: 'none', boxShadow: 'rgba(255, 255, 255, 0.24) 0px 3px 8px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'

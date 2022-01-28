@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
+import { useTheme } from '@emotion/react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -12,6 +13,7 @@ import Collapse from '@mui/material/Collapse';
 import Zoom from '@mui/material/Zoom';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import game_list from '../assets/data/game_list.json';
@@ -20,6 +22,7 @@ import skill_table from '../assets/data/skill_table.json';
 import opname_to_code from '../assets/data/opname_to_code.json';
 
 const GameBoard = () => {
+  const theme = useTheme();
   const [cookies, setCookie] = useCookies(['hs_sq']);
   const game = game_list.find(el => el['sub'] === 'skill_quiz');
 
@@ -115,6 +118,27 @@ const GameBoard = () => {
     setCurScore(0);
   }
 
+  const createItem = (imgSrc, altText, subText) => (
+    <Collapse orientation='horizontal'>
+      <Box
+        component={Stack}
+        justifyContent='center'
+        alignItems='center'
+      >
+        <Box
+          component='img'
+          src={imgSrc}
+          alt={altText}
+          sx={{ width: '128px', height: '128px', border: '1px solid white' }}
+          mb={2}
+        />
+        <Typography>
+          {subText}
+        </Typography>
+      </Box>
+    </Collapse>
+  );
+
   return (
     <>
       <Typography variant='h3' component='div' textAlign='center' gutterBottom>
@@ -126,46 +150,27 @@ const GameBoard = () => {
         </Typography>
         <Paper
           elevation={24}
-          sx={{ minWidth: '200px', p: '16px', mb: '16px' }}
+          sx={{
+            minWidth: '200px',
+            p: '16px',
+            mb: '24px',
+            boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
+          }}
         >
           <TransitionGroup
             component={Stack}
+            divider={<Divider orientation="vertical" flexItem />}
+            direction='row'
+            p={1}
+            spacing={2}
             justifyContent='center'
             alignItems='center'
           >
-            {showSolution && (
-              <Collapse>
-                <Box>
-                  <Box
-                    component='img'
-                    src={avatar_img_paths[opname_to_code[operatorName]]}
-                    alt='image of operator solution'
-                    sx={{width: '128px', height: '128px'}}
-                  >
-                  </Box>
-                  <Typography variant='h6'>
-                    {operatorName}
-                  </Typography>
-                </Box>
-              </Collapse>
-            )}
-            <Collapse in={true}>
-              <Box
-                component={Stack}
-                justifyContent='center'
-                alignItems='center'
-              >
-                <Box
-                  component='img'
-                  src={skill_img_paths[skill_code_names[randNum]]}
-                  alt='skill icon to guess'
-                  mb={2}
-                />
-                <Typography component='div'>
-                  {curSkillName}
-                </Typography>
-              </Box>
-            </Collapse>
+            {
+              showSolution &&
+              createItem(avatar_img_paths[opname_to_code[operatorName]], 'image of operator solution', operatorName)
+            }
+            {createItem(skill_img_paths[skill_code_names[randNum]], 'skill icon to guess', curSkillName)}
           </TransitionGroup>
         </Paper>
         <Box sx={{ display: roundResult ? 'block' : 'none' }}>
