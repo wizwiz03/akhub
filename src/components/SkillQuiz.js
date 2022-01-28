@@ -1,29 +1,25 @@
 import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
-import { useTheme } from '@emotion/react';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grow from '@mui/material/Grow';
-import Slide from '@mui/material/Slide';
 import Collapse from '@mui/material/Collapse';
-import Zoom from '@mui/material/Zoom';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import ReplayIcon from '@mui/icons-material/Replay';
 
-import game_list from '../assets/data/game_list.json';
-import character_table from '../assets/data/character_table.json';
-import skill_table from '../assets/data/skill_table.json';
-import opname_to_code from '../assets/data/opname_to_code.json';
+import game_list from './assets/data/game_list.json';
+import character_table from './assets/data/character_table.json';
+import skill_table from './assets/data/skill_table.json';
+import opname_to_code from './assets/data/opname_to_code.json';
 
 const GameBoard = () => {
-  const theme = useTheme();
   const [cookies, setCookie] = useCookies(['hs_sq']);
   const game = game_list.find(el => el['sub'] === 'skill_quiz');
 
@@ -39,10 +35,10 @@ const GameBoard = () => {
   const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
 
   // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
-  const avatar_img_paths = importAll(require.context('../assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
+  const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
 
   // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
-  const skill_img_paths = importAll(require.context('../assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
+  const skill_img_paths = importAll(require.context('./assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
 
   // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
@@ -150,9 +146,9 @@ const GameBoard = () => {
   );
 
   return (
-    <>
+    <Container sx={{ pt: 2 }}>
       <Paper elevation={1} sx={{ py: 3 }}>
-        <Typography variant='h3' component='div' textAlign='center' gutterBottom>
+        <Typography variant='h4' component='div' textAlign='center' gutterBottom>
           {game.title}
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -165,6 +161,7 @@ const GameBoard = () => {
               minWidth: '200px',
               p: '16px',
               mb: '24px',
+              mt: '8px',
               boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
             }}
           >
@@ -215,7 +212,7 @@ const GameBoard = () => {
           </Stack>
         </Box>
       </Paper>
-    </>
+    </Container>
   )
 }
 

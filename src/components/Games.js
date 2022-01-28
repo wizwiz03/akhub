@@ -5,14 +5,15 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import { CardActionArea } from '@mui/material';
 
-import game_list from '../assets/data/game_list.json';
-import images from '../assets/images/games/index';
+import game_list from './assets/data/game_list.json';
+import images from './assets/images/games/index';
 
 const Games = () => {
   return (
-    <>
+    <Container sx={{ pt: 2}}>
       <Typography variant='h2' component='div' textAlign='center' gutterBottom>
         Games
       </Typography>
@@ -42,7 +43,7 @@ const Games = () => {
           ))
         }
       </Grid>
-    </>
+    </Container>
   );
 }
 

@@ -2,14 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import createTheme from '@mui/material/styles/createTheme';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
-import Navbar from './Navbar/Navbar';
-import Home from './Home/Home';
-import Games from './Games/Games';
-import GameBoard from './GameBoard/GameBoard';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Home from './Home';
+import Games from './Games';
+import GameBoard from './SkillQuiz';
 
 const App = () => {
   const darkTheme = createTheme({
@@ -23,7 +24,7 @@ const App = () => {
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <Navbar />
-          <Container sx={{ my: 2 }}>
+          <Box pb={2}>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />
@@ -31,7 +32,8 @@ const App = () => {
               <Route path='/games/skill_quiz' element={<GameBoard />} />
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
-          </Container>
+          </Box>
+          <Footer />
         </ThemeProvider>
       </BrowserRouter>
     </CookiesProvider>
