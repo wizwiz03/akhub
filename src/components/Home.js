@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import bgImg from '../dump/akhub_home_min.jpg';
 import game_list from './assets/data/game_list.json';
@@ -65,8 +68,41 @@ const Home = () => {
         </Container>
       </Box>
       <Box sx={{ backgroundColor: '#e5e7eb', width: '100vw', maxWidth: '100%', py: 4 }}>
-        <Container sx={{ minHeight: '50vh' }}>
-
+        <Container sx={{ minHeight: '30vh', display: 'flex' }} component={Stack} justifyContent='center' alignItems='center'>
+          <Box
+            sx={{
+              backgroundColor: '#3882f6',
+              color: '#fff',
+              py: 3,
+              px: {xs: 4, md: 8},
+              borderRadius: '8px'
+            }}
+          >
+            <Stack
+              direction='row'
+              justifyContent='center'
+              alignItems='center'
+              flexWrap='wrap'
+              spacing={1}
+              sx={{ width: '80vw', maxWidth: '700px' }}
+            >
+              <Box minWidth='240px' sx={{ flex: 3, pb: {xs: 2, md: 0} }}>
+                <Typography variant='h6' textAlign={{xs: 'center', sm: 'start'}}>
+                  Found a bug? Have some Suggestions?
+                </Typography>
+                <Typography variant='subtitle1' component='p' textAlign={{xs: 'center', sm: 'start'}}>
+                  Open an Issue on Github to report a bug or request features you would like to see!
+                </Typography>
+              </Box>
+              <Box sx={{ flex: 1, display: 'flex', justifyContent: {xs: 'center', md: 'end'} }}>
+                <Button
+                  endIcon={<GitHubIcon />}
+                  sx={{ fontSize: '1rem', color: 'white', border: '1px solid #fff', borderRadius: '6px' }}
+                  href='https://github.com/tnyngyhng/akhub'
+                >GitHub</Button>
+              </Box>
+            </Stack>
+          </Box>
         </Container>
       </Box>
     </>
