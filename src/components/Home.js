@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
-import bgImg from '../dump/akhub_home.jpg';
+import bgImg from '../dump/akhub_home_min.jpg';
 import game_list from './assets/data/game_list.json';
 import images from './assets/images/games/index';
 
@@ -44,24 +44,29 @@ const Home = () => {
       </Box>
       <Box sx={{ backgroundColor: 'rgb(255,255,255)', width: '100vw', maxWidth: '100%', py: 4 }}>
         <Container sx={{ minHeight: '70vh', color: '#000' }}>
-          <Typography variant='h4' sx={{ fontWeight: 700, textAlign: 'center' }}>
+          <Typography variant='h4' sx={{ fontWeight: 600, textAlign: 'center' }}>
             Check out these Games!
           </Typography>
-          <Stack direction='row' justifyContent='space-around' spacing={2} mt={5}>
+          <Stack direction='row' justifyContent='space-around' spacing={2} mt={5} sx={{ flexWrap: 'wrap' }}>
             {
               game_list.map((game, i) => (
-                <Stack key={i} alignItems='center' spacing={3} fle>
+                <Stack key={i} alignItems='center' spacing={3}>
                   <Box
                     component='img'
                     src={images[game.img]}
                     alt={game.alt}
                     sx={{ height: '180px', border: '5px solid #3b82f6', borderRadius: '12px' }}
                   />
-                  <Typography variant='h5' sx={{maxWidth: '200px'}}>{game.title}</Typography>
+                  <Typography sx={{ maxWidth: '200px' }}>{game.title}</Typography>
                 </Stack >
               ))
             }
           </Stack>
+        </Container>
+      </Box>
+      <Box sx={{ backgroundColor: '#e5e7eb', width: '100vw', maxWidth: '100%', py: 4 }}>
+        <Container sx={{ minHeight: '50vh' }}>
+
         </Container>
       </Box>
     </>

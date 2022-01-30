@@ -10,20 +10,17 @@
     ],
     "img": "placeholder",
     "sub": "skill_quiz",
-    "alt": "preview of skill quiz game"
+    "alt": "thumbnail of skill quiz game"
   },
   {
-    "title": "Skill Icon Quiz",
-    "descr": "Can you guess to which Operator this Skill Icon belongs to?",
+    "title": "Who is that Operator?",
+    "descr": "How well do you know your favorite Operators? Can you guess them just by their profile?",
     "rules": [
-      "See a random icon of a skill",
-      "Guess which operator the skill belongs too",
-      "Get a point for each correct guess",
-      "The game ends if you guessed wrong"
+      "todo"
     ],
     "img": "placeholder",
-    "sub": "skill_icon_quiz",
-    "alt": "preview of skill icon quiz game"
+    "sub": "profile_guesser",
+    "alt": "thumbnail of who is that operator game"
   },
   {
     "title": "Skill Icon Quiz",

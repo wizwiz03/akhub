@@ -4,6 +4,7 @@ import { CookiesProvider } from 'react-cookie';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import createTheme from '@mui/material/styles/createTheme';
+import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
 import Navbar from './Navbar';
@@ -11,13 +12,15 @@ import Footer from './Footer';
 import Home from './Home';
 import Games from './Games';
 import GameBoard from './SkillQuiz';
+import ProfileGuesser from './ProfileGuesser';
 
 const App = () => {
-  const darkTheme = createTheme({
+  let darkTheme = createTheme({
     palette: {
       mode: 'dark'
     }
   });
+  darkTheme = responsiveFontSizes(darkTheme);
   return (
     <CookiesProvider>
       <BrowserRouter>
@@ -30,6 +33,7 @@ const App = () => {
               <Route path='/home' element={<Home />} />
               <Route path='/games' element={<Games />} />
               <Route path='/games/skill_quiz' element={<GameBoard />} />
+              <Route path='/games/profile_guesser' element={<ProfileGuesser />} />
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
           </Box>

@@ -135,10 +135,10 @@ const GameBoard = () => {
           component='img'
           src={imgSrc}
           alt={altText}
-          sx={{ width: '128px', height: '128px', border: '1px solid white' }}
+          sx={{ width: { xs: '100px', md: '128px'}, height: { xs: '100px', md: '128px'}, border: '1px solid white' }}
           mb={2}
         />
-        <Typography>
+        <Typography textAlign='center' sx={{ maxWidth: { xs: '100px', sm: 'none'} }}>
           {subText}
         </Typography>
       </Box>
@@ -147,19 +147,19 @@ const GameBoard = () => {
 
   return (
     <Container sx={{ pt: 2 }}>
-      <Paper elevation={1} sx={{ py: 3 }}>
-        <Typography variant='h4' component='div' textAlign='center' gutterBottom>
+      <Paper elevation={1} sx={{ p: 3 }}>
+        <Typography variant='h4' textAlign='center' gutterBottom>
           {game.title}
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography variant='h6' component='div' gutterBottom>
+          <Typography variant='h6' textAlign='center' gutterBottom>
             {game.descr}
           </Typography>
           <Paper
             elevation={24}
             sx={{
               minWidth: '200px',
-              p: '16px',
+              p: { xs: '12px', md: '16px'},
               mb: '24px',
               mt: '8px',
               boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
@@ -169,7 +169,6 @@ const GameBoard = () => {
               component={Stack}
               divider={<Divider orientation="vertical" flexItem />}
               direction='row'
-              p={1}
               spacing={2}
               justifyContent='center'
               alignItems='center'
@@ -191,13 +190,13 @@ const GameBoard = () => {
                   autoHighlight
                   clearOnEscape
                   options={char_names}
-                  sx={{ width: 300 }}
+                  sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' />}
                 />
               </Box>
             ) : (
               <Stack mb={2} alignItems='center' spacing={1}>
-                <Typography variant='h6'>Looks like you have lost the game. Try again?</Typography>
+                <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
                 <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
               </Stack>
             )
