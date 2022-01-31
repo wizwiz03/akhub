@@ -3362,7 +3362,7 @@
   },
   "char_376_therex": {
     "table1": {
-      "Model": "Thermal-EX",
+      "Model": "THRM-EX",
       "Gender Assignment": "Male",
       "Time in Service": "Less than 1 year",
       "Manufacturer": "Raythean",

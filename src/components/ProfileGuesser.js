@@ -42,6 +42,8 @@ const ProfileGuesser = () => {
   const [operatorCode, setOperatorCode] = useState('char_500_noirc');
   const [curScore, setCurScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [showSolution, setShowSolution] = useState(false);
+  const [roundResult, setRoundResult] = useState(-1);
 
   const set_rand_profile = () => {
     let random_number;
@@ -54,6 +56,7 @@ const ProfileGuesser = () => {
     setRandNum(random_number);
     setOperatorCode(Object.keys(profile_table)[random_number]);
     setDupeNums([...dupeNums, random_number]);
+    console.log(opname_to_code[Object.keys(profile_table)[random_number]]);
   };
 
   useEffect(() => {
@@ -63,8 +66,43 @@ const ProfileGuesser = () => {
     }
   }, []);
 
-  const onSubmit = () => {
+  const load_new_round = () => {
+    setShowSolution(false);
+    setUserInput(null);
+    set_rand_profile();
+    setRoundResult(-1);
+  };
 
+  useEffect(() => {
+    let timer = null;
+    if (roundResult === 1) {
+      console.log('Timeout triggered');
+      setCurScore(curScore + 1);
+      timer = setTimeout(load_new_round, 3000);
+    }
+    return () => clearTimeout(timer);
+  }, [roundResult]);
+
+  const processRound = (val) => {
+    setShowSolution(true);
+    const win_con = opname_to_code[val] === operatorCode;
+    if (win_con) {
+      setRoundResult(1);
+    }
+    else {
+      setRoundResult(0);
+      if (curScore > highScore) {
+        setHighScore(curScore);
+        setCookie('hs_pg', curScore, { path: '/' });
+      }
+    }
+  };
+
+  const onSubmit = (e, val) => {
+    if (val) {
+      setUserInput(val);
+      processRound(val);
+    }
   };
 
   const create_profile_story_table = () => {
@@ -189,10 +227,10 @@ const ProfileGuesser = () => {
         <Stack alignItems='center'>
           <Stack direction='row' justifyContent='space-around' spacing={10}>
             <Typography variant='body2' textAlign='center' component='div'>
-              Your High Score:
+              {`Your High Score: ${highScore}`}
             </Typography>
             <Typography variant='body2' textAlign='center' component='div'>
-              Current Score:
+              {`Current Score: ${curScore}`}
             </Typography>
           </Stack>
           <Box>
