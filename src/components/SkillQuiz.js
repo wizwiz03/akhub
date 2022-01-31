@@ -21,7 +21,7 @@ import opname_to_code from './assets/data/opname_to_code.json';
 
 const GameBoard = () => {
   const [cookies, setCookie] = useCookies(['hs_sq']);
-  const game = game_list.find(el => el['sub'] === 'skill_quiz');
+  const game = game_list.find(mode => mode['sub'] === 'skill_quiz');
 
 
   const importAll = (r) => {
@@ -32,7 +32,8 @@ const GameBoard = () => {
   }
 
   // ['Myrtle', 'Bagpipe', ...]
-  const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
+  // const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
+  const char_names = Object.keys(opname_to_code);
 
   // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
@@ -57,7 +58,7 @@ const GameBoard = () => {
 
   const set_rand_skill = () => {
     let random_number;
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 50; i++) {
       random_number = parseInt(skill_code_names.length * Math.random());
       if (!dupeNums.includes(random_number)) {
         break;
@@ -135,10 +136,10 @@ const GameBoard = () => {
           component='img'
           src={imgSrc}
           alt={altText}
-          sx={{ width: { xs: '100px', md: '128px'}, height: { xs: '100px', md: '128px'}, border: '1px solid white' }}
+          sx={{ width: { xs: '100px', md: '128px' }, height: { xs: '100px', md: '128px' }, border: '1px solid white' }}
           mb={2}
         />
-        <Typography textAlign='center' sx={{ maxWidth: { xs: '100px', sm: 'none'} }}>
+        <Typography textAlign='center' sx={{ maxWidth: { xs: '100px', sm: 'none' } }}>
           {subText}
         </Typography>
       </Box>
@@ -146,8 +147,8 @@ const GameBoard = () => {
   );
 
   return (
-    <Container sx={{ pt: 2 }}>
-      <Paper elevation={1} sx={{ p: 3 }}>
+    <Paper elevation={8}>
+      <Container sx={{ p: {xs: 2, sm: 3, md: 4} }} >
         <Typography variant='h4' textAlign='center' gutterBottom>
           {game.title}
         </Typography>
@@ -159,7 +160,7 @@ const GameBoard = () => {
             elevation={24}
             sx={{
               minWidth: '200px',
-              p: { xs: '12px', md: '16px'},
+              p: { xs: '12px', md: '16px' },
               mb: '24px',
               mt: '8px',
               boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
@@ -191,7 +192,7 @@ const GameBoard = () => {
                   clearOnEscape
                   options={char_names}
                   sx={{ maxWidth: '300px', width: '70vw' }}
-                  renderInput={tfProps => <TextField {...tfProps} label='Operator' />}
+                  renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{border: '1px solid rgb(250,250,250)', borderRadius: '6px'}} />}
                 />
               </Box>
             ) : (
@@ -202,16 +203,16 @@ const GameBoard = () => {
             )
           }
           <Stack direction='row' spacing={10} justifyContent='space-around'>
-            <Typography component='div'>
+            <Typography textAlign='center' component='div'>
               Your High Score: {highScore}
             </Typography>
-            <Typography component='div'>
+            <Typography textAlign='center' component='div'>
               Current Score: {curScore}
             </Typography>
           </Stack>
         </Box>
-      </Paper>
-    </Container>
+      </Container >
+    </Paper>
   )
 }
 

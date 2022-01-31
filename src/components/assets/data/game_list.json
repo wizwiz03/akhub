@@ -2,6 +2,7 @@
   {
     "title": "Skill Quiz",
     "descr": "Can you guess which Operator this Skill belongs to?",
+    "descrLong": "TODO",
     "rules": [
       "See a random icon of a skill",
       "Guess which operator the skill belongs too",
@@ -14,7 +15,8 @@
   },
   {
     "title": "Who is that Operator?",
-    "descr": "How well do you know your favorite Operators? Can you guess them just by their profile?",
+    "descr": "Guess the Operator by their profile",
+    "descrLong": "How well do you know your favorite Operators? Can you guess them just by their profile?",
     "rules": [
       "todo"
     ],

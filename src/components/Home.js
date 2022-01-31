@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import bgImg from '../dump/akhub_home_min.jpg';
+import bgImg from './assets/images/akhub_home.jpg';
 import game_list from './assets/data/game_list.json';
 import images from './assets/images/games/index';
 

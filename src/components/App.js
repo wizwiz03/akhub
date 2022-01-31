@@ -18,6 +18,19 @@ const App = () => {
   let darkTheme = createTheme({
     palette: {
       mode: 'dark'
+    },
+    components: {
+      MuiTableCell: {
+        styleOverrides: {
+          root: {
+            fontSize: '1rem',
+            fontWeight: 400
+          },
+          head: {
+            fontSize: '1.2rem'
+          }
+        }
+      }
     }
   });
   darkTheme = responsiveFontSizes(darkTheme);
