@@ -42,7 +42,7 @@ const ProfileGuesser = () => {
   const char_names = Object.keys(opname_to_code);
 
   const [userInput, setUserInput] = useState(null);
-  const [dupeNums, setDupeNums] = useState([]);
+  const [remaining, setRemaining] = useState([...Object.keys(profile_table)]);
   const [operatorCode, setOperatorCode] = useState('char_500_noirc');
   const [curScore, setCurScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
@@ -51,16 +51,13 @@ const ProfileGuesser = () => {
   const [solution, setSolution] = useState('char_500_noirc');
 
   const set_rand_profile = () => {
-    let random_number;
-    for (let i = 0; i < 50; i++) {
-      random_number = parseInt(Object.keys(profile_table).length * Math.random());
-      if (!dupeNums.includes(random_number)) {
-        break;
-      }
+    if (remaining.length === 0) {
+      //todo do something special
     }
-    setOperatorCode(Object.keys(profile_table)[random_number]);
-    setDupeNums([...dupeNums, random_number]);
-    console.log(profile_table[Object.keys(profile_table)[random_number]]['table1']['Code Name']);
+    const new_profile = remaining[parseInt(remaining.length * Math.random())];
+    setOperatorCode(new_profile);
+    setRemaining(remaining.filter(profile => profile !== new_profile));
+    console.log(profile_table[new_profile]['table1']['Code Name']);
   };
 
   useEffect(() => {
@@ -95,6 +92,7 @@ const ProfileGuesser = () => {
       setRoundResult(1);
     }
     else {
+      setRemaining([...Object.keys(profile_table)]);
       setRoundResult(0);
       if (curScore > highScore) {
         setHighScore(curScore);
@@ -111,7 +109,6 @@ const ProfileGuesser = () => {
   };
 
   const onClickPlay = () => {
-    setDupeNums([]);
     setCurScore(0);
     load_new_round();
   };

@@ -74,7 +74,7 @@ const Home = () => {
               backgroundColor: '#3882f6',
               color: '#fff',
               py: 3,
-              px: {xs: 4, md: 8},
+              px: { xs: 4, md: 8 },
               borderRadius: '8px'
             }}
           >
@@ -86,21 +86,23 @@ const Home = () => {
               spacing={1}
               sx={{ width: '80vw', maxWidth: '700px' }}
             >
-              <Box minWidth='240px' sx={{ flex: 3, pb: {xs: 2, md: 0} }}>
-                <Typography variant='h6' textAlign={{xs: 'center', sm: 'start'}}>
+              <Box minWidth='240px' sx={{ flex: 3, pb: { xs: 2, md: 0 } }}>
+                <Typography variant='h6' textAlign={{ xs: 'center', sm: 'start' }}>
                   Found a bug? Have some Suggestions?
                 </Typography>
-                <Typography variant='subtitle1' component='p' textAlign={{xs: 'center', sm: 'start'}}>
+                <Typography variant='subtitle1' component='p' textAlign={{ xs: 'center', sm: 'start' }}>
                   Open an Issue on Github to report a bug or request features you would like to see!
                 </Typography>
               </Box>
-              <Box sx={{ flex: 1, display: 'flex', justifyContent: {xs: 'center', md: 'end'} }}>
+              <Box sx={{ flex: 1, display: 'flex', justifyContent: { xs: 'center', md: 'end' } }}>
                 <Button
                   endIcon={<GitHubIcon />}
                   sx={{ fontSize: '1rem', color: 'white', border: '1px solid #fff', borderRadius: '6px' }}
                   href='https://github.com/tnyngyhng/akhub'
                   target='_blank'
-                >GitHub</Button>
+                >
+                  GitHub
+                </Button>
               </Box>
             </Stack>
           </Box>

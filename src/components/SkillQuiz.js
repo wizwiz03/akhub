@@ -46,7 +46,7 @@ const GameBoard = () => {
 
 
   const [userInput, setUserInput] = useState(null);
-  const [dupeNums, setDupeNums] = useState([]);
+  const [remaining, setRemaining] = useState([...skill_code_names]);
   const [curSkillCode, setCurSkillCode] = useState('skchr_absin_1');
   const [curSkillName, setCurSkillName] = useState('');
   const [curScore, setCurScore] = useState(0);
@@ -56,17 +56,14 @@ const GameBoard = () => {
   const [operatorName, setOperatorName] = useState('');
 
   const set_rand_skill = () => {
-    let random_number;
-    for (let i = 0; i < 50; i++) {
-      random_number = parseInt(skill_code_names.length * Math.random());
-      if (!dupeNums.includes(random_number)) {
-        break;
-      }
+    if (remaining.length === 0) {
+      // todo do something special
     }
-    setCurSkillCode(skill_code_names[random_number]);
-    setCurSkillName(skill_table[skill_code_names[random_number]]['name']);
-    setDupeNums([...dupeNums, random_number]);
-    console.log(skill_table[skill_code_names[random_number]]['op_names'][0]);
+    const new_skill = remaining[parseInt(remaining.length * Math.random())];
+    setCurSkillCode(new_skill);
+    setCurSkillName(skill_table[new_skill]['name']);
+    setRemaining(remaining.filter(skill => skill !== new_skill))
+    console.log(skill_table[new_skill]['op_names'][0]);
   }
 
   useEffect(() => {
@@ -77,10 +74,10 @@ const GameBoard = () => {
   }, []);
 
   const load_new_round = () => {
+    setRoundResult(-1);
     setShowSolution(false);
     setUserInput(null);
     set_rand_skill();
-    setRoundResult(-1);
   }
 
   useEffect(() => {
@@ -103,6 +100,7 @@ const GameBoard = () => {
     else {
       setOperatorName(skill_table[curSkillCode]['op_names'][0]);
       setRoundResult(0);
+      setRemaining([...skill_code_names]);
       if (curScore > highScore) {
         setHighScore(curScore);
         setCookie('hs_sq', curScore, { path: '/' });
@@ -118,7 +116,6 @@ const GameBoard = () => {
   }
 
   const onClickPlay = () => {
-    setDupeNums([]);
     setCurScore(0);
     load_new_round();
   }
