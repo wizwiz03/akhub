@@ -260,7 +260,7 @@ const ProfileGuesser = () => {
                 />
               </Box>
             ) : (
-              <Stack mb={2} alignItems='center' spacing={1}>
+              <Stack my={2} alignItems='center' spacing={1}>
                 <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
                 <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
               </Stack>

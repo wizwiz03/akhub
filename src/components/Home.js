@@ -99,6 +99,7 @@ const Home = () => {
                   endIcon={<GitHubIcon />}
                   sx={{ fontSize: '1rem', color: 'white', border: '1px solid #fff', borderRadius: '6px' }}
                   href='https://github.com/tnyngyhng/akhub'
+                  target='_blank'
                 >GitHub</Button>
               </Box>
             </Stack>
