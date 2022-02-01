@@ -14,6 +14,10 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Collapse from '@mui/material/Collapse';
+import Button from '@mui/material/Button';
+import ReplayIcon from '@mui/icons-material/Replay';
+
 
 import game_list from './assets/data/game_list.json';
 import profile_table from './assets/data/profile_table.json';
@@ -37,13 +41,13 @@ const ProfileGuesser = () => {
   const char_names = Object.keys(opname_to_code);
 
   const [userInput, setUserInput] = useState(null);
-  const [randNum, setRandNum] = useState(0);
   const [dupeNums, setDupeNums] = useState([]);
   const [operatorCode, setOperatorCode] = useState('char_500_noirc');
   const [curScore, setCurScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [showSolution, setShowSolution] = useState(false);
   const [roundResult, setRoundResult] = useState(-1);
+  const [solution, setSolution] = useState('char_500_noirc');
 
   const set_rand_profile = () => {
     let random_number;
@@ -53,10 +57,9 @@ const ProfileGuesser = () => {
         break;
       }
     }
-    setRandNum(random_number);
     setOperatorCode(Object.keys(profile_table)[random_number]);
     setDupeNums([...dupeNums, random_number]);
-    console.log(opname_to_code[Object.keys(profile_table)[random_number]]);
+    console.log(profile_table[Object.keys(profile_table)[random_number]]['table1']['Code Name']);
   };
 
   useEffect(() => {
@@ -86,6 +89,7 @@ const ProfileGuesser = () => {
   const processRound = (val) => {
     setShowSolution(true);
     const win_con = opname_to_code[val] === operatorCode;
+    setSolution(operatorCode);
     if (win_con) {
       setRoundResult(1);
     }
@@ -103,6 +107,12 @@ const ProfileGuesser = () => {
       setUserInput(val);
       processRound(val);
     }
+  };
+
+  const onClickPlay = () => {
+    setDupeNums([]);
+    setCurScore(0);
+    load_new_round();
   };
 
   const create_profile_story_table = () => {
@@ -130,7 +140,7 @@ const ProfileGuesser = () => {
 
   const create_profile_stats_table = () => {
     const format_stats_table = (stat, i) => {
-      if (stat === 'Code Name' || stat === 'Model') {
+      if (stat === 'Code Name') {
         return null;
       }
       if (stat === 'Infection Status') {
@@ -233,18 +243,52 @@ const ProfileGuesser = () => {
               {`Current Score: ${curScore}`}
             </Typography>
           </Stack>
-          <Box>
-            <Autocomplete
-              value={userInput}
-              onChange={onSubmit}
-              disablePortal
-              autoHighlight
-              clearOnEscape
-              options={char_names}
-              sx={{ maxWidth: '300px', width: '70vw' }}
-              renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
-            />
-          </Box>
+          {
+            roundResult ? (
+              <Box py={2}>
+                <Autocomplete
+                  value={userInput}
+                  onChange={onSubmit}
+                  disablePortal
+                  autoHighlight
+                  clearOnEscape
+                  options={char_names}
+                  sx={{ maxWidth: '300px', width: '70vw' }}
+                  renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
+                />
+              </Box>
+            ) : (
+              <Stack mb={2} alignItems='center' spacing={1}>
+                <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
+                <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
+              </Stack>
+            )
+          }
+          <Collapse in={showSolution} unmountOnExit>
+            <Paper
+              elevation={24}
+              sx={{
+                minWidth: '200px',
+                p: { xs: '12px', md: '16px' },
+                mb: '24px',
+                mt: '8px',
+                boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
+              }}
+            >
+              <Stack justifyContent='center' alignItems='center'>
+                <Box
+                  component='img'
+                  src={avatar_img_paths[solution]}
+                  alt='image of operator solution'
+                  mb={2}
+                  sx={{ width: '128px', height: '128px' }}
+                />
+                <Typography textAlign='center'>
+                  {profile_table[solution]['table1']['Code Name']}
+                </Typography>
+              </Stack>
+            </Paper>
+          </Collapse>
           {create_profile_story_table()}
           {create_profile_stats_table()}
           {create_nation_combat_table()}

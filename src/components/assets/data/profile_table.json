@@ -1878,7 +1878,7 @@
   },
   "char_286_cast3": {
     "table1": {
-      "Model": "Castle-3",
+      "Code Name": "Castle-3",
       "Gender Assignment": "Male",
       "Time in Service": "3 years",
       "Manufacturer": "Raythean",
@@ -1905,7 +1905,7 @@
   },
   "char_285_medic2": {
     "table1": {
-      "Model": "Lancet-2",
+      "Code Name": "Lancet-2",
       "Gender Assignment": "Female",
       "Time in Service": "2 years",
       "Manufacturer": "Raythean",
@@ -3362,7 +3362,7 @@
   },
   "char_376_therex": {
     "table1": {
-      "Model": "THRM-EX",
+      "Code Name": "THRM-EX",
       "Gender Assignment": "Male",
       "Time in Service": "Less than 1 year",
       "Manufacturer": "Raythean",

@@ -46,7 +46,6 @@ const GameBoard = () => {
 
 
   const [userInput, setUserInput] = useState(null);
-  const [randNum, setRandNum] = useState(0);
   const [dupeNums, setDupeNums] = useState([]);
   const [curSkillCode, setCurSkillCode] = useState('skchr_absin_1');
   const [curSkillName, setCurSkillName] = useState('');
@@ -64,7 +63,6 @@ const GameBoard = () => {
         break;
       }
     }
-    setRandNum(random_number);
     setCurSkillCode(skill_code_names[random_number]);
     setCurSkillName(skill_table[skill_code_names[random_number]]['name']);
     setDupeNums([...dupeNums, random_number]);
@@ -178,7 +176,7 @@ const GameBoard = () => {
                 showSolution &&
                 createItem(avatar_img_paths[opname_to_code[operatorName]], 'image of operator solution', operatorName)
               }
-              {createItem(skill_img_paths[skill_code_names[randNum]], 'skill icon to guess', curSkillName)}
+              {createItem(skill_img_paths[curSkillCode], 'skill icon to guess', curSkillName)}
             </TransitionGroup>
           </Paper>
           {
