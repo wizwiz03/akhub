@@ -16,6 +16,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Collapse from '@mui/material/Collapse';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import ReplayIcon from '@mui/icons-material/Replay';
 
 
@@ -143,7 +144,7 @@ const ProfileGuesser = () => {
       if (stat === 'Code Name') {
         return null;
       }
-      if (stat === 'Infection Status') {
+      if (stat === 'Infection Status' || stat === 'Inspection Report') {
         return (
           <Fragment key={`${stat}${i}`}>
             <TableRow key={`${stat}${i + 1}`}>
@@ -232,9 +233,9 @@ const ProfileGuesser = () => {
           {game.title}
         </Typography>
         <Typography variant='h6' textAlign='center' gutterBottom>
-          {game.descr}
+
         </Typography>
-        <Stack alignItems='center'>
+        <Stack alignItems='center' sx={{ py: 2 }}>
           <Stack direction='row' justifyContent='space-around' spacing={10}>
             <Typography variant='body2' textAlign='center' component='div'>
               {`Your High Score: ${highScore}`}
@@ -252,6 +253,7 @@ const ProfileGuesser = () => {
                   disablePortal
                   autoHighlight
                   clearOnEscape
+                  blurOnSelect
                   options={char_names}
                   sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
@@ -289,9 +291,31 @@ const ProfileGuesser = () => {
               </Stack>
             </Paper>
           </Collapse>
-          {create_profile_story_table()}
-          {create_profile_stats_table()}
-          {create_nation_combat_table()}
+          <Grid container alignItems='stretch' sx={{ maxWidth: '950px' }}>
+            <Grid item xs={12} sx={{
+              margin: '12px 0',
+              borderTop: '1px solid white',
+              borderBottom: '1px solid white'
+            }}>
+              {create_profile_story_table()}
+            </Grid>
+            <Grid item xs={12} sm={6} sx={{
+              margin: '12px 0',
+              borderTop: '1px solid white',
+              borderBottom: '1px solid white',
+              borderRight: { xs: '', sm: '1px solid white' }
+            }}>
+              {create_profile_stats_table()}
+            </Grid>
+            <Grid item xs={12} sm={6} sx={{
+              margin: '12px 0',
+              borderTop: '1px solid white',
+              borderBottom: '1px solid white',
+              borderLeft: { xs: '', sm: '1px solid white' }
+            }}>
+              {create_nation_combat_table()}
+            </Grid>
+          </Grid>
         </Stack>
       </Container>
     </Paper>

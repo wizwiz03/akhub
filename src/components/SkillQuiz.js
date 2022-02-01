@@ -188,6 +188,7 @@ const GameBoard = () => {
                   disablePortal
                   autoHighlight
                   clearOnEscape
+                  blurOnSelect
                   options={char_names}
                   sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{border: '1px solid rgb(250,250,250)', borderRadius: '6px'}} />}
