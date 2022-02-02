@@ -41,7 +41,7 @@ const App = () => {
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <Navbar />
-          <Box pb={2}>
+          <Box>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />

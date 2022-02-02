@@ -21,8 +21,7 @@ const Home = () => {
           maxWidth: '100%',
           backgroundImage: `url(${bgImg})`,
           backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          position: 'relative'
+          backgroundSize: 'cover'
         }}
       >
         <Container>
