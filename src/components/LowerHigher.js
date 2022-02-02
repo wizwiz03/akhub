@@ -13,7 +13,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import char_stats from './assets/data/char_stats.json';
 import opname_to_code from './assets/data/opname_to_code.json';
 
-const HigherLower = () => {
+const LowerHigher = () => {
   const [cookies, setCookie] = useCookies(['hs_lh']);
 
   const importAll = (r) => {
@@ -203,4 +203,4 @@ const HigherLower = () => {
   );
 };
 
-export default HigherLower;
+export default LowerHigher;

@@ -13,7 +13,7 @@ import Home from './Home';
 import Games from './Games';
 import GameBoard from './SkillQuiz';
 import ProfileGuesser from './ProfileGuesser';
-import HigherLower from './HigherLower';
+import LowerHigher from './LowerHigher';
 
 const App = () => {
   let darkTheme = createTheme({
@@ -57,7 +57,7 @@ const App = () => {
               <Route path='/games' element={<Games />} />
               <Route path='/games/skill_quiz' element={<GameBoard />} />
               <Route path='/games/profile_guesser' element={<ProfileGuesser />} />
-              <Route path='/games/higher_lower' element={<HigherLower />} />
+              <Route path='/games/lower_higher' element={<LowerHigher />} />
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
           </Box>

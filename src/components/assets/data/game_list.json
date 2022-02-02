@@ -22,13 +22,13 @@
     "alt": "thumbnail of who is that operator game"
   },
   {
-    "title": "Higher Lower",
+    "title": "Lower Higher",
     "descr": "Which Operator has the higher stat?",
     "rules": [
       "todo"
     ],
     "img": "placeholder",
-    "sub": "higher_lower",
-    "alt": "preview of the higher lower game"
+    "sub": "lower_higher",
+    "alt": "preview of the lower higher game"
   }
 ]
