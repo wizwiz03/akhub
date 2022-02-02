@@ -4,10 +4,7 @@
     "descr": "Can you guess which Operator this Skill belongs to?",
     "descrLong": "TODO",
     "rules": [
-      "See a random icon of a skill",
-      "Guess which operator the skill belongs too",
-      "Get a point for each correct guess",
-      "The game ends if you guessed wrong"
+      "todo"
     ],
     "img": "placeholder",
     "sub": "skill_quiz",
@@ -25,16 +22,13 @@
     "alt": "thumbnail of who is that operator game"
   },
   {
-    "title": "Skill Icon Quiz",
-    "descr": "Can you guess to which Operator this Skill Icon belongs to?",
+    "title": "Higher Lower",
+    "descr": "Which Operator has the higher stat?",
     "rules": [
-      "See a random icon of a skill",
-      "Guess which operator the skill belongs too",
-      "Get a point for each correct guess",
-      "The game ends if you guessed wrong"
+      "todo"
     ],
     "img": "placeholder",
-    "sub": "skill_icon_quiz",
-    "alt": "preview of skill icon quiz game"
+    "sub": "higher_lower",
+    "alt": "preview of the higher lower game"
   }
 ]
