@@ -20,6 +20,15 @@ const App = () => {
     palette: {
       mode: 'dark'
     },
+    typography: {
+      body0: {
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        fontWeight: 500,
+        fontSize: '1.1rem',
+        lineHeight: 1.5,
+        letterSpacing: '0.00938em'
+      }
+    },
     components: {
       MuiTableCell: {
         styleOverrides: {

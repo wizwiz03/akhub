@@ -4,19 +4,17 @@ import { useCookies } from 'react-cookie';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Collapse from '@mui/material/Collapse';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import ReplayIcon from '@mui/icons-material/Replay';
 
 import char_stats from './assets/data/char_stats.json';
+import opname_to_code from './assets/data/opname_to_code.json';
 
 const HigherLower = () => {
+  const [cookies, setCookie] = useCookies(['hs_lh']);
 
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
@@ -34,39 +32,62 @@ const HigherLower = () => {
   const [curStat, setCurStat] = useState();
   const [curScore, setCurScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [roundResult, setRoundResult] = useState(-1);
+  const [solutionStats, setSolutionStats] = useState([]);
 
   const get_random_char = () => {
     return char_codes[parseInt(char_codes.length * Math.random())];
   };
 
-  const get_random_stat = () => {
-    return stat_codes[parseInt(stat_codes.length * Math.random())];
-  };
-
   const load_new_round = () => {
-    let char_1 = get_random_char();
+    setCurStat(stat_codes[parseInt(stat_codes.length * Math.random())]);
+    let char_new = get_random_char();
     if (charMemory.length === 0) {
-      let char_2 = char_1;
-      while (char_2 === char_1) {
+      let char_2 = char_new;
+      while (char_2 === char_new) {
         char_2 = get_random_char();
       }
-      setCharMemory([char_1, char_2]);
+      setCharMemory([char_new, char_2]);
     }
     else {
-      while (char_1 === charMemory.at[-1]) {
-        char_1 = get_random_char();
+      while (char_new === charMemory.at(-1)) {
+        char_new = get_random_char();
       }
-      setCharMemory([...charMemory, char_1]);
+      setCharMemory([...charMemory, char_new]);
     }
-    setCurStat(get_random_stat());
   };
 
   useEffect(() => {
     load_new_round();
+    if (cookies.hs_lh) {
+      setHighScore(cookies.hs_lh);
+    }
   }, []);
 
+  const check_set_solution = (user_val) => {
+    const stat_a = char_stats[charMemory.at(-2)]['phases'][2]['attributesKeyFrames'][0]['data'][curStat];
+    const stat_b = char_stats[charMemory.at(-1)]['phases'][2]['attributesKeyFrames'][0]['data'][curStat];
+    setSolutionStats([stat_a, stat_b]);
+    const sol_val = stat_a === stat_b ? opname_to_code[user_val] : stat_a > stat_b ? charMemory.at(-2) : charMemory.at(-1);
+    return opname_to_code[user_val] === sol_val;
+  };
+
+  const processRound = (user_val) => {
+    const win_con = check_set_solution(user_val);
+    if (win_con) {
+      setRoundResult(1);
+    }
+    else {
+      setRoundResult(0);
+    }
+  };
+
+  const onClickSol = (e) => {
+    processRound(e.currentTarget.textContent);
+  };
+
   return (
-    <Container sx={{ minHeight: '100vh',padding: 0 }}>
+    <Container sx={{ minHeight: '100vh', padding: 0, position: 'relative' }}>
       <TransitionGroup>
         {
           charMemory.map((char, index) => {
@@ -75,11 +96,10 @@ const HigherLower = () => {
             }
             const img_key = char + '_2';
             return (
-              <Collapse key={index} sx={{height: '100%'}}>
+              <Collapse key={index}>
                 <Box
                   sx={{
-                    background: 'rgb(237,237,237)',
-                    background: `url(${char_img_paths[img_key]}) no-repeat center / cover`,
+                    background: `url(${char_img_paths[img_key]}) no-repeat center / cover, 'rgb(237,237,237)'`,
                     background: `url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
                     backgroundSize: 'contain, auto auto'
                   }}
@@ -87,8 +107,12 @@ const HigherLower = () => {
                   {index === charMemory.length - 2 ? (
                     <Stack
                       alignItems='center'
-                      py={2}
-                      sx={{ height: '50vh', backgroundColor: 'rgba(0,0,0,0.4)', borderBottom: '1px solid black' }}
+                      sx={{
+                        padding: '16px 16px 32px 16px',
+                        height: '50vh',
+                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        borderBottom: '1px solid black'
+                      }}
                     >
                       <Stack direction='row' justifyContent='space-between' sx={{ width: '100%' }}>
                         <Typography>
@@ -102,45 +126,47 @@ const HigherLower = () => {
                         Which Operator (E2Lv1) has higher {available_stats[curStat]}?
                       </Typography>
                       <Stack alignItems='center' mt='auto'>
-                        <Typography>
+                        <Typography variant='body0'>
                           {char_stats[char]['name']}
                         </Typography>
-                        <Typography>
+                        <Typography variant='body0'>
                           {available_stats[curStat]}
                         </Typography>
+                        {roundResult !== -1 && (
+                          <Typography variant='body0'>
+                            {solutionStats.at(-2)}
+                          </Typography>
+                        )}
                       </Stack>
-                      <Box sx={{
-                        position: 'absolute',
-                        top: '55%',
-                        backgroundColor: '#fff',
-                        borderRadius: '50%',
-                        width: '3rem',
-                        height: '3rem'
-                      }}>
-                        
-                      </Box>
                     </Stack>
                   ) : (
                     <Stack
                       alignItems='center'
-                      py={2}
+                      p={2}
+                      pt={4}
                       sx={{ height: '50vh', backgroundColor: 'rgba(0,0,0,0.4)' }}
                     >
                       <Stack alignItems='center'>
-                        <Typography>
+                        {roundResult !== -1 && (
+                          <Typography variant='body0'>
+                            {solutionStats.at(-1)}
+                          </Typography>
+                        )}
+                        <Typography variant='body0'>
                           {available_stats[curStat]}
                         </Typography>
-                        <Typography>
+                        <Typography variant='body0'>
                           {char_stats[char]['name']}
                         </Typography>
                       </Stack>
                       <Stack my='auto' spacing={2}>
-                        <Button variant='outlined' sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}>
-                          {char_stats[charMemory.at(-2)]['name']}
-                        </Button>
-                        <Button variant='outlined' sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}>
-                          {char_stats[char]['name']}
-                        </Button>
+                        {[-2, -1].map(j => (
+                          <Button key={j} variant='outlined' onClick={onClickSol}
+                            sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}
+                          >
+                            {char_stats[charMemory.at(j)]['name']}
+                          </Button>
+                        ))}
                       </Stack>
                     </Stack>
                   )
@@ -151,6 +177,28 @@ const HigherLower = () => {
           })
         }
       </TransitionGroup>
+      <Box sx={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        backgroundColor: '#fff',
+        borderRadius: '50%',
+        width: '3rem',
+        height: '3rem',
+        transform: 'translate(-50%, -50%)'
+      }}>
+        <Box sx={{
+          color: 'black',
+          textAlign: 'center',
+          verticalAlign: 'middle',
+          display: 'table-cell',
+          fontSize: '1.1rem',
+          fontWeight: '700',
+          height: '3rem',
+          width: '3rem'
+        }}
+        >VS</Box>
+      </Box>
     </Container>
   );
 };
