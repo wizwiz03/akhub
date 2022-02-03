@@ -9,6 +9,7 @@ import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import ReplayIcon from '@mui/icons-material/Replay';
+import CountUp from 'react-countup';
 
 import char_stats from './assets/data/char_stats.json';
 import opname_to_code from './assets/data/opname_to_code.json';
@@ -40,7 +41,8 @@ const LowerHigher = () => {
   };
 
   const set_rand_matchup = () => {
-    setCurStat(stat_codes[parseInt(stat_codes.length * Math.random())]);
+    const new_stat = stat_codes[parseInt(stat_codes.length * Math.random())];
+    setCurStat(new_stat);
     let char_new = get_random_char();
     if (charMemory.length === 0) {
       let char_2 = char_new;
@@ -48,11 +50,13 @@ const LowerHigher = () => {
         char_2 = get_random_char();
       }
       setCharMemory([char_new, char_2]);
+      console.log(char_stats[char_new]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat], char_stats[char_2]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat]);
     }
     else {
       while (char_new === charMemory.at(-1)) {
         char_new = get_random_char();
       }
+      console.log(char_stats[charMemory.at(-1)]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat], char_stats[char_new]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat]);
       setCharMemory([...charMemory, char_new]);
     }
   }
@@ -158,9 +162,17 @@ const LowerHigher = () => {
                           {available_stats[curStat]}
                         </Typography>
                         {roundResult !== -1 && (
-                          <Typography variant='body0'>
-                            {solutionStats.at(-2)}
-                          </Typography>
+                          <CountUp
+                            start={parseInt(solutionStats.at(-2) * 0.75)}
+                            end={solutionStats.at(-2)}
+                            delay={0}
+                            duration={1}
+                            decimals={curStat === 'baseAttackTime' ? 1 : 0}
+                          >
+                            {({ countUpRef }) => (
+                              <Typography ref={countUpRef} variant='h4' />
+                            )}
+                          </CountUp>
                         )}
                       </Stack>
                     </Stack>
@@ -173,9 +185,17 @@ const LowerHigher = () => {
                     >
                       <Stack alignItems='center'>
                         {roundResult !== -1 && (
-                          <Typography variant='body0'>
-                            {solutionStats.at(-1)}
-                          </Typography>
+                          <CountUp
+                            start={parseInt(solutionStats.at(-1) * 0.75)}
+                            end={solutionStats.at(-1)}
+                            delay={0}
+                            duration={1}
+                            decimals={curStat === 'baseAttackTime' ? 1 : 0}
+                          >
+                            {({ countUpRef }) => (
+                              <Typography ref={countUpRef} variant='h4' />
+                            )}
+                          </CountUp>
                         )}
                         <Typography variant='body0'>
                           {available_stats[curStat]}
