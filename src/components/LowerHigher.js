@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Collapse from '@mui/material/Collapse';
+import Fade from '@mui/material/Fade';
 import Stack from '@mui/material/Stack';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import ReplayIcon from '@mui/icons-material/Replay';
@@ -221,30 +222,35 @@ const LowerHigher = () => {
           })
         }
       </TransitionGroup>
-      <Box sx={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        backgroundColor: '#fff',
-        borderRadius: '50%',
-        width: '3rem',
-        height: '3rem',
-        transform: 'translate(-50%, -50%)'
-      }}>
-        <Box sx={{
-          color: 'black',
-          textAlign: 'center',
-          verticalAlign: 'middle',
-          display: 'table-cell',
-          fontSize: '1.1rem',
-          fontWeight: '700',
-          height: '3rem',
-          width: '3rem'
-        }}
-        >
-          VS
-        </Box>
-      </Box>
+      <TransitionGroup>
+        {[-1, 0, 1].map(result => result !== roundResult ? null : (
+          <Fade timeout={1500} key={result} unmountOnExit>
+            <Box sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              borderRadius: '50%',
+              width: '3rem',
+              height: '3rem',
+              transform: 'translate(-50%, -50%)',
+              backgroundColor: result ? result === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336'
+            }}>
+              <Box sx={{
+                color: 'black',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                display: 'table-cell',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                height: '3rem',
+                width: '3rem',
+              }}>
+               VS
+              </Box>
+            </Box>
+          </Fade>
+        ))}
+      </TransitionGroup>
       {!roundResult && (
         <Stack my='auto'>
           <Typography>
