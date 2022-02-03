@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import createTheme from '@mui/material/styles/createTheme';
 import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
@@ -49,7 +49,7 @@ const App = () => {
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <Navbar />
-          <Box>
+          <Paper elevation={4}>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />
@@ -59,7 +59,7 @@ const App = () => {
               <Route path='/games/lower_higher' element={<LowerHigher />} />
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
-          </Box>
+          </Paper>
         </ThemeProvider>
       </BrowserRouter>
     </CookiesProvider>

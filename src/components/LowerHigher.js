@@ -131,141 +131,141 @@ const LowerHigher = () => {
       {isGameover ? (
         <Gameover score={curScore} playAgain={playAgain} />
       ) : (
-        <Box>
-          <TransitionGroup>
-            {
-              charMemory.map((char, index) => {
-                if (index < charMemory.length - 2) {
-                  return null;
-                }
-                const img_key = char + '_2';
-                return (
-                  <Collapse key={index}>
-                    <Box
-                      sx={{
-                        background: `url(${char_img_paths[img_key]}) no-repeat center, 'rgb(237,237,237)'`,
-                        background: `url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
-                        backgroundSize: 'contain, auto auto'
-                      }}
-                    >
-                      {index === charMemory.length - 2 ? (
-                        <Stack
-                          alignItems='center'
-                          sx={{
-                            padding: '16px 16px 32px 16px',
-                            height: '50vh',
-                            backgroundColor: 'rgba(0,0,0,0.4)',
-                            borderBottom: '1px solid black'
-                          }}
-                        >
-                          <Stack direction='row' justifyContent='space-between' sx={{ width: '100%' }}>
-                            <Typography>
-                              High Score: {highScore}
-                            </Typography>
-                            <Typography>
-                              Score: {curScore}
-                            </Typography>
-                          </Stack>
-                          <Typography variant='h6' textAlign='center' py={2}>
-                            Which Operator (E2Lv1) has higher {available_stats[curStat]}?
+        <TransitionGroup>
+          {
+            charMemory.map((char, index) => {
+              if (index < charMemory.length - 2) {
+                return null;
+              }
+              const img_key = char + '_2';
+              return (
+                <Collapse key={index}>
+                  <Box
+                    sx={{
+                      background: `url(${char_img_paths[img_key]}) no-repeat center, 'rgb(237,237,237)'`,
+                      background: `url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
+                      backgroundSize: 'contain, auto auto'
+                    }}
+                  >
+                    {index === charMemory.length - 2 ? (
+                      <Stack
+                        alignItems='center'
+                        sx={{
+                          padding: '16px 16px 32px 16px',
+                          height: '50vh',
+                          backgroundColor: 'rgba(0,0,0,0.4)',
+                          borderBottom: '1px solid black'
+                        }}
+                      >
+                        <Stack direction='row' justifyContent='space-between' sx={{ width: '100%' }}>
+                          <Typography>
+                            High Score: {highScore}
                           </Typography>
-                          <Stack alignItems='center' mt='auto'>
-                            <Typography variant='body0'>
-                              {char_stats[char]['name']}
-                            </Typography>
-                            <Typography variant='body0'>
-                              {available_stats[curStat]}
-                            </Typography>
-                            {roundResult !== -1 && (
-                              <CountUp
-                                start={parseInt(solutionStats.at(-2) * 0.75)}
-                                end={solutionStats.at(-2)}
-                                delay={0}
-                                duration={1}
-                                decimals={curStat === 'baseAttackTime' ? 1 : 0}
-                              >
-                                {({ countUpRef }) => (
-                                  <Typography ref={countUpRef} variant='h4' />
-                                )}
-                              </CountUp>
-                            )}
-                          </Stack>
+                          <Typography>
+                            Score: {curScore}
+                          </Typography>
                         </Stack>
-                      ) : (
-                        <Stack
-                          alignItems='center'
-                          p={2}
-                          pt={4}
-                          sx={{ height: '50vh', backgroundColor: 'rgba(0,0,0,0.4)' }}
-                        >
-                          <Stack alignItems='center'>
-                            {roundResult !== -1 && (
-                              <CountUp
-                                start={parseInt(solutionStats.at(-1) * 0.75)}
-                                end={solutionStats.at(-1)}
-                                delay={0}
-                                duration={1}
-                                decimals={curStat === 'baseAttackTime' ? 1 : 0}
-                              >
-                                {({ countUpRef }) => (
-                                  <Typography ref={countUpRef} variant='h4' />
-                                )}
-                              </CountUp>
-                            )}
-                            <Typography variant='body0'>
-                              {available_stats[curStat]}
-                            </Typography>
-                            <Typography variant='body0'>
-                              {char_stats[char]['name']}
-                            </Typography>
-                          </Stack>
-                          <Stack my='auto' spacing={2}>
-                            {[-2, -1].map(j => (
-                              <Button key={j} variant='outlined' onClick={onClickSol} disabled={roundResult === -1 ? false : true}
-                                sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}
-                              >
-                                {char_stats[charMemory.at(j)]['name']}
-                              </Button>
-                            ))}
-                          </Stack>
+                        <Typography variant='h6' textAlign='center' py={2}>
+                          Which Operator (E2Lv1) has higher {available_stats[curStat]}?
+                        </Typography>
+                        <Stack alignItems='center' mt='auto'>
+                          <Typography variant='body0'>
+                            {char_stats[char]['name']}
+                          </Typography>
+                          <Typography variant='body0'>
+                            {available_stats[curStat]}
+                          </Typography>
+                          {roundResult !== -1 && (
+                            <CountUp
+                              start={parseInt(solutionStats.at(-2) * 0.75)}
+                              end={solutionStats.at(-2)}
+                              delay={0}
+                              duration={1}
+                              decimals={curStat === 'baseAttackTime' ? 1 : 0}
+                            >
+                              {({ countUpRef }) => (
+                                <Typography ref={countUpRef} variant='h4' />
+                              )}
+                            </CountUp>
+                          )}
                         </Stack>
-                      )}
-                    </Box>
-                  </Collapse>
-                );
-              })
-            }
-          </TransitionGroup>
-          <TransitionGroup>
-            {[-1, 0, 1].map(result => result !== roundResult ? null : (
-              <Fade timeout={1500} key={result} unmountOnExit>
-                <Box sx={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  borderRadius: '50%',
-                  width: '3rem',
-                  height: '3rem',
-                  transform: 'translate(-50%, -50%)',
-                  backgroundColor: result ? result === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336'
-                }}>
-                  <Box sx={{
-                    color: 'black',
-                    textAlign: 'center',
-                    verticalAlign: 'middle',
-                    display: 'table-cell',
-                    fontSize: '1.1rem',
-                    fontWeight: '700',
-                    height: '3rem',
-                    width: '3rem',
-                  }}>
-                    VS
+                      </Stack>
+                    ) : (
+                      <Stack
+                        alignItems='center'
+                        p={2}
+                        pt={4}
+                        sx={{ height: '50vh', backgroundColor: 'rgba(0,0,0,0.4)' }}
+                      >
+                        <Stack alignItems='center'>
+                          {roundResult !== -1 && (
+                            <CountUp
+                              start={parseInt(solutionStats.at(-1) * 0.75)}
+                              end={solutionStats.at(-1)}
+                              delay={0}
+                              duration={1}
+                              decimals={curStat === 'baseAttackTime' ? 1 : 0}
+                            >
+                              {({ countUpRef }) => (
+                                <Typography ref={countUpRef} variant='h4' />
+                              )}
+                            </CountUp>
+                          )}
+                          <Typography variant='body0'>
+                            {available_stats[curStat]}
+                          </Typography>
+                          <Typography variant='body0'>
+                            {char_stats[char]['name']}
+                          </Typography>
+                        </Stack>
+                        <Stack my='auto' spacing={2}>
+                          {[-2, -1].map(j => (
+                            <Button key={j} variant='outlined' onClick={onClickSol} disabled={roundResult === -1 ? false : true}
+                              sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}
+                            >
+                              {char_stats[charMemory.at(j)]['name']}
+                            </Button>
+                          ))}
+                        </Stack>
+                      </Stack>
+                    )}
                   </Box>
+                </Collapse>
+              );
+            })
+          }
+        </TransitionGroup>
+      )}
+      {!isGameover && (
+        <TransitionGroup>
+          {[-1, 0, 1].map(result => result !== roundResult ? null : (
+            <Fade timeout={1500} key={result} unmountOnExit>
+              <Box sx={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                borderRadius: '50%',
+                width: '3rem',
+                height: '3rem',
+                transform: 'translate(-50%, -50%)',
+                backgroundColor: result ? result === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336'
+              }}>
+                <Box sx={{
+                  color: 'black',
+                  textAlign: 'center',
+                  verticalAlign: 'middle',
+                  display: 'table-cell',
+                  fontSize: '1.1rem',
+                  fontWeight: '700',
+                  height: '3rem',
+                  width: '3rem',
+                }}>
+                  VS
                 </Box>
-              </Fade>
-            ))}
-          </TransitionGroup>
-        </Box>
+              </Box>
+            </Fade>
+          ))}
+        </TransitionGroup>
       )}
     </Container>
   );
