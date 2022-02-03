@@ -39,7 +39,7 @@ const LowerHigher = () => {
     return char_codes[parseInt(char_codes.length * Math.random())];
   };
 
-  const load_new_round = () => {
+  const set_rand_matchup = () => {
     setCurStat(stat_codes[parseInt(stat_codes.length * Math.random())]);
     let char_new = get_random_char();
     if (charMemory.length === 0) {
@@ -55,14 +55,29 @@ const LowerHigher = () => {
       }
       setCharMemory([...charMemory, char_new]);
     }
+  }
+
+  const load_new_round = () => {
+    set_rand_matchup();
+    setRoundResult(-1);
   };
 
   useEffect(() => {
-    load_new_round();
+    set_rand_matchup();
     if (cookies.hs_lh) {
       setHighScore(cookies.hs_lh);
     }
   }, []);
+
+  useEffect(() => {
+    let timer = null;
+    if (roundResult === 1) {
+      console.log('Timeout triggered');
+      setCurScore(curScore + 1);
+      timer = setTimeout(load_new_round, 3000);
+    }
+    return () => clearTimeout(timer);
+  }, [roundResult]);
 
   const check_set_solution = (user_val) => {
     const stat_a = char_stats[charMemory.at(-2)]['phases'][2]['attributesKeyFrames'][0]['data'][curStat];
@@ -78,12 +93,22 @@ const LowerHigher = () => {
       setRoundResult(1);
     }
     else {
+      setCharMemory([]);
       setRoundResult(0);
+      if (curScore > highScore) {
+        setHighScore(curScore);
+        setCookie('hs_lh', curScore, { path: '/' });
+      }
     }
   };
 
   const onClickSol = (e) => {
     processRound(e.currentTarget.textContent);
+  };
+
+  const playAgain = () => {
+    setCurScore(0);
+    load_new_round();
   };
 
   return (
@@ -99,7 +124,7 @@ const LowerHigher = () => {
               <Collapse key={index}>
                 <Box
                   sx={{
-                    background: `url(${char_img_paths[img_key]}) no-repeat center / cover, 'rgb(237,237,237)'`,
+                    background: `url(${char_img_paths[img_key]}) no-repeat center, 'rgb(237,237,237)'`,
                     background: `url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
                     backgroundSize: 'contain, auto auto'
                   }}
@@ -161,7 +186,7 @@ const LowerHigher = () => {
                       </Stack>
                       <Stack my='auto' spacing={2}>
                         {[-2, -1].map(j => (
-                          <Button key={j} variant='outlined' onClick={onClickSol}
+                          <Button key={j} variant='outlined' onClick={onClickSol} disabled={roundResult === 1 ? true : false}
                             sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}
                           >
                             {char_stats[charMemory.at(j)]['name']}
@@ -169,8 +194,7 @@ const LowerHigher = () => {
                         ))}
                       </Stack>
                     </Stack>
-                  )
-                  }
+                  )}
                 </Box>
               </Collapse>
             );
@@ -197,8 +221,20 @@ const LowerHigher = () => {
           height: '3rem',
           width: '3rem'
         }}
-        >VS</Box>
+        >
+          VS
+        </Box>
       </Box>
+      {!roundResult && (
+        <Stack my='auto'>
+          <Typography>
+            Oh no, you lost.
+          </Typography>
+          <Button endIcon={<ReplayIcon />} variant='outlined' onClick={playAgain}>
+            Play Again
+          </Button>
+        </Stack>
+      )}
     </Container>
   );
 };
