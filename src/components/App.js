@@ -8,7 +8,6 @@ import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
 import Navbar from './Navbar';
-import Footer from './Footer';
 import Home from './Home';
 import Games from './Games';
 import GameBoard from './SkillQuiz';
@@ -61,7 +60,6 @@ const App = () => {
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
           </Box>
-          <Footer />
         </ThemeProvider>
       </BrowserRouter>
     </CookiesProvider>

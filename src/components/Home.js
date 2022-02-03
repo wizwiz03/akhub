@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+import Footer from './Footer';
+
 import bgImg from './assets/images/akhub_home.jpg';
 import game_list from './assets/data/game_list.json';
 import images from './assets/images/games/index';
@@ -67,7 +69,7 @@ const Home = () => {
         </Container>
       </Box>
       <Box sx={{ backgroundColor: '#e5e7eb', width: '100vw', maxWidth: '100%', py: 4 }}>
-        <Container sx={{ minHeight: '30vh', display: 'flex' }} component={Stack} justifyContent='center' alignItems='center'>
+        <Container sx={{ minHeight: '50vh', display: 'flex' }} component={Stack} justifyContent='center' alignItems='center'>
           <Box
             sx={{
               backgroundColor: '#3882f6',
@@ -97,7 +99,7 @@ const Home = () => {
                 <Button
                   endIcon={<GitHubIcon />}
                   sx={{ fontSize: '1rem', color: 'white', border: '1px solid #fff', borderRadius: '6px' }}
-                  href='https://github.com/tnyngyhng/akhub'
+                  href='https://github.com/wizwiz03/akhub'
                   target='_blank'
                 >
                   GitHub
@@ -107,6 +109,7 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 }
