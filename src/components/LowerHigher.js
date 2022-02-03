@@ -127,7 +127,7 @@ const LowerHigher = () => {
   };
 
   return (
-    <Container sx={{ minHeight: '100vh', padding: 0, position: 'relative' }}>
+    <Container sx={{ minHeight: '100vh', padding: 0, position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {isGameover ? (
         <Gameover score={curScore} playAgain={playAgain} />
       ) : (

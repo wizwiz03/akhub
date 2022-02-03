@@ -11,7 +11,7 @@ const Navbar = () => {
   const pages = { 'Home': '/', 'Games': '/games' };
   return (
     <AppBar position='static'>
-      <Container>
+      <Container px={0}>
         <Toolbar>
           <Grid container alignItems='center'>
             <Grid item xs='auto' sm={3}>

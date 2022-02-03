@@ -9,13 +9,13 @@ import Footer from './Footer';
 
 import gameover_img from '../dump/lost_1.png';
 
-const Gameover = ({ curScore, playAgain }) => {
+const Gameover = ({ score, playAgain }) => {
   return (
     <>
-      <Paper elevation={8} sx={{ padding: '16px 0' }}>
+      <Paper elevation={8} sx={{ padding: '16px 0', flex: 1 }}>
         <Stack alignItems='center' spacing={2}>
           <Typography variant='h2'>Your final score:</Typography>
-          <Typography variant='h1'>{curScore}</Typography>
+          <Typography variant='h1'>{score}</Typography>
           <Typography variant='p' textAlign='center'>
             Looks like you have lost. You can't stop like this... How about another try?
           </Typography>
