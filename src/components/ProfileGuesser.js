@@ -65,7 +65,6 @@ const ProfileGuesser = () => {
     if (cookies.hs_pg) {
       setHighScore(cookies.hs_pg);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const load_new_round = () => {

@@ -7,6 +7,7 @@ import createTheme from '@mui/material/styles/createTheme';
 import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
+import ScrollToTop from './ScrollToTop';
 import Navbar from './Navbar';
 import Home from './Home';
 import Games from './Games';
@@ -45,10 +46,11 @@ const App = () => {
   darkTheme = responsiveFontSizes(darkTheme);
   return (
     <CookiesProvider>
-      <BrowserRouter>
-        <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={darkTheme}>
+        <BrowserRouter>
           <CssBaseline />
-          <Paper elevation={4} sx={{minHeight: '100vh'}}>
+          <ScrollToTop />
+          <Paper elevation={4} sx={{ minHeight: '100vh' }}>
             <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
@@ -60,8 +62,8 @@ const App = () => {
               <Route path='*' element={<main><p>There's nothing here</p></main>} />
             </Routes>
           </Paper>
-        </ThemeProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ThemeProvider>
     </CookiesProvider>
   );
 }
