@@ -6,7 +6,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     if (pathname === '/games/lower_higher') {
-      window.scrollTo({ bottom: 0, behavior: 'smooth' });
+      window.scrollTo(0, document.body.scrollHeight, { behavior: 'smooth' });
     }
     else {
       window.scrollTo(0, 0);

@@ -6,11 +6,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Collapse from '@mui/material/Collapse';
-import Fade from '@mui/material/Fade';
 import Stack from '@mui/material/Stack';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CountUp from 'react-countup';
 
+import Footer from './Footer';
 import Gameover from './Gameover';
 
 import char_stats from './assets/data/char_stats.json';
@@ -130,7 +130,10 @@ const LowerHigher = () => {
   return (
     <Box sx={{ minHeight: '100vh', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {isGameover ? (
-        <Gameover score={curScore} playAgain={playAgain} />
+        <>
+          <Gameover score={curScore} playAgain={playAgain} />
+          <Footer />
+        </>
       ) : (
         <TransitionGroup>
           {
@@ -241,7 +244,7 @@ const LowerHigher = () => {
           height: '3rem',
           transform: 'translate(-50%, -50%)',
           backgroundColor: roundResult ? roundResult === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336',
-          transition: theme.transitions.create(['background-color'], {duration: 1500})
+          transition: theme.transitions.create(['background-color'], { duration: 1500 })
         }}>
           <Box sx={{
             color: 'black',
