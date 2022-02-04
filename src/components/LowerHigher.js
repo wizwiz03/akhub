@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
+import { useTheme } from '@emotion/react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -17,6 +18,7 @@ import opname_to_code from './assets/data/opname_to_code.json';
 
 const LowerHigher = () => {
   const [cookies, setCookie] = useCookies(['hs_lh']);
+  const theme = useTheme();
 
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
@@ -229,35 +231,31 @@ const LowerHigher = () => {
         </TransitionGroup>
       )}
       {!isGameover && (
-        <TransitionGroup>
-          {[-1, 0, 1].map(result => result !== roundResult ? null : (
-            <Fade timeout={1500} key={result} unmountOnExit>
-              <Box sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                borderRadius: '50%',
-                width: '3rem',
-                height: '3rem',
-                transform: 'translate(-50%, -50%)',
-                backgroundColor: result ? result === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336'
-              }}>
-                <Box sx={{
-                  color: 'black',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  display: 'table-cell',
-                  fontSize: '1.1rem',
-                  fontWeight: '700',
-                  height: '3rem',
-                  width: '3rem',
-                }}>
-                  VS
-                </Box>
-              </Box>
-            </Fade>
-          ))}
-        </TransitionGroup>
+
+        <Box sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          borderRadius: '50%',
+          width: '3rem',
+          height: '3rem',
+          transform: 'translate(-50%, -50%)',
+          backgroundColor: roundResult ? roundResult === 1 ? 'rgb(75,181,67)' : '#fff' : '#f44336',
+          transition: theme.transitions.create(['background-color'], {duration: 1500})
+        }}>
+          <Box sx={{
+            color: 'black',
+            textAlign: 'center',
+            verticalAlign: 'middle',
+            display: 'table-cell',
+            fontSize: '1.1rem',
+            fontWeight: '700',
+            height: '3rem',
+            width: '3rem',
+          }}>
+            VS
+          </Box>
+        </Box>
       )}
     </Box>
   );
