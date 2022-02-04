@@ -48,8 +48,8 @@ const App = () => {
       <BrowserRouter>
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
-          <Navbar />
-          <Paper elevation={4}>
+          <Paper elevation={4} sx={{minHeight: '100vh'}}>
+            <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/home' element={<Home />} />

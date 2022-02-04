@@ -14,6 +14,8 @@ import Divider from '@mui/material/Divider';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import ReplayIcon from '@mui/icons-material/Replay';
 
+import Footer from './Footer';
+
 import game_list from './assets/data/game_list.json';
 import character_table from './assets/data/character_table.json';
 import skill_table from './assets/data/skill_table.json';
@@ -31,17 +33,9 @@ const GameBoard = () => {
     }, {})
   }
 
-  // ['Myrtle', 'Bagpipe', ...]
-  // const char_names = Object.keys(character_table).map(key => character_table[key]['name']);
   const char_names = Object.keys(opname_to_code);
-
-  // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
-
-  // { 'skchr_absin_1': <webpack_img_path>, 'skchr_aglina_1': <webpack_img_path>, ... }
   const skill_img_paths = importAll(require.context('./assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
-
-  // ['skchr_absin_1', 'skchr_aglina_1', ...]
   const skill_code_names = Object.keys(skill_table);
 
 
@@ -142,73 +136,76 @@ const GameBoard = () => {
   );
 
   return (
-    <Paper elevation={8}>
-      <Container sx={{ p: {xs: 2, sm: 3, md: 4} }} >
-        <Typography variant='h4' textAlign='center' gutterBottom>
-          {game.title}
-        </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography variant='h6' textAlign='center' gutterBottom>
-            {game.descr}
+    <Stack>
+      <Paper elevation={8} sx={{flex: 1, padding: '16px 0'}}>
+        <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }} >
+          <Typography variant='h4' textAlign='center' gutterBottom>
+            {game.title}
           </Typography>
-          <Paper
-            elevation={24}
-            sx={{
-              minWidth: '200px',
-              p: { xs: '12px', md: '16px' },
-              mb: '24px',
-              mt: '8px',
-              boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
-            }}
-          >
-            <TransitionGroup
-              component={Stack}
-              divider={<Divider orientation="vertical" flexItem />}
-              direction='row'
-              spacing={2}
-              justifyContent='center'
-              alignItems='center'
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Typography variant='h6' textAlign='center' gutterBottom>
+              {game.descr}
+            </Typography>
+            <Paper
+              elevation={24}
+              sx={{
+                minWidth: '200px',
+                p: { xs: '12px', md: '16px' },
+                mb: '24px',
+                mt: '8px',
+                boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
+              }}
             >
-              {
-                showSolution &&
-                createItem(avatar_img_paths[opname_to_code[operatorName]], 'image of operator solution', operatorName)
-              }
-              {createItem(skill_img_paths[curSkillCode], 'skill icon to guess', curSkillName)}
-            </TransitionGroup>
-          </Paper>
-          {
-            roundResult ? (
-              <Box mb={2}>
-                <Autocomplete
-                  value={userInput}
-                  onChange={onSubmit}
-                  disablePortal
-                  autoHighlight
-                  clearOnEscape
-                  blurOnSelect
-                  options={char_names}
-                  sx={{ maxWidth: '300px', width: '70vw' }}
-                  renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{border: '1px solid rgb(250,250,250)', borderRadius: '6px'}} />}
-                />
-              </Box>
-            ) : (
-              <Stack mb={2} alignItems='center' spacing={1}>
-                <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
-                <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
-              </Stack>
-            )
-          }
-          <Stack direction='row' spacing={10} justifyContent='space-around'>
-            <Typography textAlign='center' component='div'>
-              Your High Score: {highScore}
-            </Typography>
-            <Typography textAlign='center' component='div'>
-              Current Score: {curScore}
-            </Typography>
-          </Stack>
-        </Box>
-      </Container >
-    </Paper>
+              <TransitionGroup
+                component={Stack}
+                divider={<Divider orientation="vertical" flexItem />}
+                direction='row'
+                spacing={2}
+                justifyContent='center'
+                alignItems='center'
+              >
+                {
+                  showSolution &&
+                  createItem(avatar_img_paths[opname_to_code[operatorName]], 'image of operator solution', operatorName)
+                }
+                {createItem(skill_img_paths[curSkillCode], 'skill icon to guess', curSkillName)}
+              </TransitionGroup>
+            </Paper>
+            {
+              roundResult ? (
+                <Box mb={2}>
+                  <Autocomplete
+                    value={userInput}
+                    onChange={onSubmit}
+                    disablePortal
+                    autoHighlight
+                    clearOnEscape
+                    blurOnSelect
+                    options={char_names}
+                    sx={{ maxWidth: '300px', width: '70vw' }}
+                    renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
+                  />
+                </Box>
+              ) : (
+                <Stack mb={2} alignItems='center' spacing={1}>
+                  <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
+                  <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
+                </Stack>
+              )
+            }
+            <Stack direction='row' spacing={10} justifyContent='space-around'>
+              <Typography textAlign='center' component='div'>
+                Your High Score: {highScore}
+              </Typography>
+              <Typography textAlign='center' component='div'>
+                Current Score: {curScore}
+              </Typography>
+            </Stack>
+          </Box>
+        </Container >
+      </Paper>
+      <Footer />
+    </Stack>
   )
 }
 

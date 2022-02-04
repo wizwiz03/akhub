@@ -12,7 +12,7 @@ import gameover_img from '../dump/lost_1.png';
 const Gameover = ({ score, playAgain }) => {
   return (
     <>
-      <Paper elevation={8} sx={{ padding: '24px 4px', flex: 1 }}>
+      <Paper elevation={8} sx={{ padding: '24px 8px', flex: 1 }}>
         <Stack alignItems='center' spacing={2}>
           <Typography variant='h2'>Your final score:</Typography>
           <Typography variant='h1'>{score}</Typography>

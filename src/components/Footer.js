@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer = () => {
   const theme = useTheme();
   return (
-    <Box py={2} sx={{
+    <Box py={3} sx={{
       backgroundColor: theme.palette.background.default,
       boxShadow: theme.shadows[4],
       backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))'

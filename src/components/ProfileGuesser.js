@@ -38,7 +38,6 @@ const ProfileGuesser = () => {
     }, {})
   }
 
-  // { 'char_002_amiya_1': <webpack_img_path>, 'char_003_kalts_1': <webpack_img_path>, ... }
   const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
   const char_names = Object.keys(opname_to_code);
 
