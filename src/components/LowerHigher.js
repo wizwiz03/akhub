@@ -27,7 +27,7 @@ const LowerHigher = () => {
     }, {})
   }
 
-  const char_img_paths = importAll(require.context('./assets/images/characters_min_512', false, /\.(png|jpe?g|svg)$/));
+  const char_img_paths = importAll(require.context('./assets/images/characters_512_tinyfied', false, /\.(png|jpe?g|svg)$/));
   const char_codes = Object.keys(char_stats);
   const available_stats = { 'maxHp': 'HP', 'atk': 'ATK', 'def': 'DEF', 'magicResistance': 'Arts Resist', 'baseAttackTime': 'Attack Interval' };
   const stat_codes = Object.keys(available_stats);
@@ -54,13 +54,13 @@ const LowerHigher = () => {
         char_2 = get_random_char();
       }
       setCharMemory([char_new, char_2]);
-      console.log(char_stats[char_new]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat], char_stats[char_2]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat]);
+      console.log(char_stats[char_new]['statsE2LV1'][new_stat], char_stats[char_2]['statsE2LV1'][new_stat]);
     }
     else {
       while (char_new === charMemory.at(-1)) {
         char_new = get_random_char();
       }
-      console.log(char_stats[charMemory.at(-1)]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat], char_stats[char_new]['phases'][2]['attributesKeyFrames'][0]['data'][new_stat]);
+      console.log(char_stats[charMemory.at(-1)]['statsE2LV1'][new_stat], char_stats[char_new]['statsE2LV1'][new_stat]);
       setCharMemory([...charMemory, char_new]);
     }
   }
@@ -96,8 +96,8 @@ const LowerHigher = () => {
   }, [roundResult]);
 
   const check_set_solution = (user_val) => {
-    const stat_a = char_stats[charMemory.at(-2)]['phases'][2]['attributesKeyFrames'][0]['data'][curStat];
-    const stat_b = char_stats[charMemory.at(-1)]['phases'][2]['attributesKeyFrames'][0]['data'][curStat];
+    const stat_a = char_stats[charMemory.at(-2)]['statsE2LV1'][curStat];
+    const stat_b = char_stats[charMemory.at(-1)]['statsE2LV1'][curStat];
     setSolutionStats([stat_a, stat_b]);
     const sol_val = stat_a === stat_b ? opname_to_code[user_val] : stat_a > stat_b ? charMemory.at(-2) : charMemory.at(-1);
     return opname_to_code[user_val] === sol_val;
