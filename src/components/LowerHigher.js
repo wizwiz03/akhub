@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Collapse from '@mui/material/Collapse';
@@ -127,7 +126,7 @@ const LowerHigher = () => {
   };
 
   return (
-    <Container sx={{ minHeight: '100vh', padding: 0, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ minHeight: '100vh', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {isGameover ? (
         <Gameover score={curScore} playAgain={playAgain} />
       ) : (
@@ -140,39 +139,37 @@ const LowerHigher = () => {
               const img_key = char + '_2';
               return (
                 <Collapse key={index}>
-                  <Box
+                  <Stack
+                    alignItems='center'
                     sx={{
                       background: `url(${char_img_paths[img_key]}) no-repeat center, 'rgb(237,237,237)'`,
-                      background: `url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
-                      backgroundSize: 'contain, auto auto'
+                      background: `linear-gradient(rgba(0,0,0,0.4) 100%, rgba(0,0,0,0.4) 100%), url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
+                      backgroundSize: 'contain, contain, auto auto',
+                      padding: '16px',
+                      paddingBottom: index === charMemory.length - 2 ? '32px' : '16px',
+                      paddingTop: index === charMemory.length - 2 ? '16px' : '32px',
+                      minHeight: '50vh',
+                      borderBottom: index === charMemory.length - 2 ? '1px solid black' : ''
                     }}
                   >
                     {index === charMemory.length - 2 ? (
-                      <Stack
-                        alignItems='center'
-                        sx={{
-                          padding: '16px 16px 32px 16px',
-                          height: '50vh',
-                          backgroundColor: 'rgba(0,0,0,0.4)',
-                          borderBottom: '1px solid black'
-                        }}
-                      >
+                      <>
                         <Stack direction='row' justifyContent='space-between' sx={{ width: '100%' }}>
-                          <Typography>
+                          <Typography variant='body0'>
                             High Score: {highScore}
                           </Typography>
-                          <Typography>
+                          <Typography variant='body0'>
                             Score: {curScore}
                           </Typography>
                         </Stack>
-                        <Typography variant='h6' textAlign='center' py={2}>
+                        <Typography variant='h5' fontWeight='bold' textAlign='center' py={2}>
                           Which Operator (E2Lv1) has higher {available_stats[curStat]}?
                         </Typography>
                         <Stack alignItems='center' mt='auto'>
-                          <Typography variant='body0'>
+                          <Typography variant='h6'>
                             {char_stats[char]['name']}
                           </Typography>
-                          <Typography variant='body0'>
+                          <Typography variant='h6'>
                             {available_stats[curStat]}
                           </Typography>
                           {roundResult !== -1 && (
@@ -189,14 +186,9 @@ const LowerHigher = () => {
                             </CountUp>
                           )}
                         </Stack>
-                      </Stack>
+                      </>
                     ) : (
-                      <Stack
-                        alignItems='center'
-                        p={2}
-                        pt={4}
-                        sx={{ height: '50vh', backgroundColor: 'rgba(0,0,0,0.4)' }}
-                      >
+                      <>
                         <Stack alignItems='center'>
                           {roundResult !== -1 && (
                             <CountUp
@@ -211,25 +203,25 @@ const LowerHigher = () => {
                               )}
                             </CountUp>
                           )}
-                          <Typography variant='body0'>
+                          <Typography variant='h6'>
                             {available_stats[curStat]}
                           </Typography>
-                          <Typography variant='body0'>
+                          <Typography variant='h6'>
                             {char_stats[char]['name']}
                           </Typography>
                         </Stack>
                         <Stack my='auto' spacing={2}>
                           {[-2, -1].map(j => (
                             <Button key={j} variant='outlined' onClick={onClickSol} disabled={roundResult === -1 ? false : true}
-                              sx={{ color: 'white', border: '2px solid white', borderRadius: '8px' }}
+                              sx={{ color: 'white', border: '2px solid white', borderRadius: '8px', fontSize: '1rem' }}
                             >
                               {char_stats[charMemory.at(j)]['name']}
                             </Button>
                           ))}
                         </Stack>
-                      </Stack>
+                      </>
                     )}
-                  </Box>
+                  </Stack>
                 </Collapse>
               );
             })
@@ -267,7 +259,7 @@ const LowerHigher = () => {
           ))}
         </TransitionGroup>
       )}
-    </Container>
+    </Box>
   );
 };
 
