@@ -1,18 +1,17 @@
 [
   {
-    "title": "Skill Quiz",
-    "descr": "Can you guess which Operator this Skill belongs to?",
-    "descrLong": "TODO",
+    "title": "Lower Higher",
+    "descr": "2 Operators, 1 Stat. Can you guess which Operator has the higher Stat?",
     "rules": [
       "todo"
     ],
     "img": "placeholder",
-    "sub": "skill_quiz",
-    "alt": "thumbnail of skill quiz game"
+    "sub": "lower_higher",
+    "alt": "preview of the lower higher game"
   },
   {
     "title": "Who is that Operator?",
-    "descr": "Guess the Operator by their profile",
+    "descr": "You call yourself a lore connoisseur? Then guessing Operators based on their profile should be a piece of cake for you!",
     "descrLong": "How well do you know your favorite Operators? Can you guess them just by their profile?",
     "rules": [
       "todo"
@@ -22,13 +21,14 @@
     "alt": "thumbnail of who is that operator game"
   },
   {
-    "title": "Lower Higher",
-    "descr": "Which Operator has the higher stat?",
+    "title": "Skill Quiz",
+    "descr": "The ultimate test. How well do you know Operators based on their Skills?",
+    "descrLong": "TODO",
     "rules": [
       "todo"
     ],
     "img": "placeholder",
-    "sub": "lower_higher",
-    "alt": "preview of the lower higher game"
+    "sub": "skill_quiz",
+    "alt": "thumbnail of skill quiz game"
   }
 ]

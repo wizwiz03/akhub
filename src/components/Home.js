@@ -4,14 +4,18 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 import Footer from './Footer';
 
-import bgImg from './assets/images/akhub_home.jpg';
 import game_list from './assets/data/game_list.json';
-import images from './assets/images/games/index';
+import bgImg from './assets/images/home/akhub_home.jpg';
+import gamesImg from './assets/images/home/char_002_amiya_1+.png';
 
 const Home = () => {
   return (
@@ -22,12 +26,12 @@ const Home = () => {
           width: '100vw',
           maxWidth: '100%',
           backgroundImage: `url(${bgImg})`,
-          backgroundPosition: 'center',
+          backgroundPosition: { xs: '55% 50%', sm: 'center' },
           backgroundSize: 'cover'
         }}
       >
         <Container>
-          <Grid container alignItems='center' sx={{ minHeight: '70vh' }}>
+          <Grid container alignItems='center' sx={{ minHeight: '85vh' }}>
             <Grid item xs={2}></Grid>
             <Grid item xs={8}>
               <Typography
@@ -47,24 +51,47 @@ const Home = () => {
         </Container>
       </Box>
       <Box sx={{ backgroundColor: 'rgb(255,255,255)', width: '100vw', maxWidth: '100%', py: 4 }}>
-        <Container sx={{ minHeight: '70vh', color: '#000' }}>
-          <Typography variant='h4' sx={{ fontWeight: 600, textAlign: 'center' }}>
-            Check out these Games!
-          </Typography>
-          <Stack direction='row' justifyContent='space-around' spacing={2} mt={5} sx={{ flexWrap: 'wrap' }}>
-            {
-              game_list.map((game, i) => (
-                <Stack key={i} alignItems='center' spacing={3}>
-                  <Box
-                    component='img'
-                    src={images[game.img]}
-                    alt={game.alt}
-                    sx={{ height: '180px', border: '5px solid #3b82f6', borderRadius: '12px' }}
-                  />
-                  <Typography sx={{ maxWidth: '200px' }}>{game.title}</Typography>
-                </Stack >
-              ))
-            }
+        <Container>
+          <Stack
+            justifyContent='center'
+            px={{xs: 1, sm: 4}}
+            sx={{ minHeight: '80vh', color: '#000', flexDirection: { xs: 'column', sm: 'row' } }}
+          >
+            <Stack justifyContent='center' sx={{ flex: 1 }}>
+              <Typography variant='h6' pb={2} pl={{sm: 2}} sx={{textAlign: {xs: 'center', sm: 'start'}}}>
+                How well do you know your favorite Operators?
+              </Typography>
+              <Typography pl={{sm: 2}} sx={{textAlign: {xs: 'center', sm: 'start'}}}>
+                Arknights Hub features 3 fun little Games that will test your knowledge:
+              </Typography>
+              <List>
+                {game_list.map(game => (
+                  <ListItem key={game['title']}>
+                    <ListItemIcon>
+                      <ArrowForwardIosRoundedIcon htmlColor='#000' />
+                    </ListItemIcon>
+                    <ListItemText
+                      color='#000'
+                      primary={game['title']}
+                      secondary={game['descr']}
+                      secondaryTypographyProps={{ color: 'secondary.contrastText' }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+              <Button variant='outlined' sx={{ maxWidth: '300px', margin: '0 auto' }}>
+                Check out the Games now!
+              </Button>
+            </Stack >
+            <Box
+              sx={{
+                flex: 1,
+                background: `url(${gamesImg}) no-repeat center`,
+                backgroundSize: 'contain',
+                display: {xs: 'none', sm: 'block'}
+              }}
+            >
+            </Box>
           </Stack>
         </Container>
       </Box>
