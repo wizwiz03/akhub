@@ -38,7 +38,7 @@ const ProfileGuesser = () => {
     }, {})
   }
 
-  const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
+  const avatar_img_paths = importAll(require.context('./assets/images/avatars_min', false, /\.(png|jpe?g|svg)$/));
   const char_names = Object.keys(opname_to_code);
 
   const [userInput, setUserInput] = useState(null);
@@ -79,7 +79,7 @@ const ProfileGuesser = () => {
     if (roundResult === 1) {
       console.log('Timeout triggered');
       setCurScore(curScore + 1);
-      timer = setTimeout(load_new_round, 3000);
+      timer = setTimeout(load_new_round, 2500);
     }
     return () => clearTimeout(timer);
   }, [roundResult]);

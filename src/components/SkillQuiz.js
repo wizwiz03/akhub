@@ -33,7 +33,7 @@ const GameBoard = () => {
   }
 
   const char_names = Object.keys(opname_to_code);
-  const avatar_img_paths = importAll(require.context('./assets/images/avatars', false, /\.(png|jpe?g|svg)$/));
+  const avatar_img_paths = importAll(require.context('./assets/images/avatars_min', false, /\.(png|jpe?g|svg)$/));
   const skill_img_paths = importAll(require.context('./assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
   const skill_code_names = Object.keys(skill_table);
 
