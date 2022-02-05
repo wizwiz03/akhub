@@ -20,6 +20,7 @@ const Footer = () => {
           <Button
             href='https://github.com/wizwiz03/akhub'
             target='_blank'
+            rel='noopener'
             aria-label='github repo link'
             size='large'
           >

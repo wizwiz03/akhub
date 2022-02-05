@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -54,14 +56,14 @@ const Home = () => {
         <Container>
           <Stack
             justifyContent='center'
-            px={{xs: 1, sm: 4}}
+            px={{ xs: 1, sm: 4 }}
             sx={{ minHeight: '80vh', color: '#000', flexDirection: { xs: 'column', sm: 'row' } }}
           >
             <Stack justifyContent='center' sx={{ flex: 1 }}>
-              <Typography variant='h6' pb={2} pl={{sm: 2}} sx={{textAlign: {xs: 'center', sm: 'start'}}}>
+              <Typography variant='h6' pb={2} pl={{ sm: 2 }} sx={{ textAlign: { xs: 'center', sm: 'start' } }}>
                 How well do you know your favorite Operators?
               </Typography>
-              <Typography pl={{sm: 2}} sx={{textAlign: {xs: 'center', sm: 'start'}}}>
+              <Typography pl={{ sm: 2 }} sx={{ textAlign: { xs: 'center', sm: 'start' } }}>
                 Arknights Hub features 3 fun little Games that will test your knowledge:
               </Typography>
               <List>
@@ -79,7 +81,9 @@ const Home = () => {
                   </ListItem>
                 ))}
               </List>
-              <Button variant='outlined' sx={{ maxWidth: '300px', margin: '0 auto' }}>
+              <Button variant='outlined' component={Link} to='/games'
+                sx={{ maxWidth: '300px', margin: '0 auto' }}
+              >
                 Check out the Games now!
               </Button>
             </Stack >
@@ -88,7 +92,7 @@ const Home = () => {
                 flex: 1,
                 background: `url(${gamesImg}) no-repeat center`,
                 backgroundSize: 'contain',
-                display: {xs: 'none', sm: 'block'}
+                display: { xs: 'none', sm: 'block' }
               }}
             >
             </Box>
@@ -128,6 +132,7 @@ const Home = () => {
                   sx={{ fontSize: '1rem', color: 'white', border: '1px solid #fff', borderRadius: '6px' }}
                   href='https://github.com/wizwiz03/akhub'
                   target='_blank'
+                  rel='noopener'
                 >
                   GitHub
                 </Button>
