@@ -15,7 +15,9 @@ const Navbar = () => {
         <Toolbar>
           <Grid container alignItems='center'>
             <Grid item xs='auto' sm={3}>
-              <Typography variant='h5' component='div' sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Typography variant='h5' component={Link} to='/'
+                sx={{ display: { xs: 'none', sm: 'block' }, textDecoration: 'none', color: 'white' }}
+              >
                 Arknights Hub
               </Typography>
               <Typography variant='h5' component='div' sx={{ display: { xs: 'block', sm: 'none' }, paddingRight: '8px' }}>

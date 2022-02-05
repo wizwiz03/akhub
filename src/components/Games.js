@@ -11,9 +11,12 @@ import { CardActionArea } from '@mui/material';
 import Footer from './Footer';
 
 import game_list from './assets/data/game_list.json';
-import images from './assets/images/games/index';
+import lh_img from '../dump/lh_screenshot.png';
+import pg_img from '../dump/pg_thumbnail.jpg';
+import sq_img from '../dump/sq_thumbnail.jpg';
 
 const Games = () => {
+  const thumbnails = {'lower_higher': lh_img, 'profile_guesser': pg_img, 'skill_quiz': sq_img};
   return (
     <>
       <Container sx={{ pt: 2 }}>
@@ -29,7 +32,7 @@ const Games = () => {
                     <CardMedia
                       component='img'
                       height='150'
-                      image={images[game.img]}
+                      image={thumbnails[game.sub]}
                       alt={game.alt}
                     />
                     <CardContent>

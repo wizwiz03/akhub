@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import ReplayIcon from '@mui/icons-material/Replay';
 
-import gameover_img from '../dump/lost_1.png';
+import gameover_img from '../dump/256_lost_1.png';
 
 const Gameover = ({ score, playAgain }) => {
   return (

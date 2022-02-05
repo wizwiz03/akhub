@@ -17,7 +17,7 @@ import Footer from './Footer';
 
 import game_list from './assets/data/game_list.json';
 import bgImg from './assets/images/home/akhub_home.jpg';
-import gamesImg from './assets/images/home/char_002_amiya_1+.png';
+import gamesImg from './assets/images/home/char_002_amiya_1+.jpg';
 
 const Home = () => {
   return (
