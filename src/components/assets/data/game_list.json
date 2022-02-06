@@ -2,33 +2,19 @@
   {
     "title": "Lower Higher",
     "descr": "2 Operators, 1 Stat. Can you guess which Operator has the higher Stat?",
-    "rules": [
-      "todo"
-    ],
-    "img": "placeholder",
-    "sub": "lower_higher",
-    "alt": "preview of the lower higher game"
+    "descrAlt": "Bagpipe vs Perfumer, Shining vs Mousse? You have never thought of these Matchups? Well, it is time. In this game you have to guess which Operator has the higher Stat out of either HP, ATK, DEF, Arts Resist or Attack Interval (at E2Lv1).",
+    "sub": "lower_higher"
   },
   {
     "title": "Who is that Operator?",
-    "descr": "You call yourself a lore connoisseur? Then guessing Operators based on their profile should be a piece of cake for you!",
-    "descrLong": "How well do you know your favorite Operators? Can you guess them just by their profile?",
-    "rules": [
-      "todo"
-    ],
-    "img": "placeholder",
-    "sub": "profile_guesser",
-    "alt": "thumbnail of who is that operator game"
+    "descr": "This game will test your lore knowledge. How well can you identify your favorite Operators based on their description?",
+    "descrAlt": "How well do you know your favorite Operators? Can you guess them just by their profile?",
+    "sub": "profile_guesser"
   },
   {
     "title": "Skill Quiz",
     "descr": "The ultimate test. How well do you know Operators based on their Skills?",
-    "descrLong": "TODO",
-    "rules": [
-      "todo"
-    ],
-    "img": "placeholder",
-    "sub": "skill_quiz",
-    "alt": "thumbnail of skill quiz game"
+    "descrAlt": "The ultimate test. Surely you are not just using meta Operators, but also have invested into many 4 star and 5 star Operators, right? Well in that case, you should have no problems identifying them by just their skills!",
+    "sub": "skill_quiz"
   }
 ]

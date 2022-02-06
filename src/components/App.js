@@ -50,7 +50,7 @@ const App = () => {
         <BrowserRouter>
           <CssBaseline />
           <ScrollToTop />
-          <Paper elevation={4} sx={{ minHeight: '100vh' }}>
+          <Paper elevation={8} sx={{ minHeight: '100vh' }}>
             <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
