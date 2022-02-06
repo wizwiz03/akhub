@@ -82,7 +82,7 @@ const Home = () => {
                 ))}
               </List>
               <Button variant='outlined' component={Link} to='/games'
-                sx={{ maxWidth: '300px', margin: '0 auto' }}
+                sx={{ maxWidth: '300px', margin: '16px auto 0px', color: '#008dff', border: '1px solid #008dff' }}
               >
                 Check out the Games now!
               </Button>

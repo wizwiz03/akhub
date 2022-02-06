@@ -13,12 +13,14 @@ import CountUp from 'react-countup';
 import Footer from './Footer';
 import Gameover from './Gameover';
 
+import game_list from './assets/data/game_list.json';
 import char_stats from './assets/data/char_stats.json';
 import opname_to_code from './assets/data/opname_to_code.json';
 
 const LowerHigher = () => {
   const [cookies, setCookie] = useCookies(['hs_lh']);
   const theme = useTheme();
+  const game = game_list.find(mode => mode['sub'] === 'lower_higher');
 
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
@@ -87,10 +89,10 @@ const LowerHigher = () => {
     if (roundResult === 1) {
       console.log('Timeout triggered');
       setCurScore(curScore + 1);
-      timer = setTimeout(load_new_round, 3000);
+      timer = setTimeout(load_new_round, 2500);
     }
     if (roundResult === 0) {
-      timer = setTimeout(show_gameover, 3000);
+      timer = setTimeout(show_gameover, 2500);
     }
     return () => clearTimeout(timer);
   }, [roundResult]);
@@ -131,7 +133,7 @@ const LowerHigher = () => {
     <Box sx={{ minHeight: '100vh', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {isGameover ? (
         <>
-          <Gameover score={curScore} playAgain={playAgain} />
+          <Gameover score_results={game.scores} score={curScore} playAgain={playAgain} />
           <Footer />
         </>
       ) : (

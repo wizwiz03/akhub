@@ -15,10 +15,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Collapse from '@mui/material/Collapse';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import ReplayIcon from '@mui/icons-material/Replay';
 
+import Gameover from './Gameover';
 import Footer from './Footer';
 
 import game_list from './assets/data/game_list.json';
@@ -49,6 +48,7 @@ const ProfileGuesser = () => {
   const [showSolution, setShowSolution] = useState(false);
   const [roundResult, setRoundResult] = useState(-1);
   const [solution, setSolution] = useState('char_500_noirc');
+  const [isGameover, setIsGameover] = useState(false);
 
   const set_rand_profile = () => {
     if (remaining.length === 0) {
@@ -74,12 +74,19 @@ const ProfileGuesser = () => {
     setRoundResult(-1);
   };
 
+  const show_gameover = () => {
+    setIsGameover(true);
+  };
+
   useEffect(() => {
     let timer = null;
     if (roundResult === 1) {
       console.log('Timeout triggered');
       setCurScore(curScore + 1);
-      timer = setTimeout(load_new_round, 2500);
+      timer = setTimeout(load_new_round, 2000);
+    }
+    if (roundResult === 0) {
+      timer = setTimeout(show_gameover, 2000);
     }
     return () => clearTimeout(timer);
   }, [roundResult]);
@@ -110,6 +117,7 @@ const ProfileGuesser = () => {
 
   const onClickPlay = () => {
     setCurScore(0);
+    setIsGameover(false);
     load_new_round();
   };
 
@@ -225,98 +233,94 @@ const ProfileGuesser = () => {
 
   return (
     <>
-      <Paper elevation={8}>
-        <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
-          <Typography variant='h4' textAlign='center' gutterBottom>
-            {game.title}
-          </Typography>
-          <Typography variant='h6' textAlign='center' gutterBottom>
+      {isGameover ? (
+        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} />
+      ) : (
+        <Paper elevation={8}>
+          <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+            <Typography variant='h4' textAlign='center' gutterBottom>
+              {game.title}
+            </Typography>
+            <Typography variant='h6' textAlign='center' gutterBottom>
 
-          </Typography>
-          <Stack alignItems='center' sx={{ py: 2 }}>
-            <Stack direction='row' justifyContent='space-around' spacing={10}>
-              <Typography variant='body2' textAlign='center' component='div'>
-                {`Your High Score: ${highScore}`}
-              </Typography>
-              <Typography variant='body2' textAlign='center' component='div'>
-                {`Current Score: ${curScore}`}
-              </Typography>
+            </Typography>
+            <Stack alignItems='center' sx={{ py: 2 }}>
+              <Stack direction='row' justifyContent='space-around' spacing={10}>
+                <Typography variant='body2' textAlign='center' component='div'>
+                  {`Your High Score: ${highScore}`}
+                </Typography>
+                <Typography variant='body2' textAlign='center' component='div'>
+                  {`Current Score: ${curScore}`}
+                </Typography>
+              </Stack>
+              <Box py={2}>
+                <Autocomplete
+                  value={userInput}
+                  onChange={onSubmit}
+                  disablePortal
+                  autoHighlight
+                  clearOnEscape
+                  blurOnSelect
+                  disabled={roundResult === -1 ? false : true}
+                  options={char_names}
+                  sx={{ maxWidth: '300px', width: '70vw' }}
+                  renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
+                />
+              </Box>
+              <Collapse in={showSolution} unmountOnExit>
+                <Paper
+                  elevation={24}
+                  sx={{
+                    minWidth: '200px',
+                    p: { xs: '12px', md: '16px' },
+                    mb: '24px',
+                    mt: '8px',
+                    boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
+                  }}
+                >
+                  <Stack justifyContent='center' alignItems='center'>
+                    <Box
+                      component='img'
+                      src={avatar_img_paths[solution]}
+                      alt='image of operator solution'
+                      mb={2}
+                      sx={{ width: '128px', height: '128px' }}
+                    />
+                    <Typography textAlign='center'>
+                      {profile_table[solution]['table1']['Code Name']}
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Collapse>
+              <Grid container alignItems='stretch' sx={{ maxWidth: '950px' }}>
+                <Grid item xs={12} sx={{
+                  margin: '12px 0',
+                  borderTop: '1px solid white',
+                  borderBottom: '1px solid white'
+                }}>
+                  {create_profile_story_table()}
+                </Grid>
+                <Grid item xs={12} sm={6} sx={{
+                  margin: '12px 0',
+                  borderTop: '1px solid white',
+                  borderBottom: '1px solid white',
+                  borderRight: { xs: '', sm: '1px solid white' }
+                }}>
+                  {create_profile_stats_table()}
+                </Grid>
+                <Grid item xs={12} sm={6} sx={{
+                  margin: '12px 0',
+                  borderTop: '1px solid white',
+                  borderBottom: '1px solid white',
+                  borderLeft: { xs: '', sm: '1px solid white' }
+                }}>
+                  {create_nation_combat_table()}
+                </Grid>
+              </Grid>
             </Stack>
-            {
-              roundResult ? (
-                <Box py={2}>
-                  <Autocomplete
-                    value={userInput}
-                    onChange={onSubmit}
-                    disablePortal
-                    autoHighlight
-                    clearOnEscape
-                    blurOnSelect
-                    options={char_names}
-                    sx={{ maxWidth: '300px', width: '70vw' }}
-                    renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
-                  />
-                </Box>
-              ) : (
-                <Stack my={2} alignItems='center' spacing={1}>
-                  <Typography textAlign='center' variant='h6'>Looks like you have lost the game. Try again?</Typography>
-                  <Button variant='contained' endIcon={<ReplayIcon />} onClick={onClickPlay}>Play Again</Button>
-                </Stack>
-              )
-            }
-            <Collapse in={showSolution} unmountOnExit>
-              <Paper
-                elevation={24}
-                sx={{
-                  minWidth: '200px',
-                  p: { xs: '12px', md: '16px' },
-                  mb: '24px',
-                  mt: '8px',
-                  boxShadow: roundResult ? roundResult === 1 ? `rgba(56, 142, 60) 0px 5px 15px` : null : `rgba(211, 47, 47) 0px 5px 15px`
-                }}
-              >
-                <Stack justifyContent='center' alignItems='center'>
-                  <Box
-                    component='img'
-                    src={avatar_img_paths[solution]}
-                    alt='image of operator solution'
-                    mb={2}
-                    sx={{ width: '128px', height: '128px' }}
-                  />
-                  <Typography textAlign='center'>
-                    {profile_table[solution]['table1']['Code Name']}
-                  </Typography>
-                </Stack>
-              </Paper>
-            </Collapse>
-            <Grid container alignItems='stretch' sx={{ maxWidth: '950px' }}>
-              <Grid item xs={12} sx={{
-                margin: '12px 0',
-                borderTop: '1px solid white',
-                borderBottom: '1px solid white'
-              }}>
-                {create_profile_story_table()}
-              </Grid>
-              <Grid item xs={12} sm={6} sx={{
-                margin: '12px 0',
-                borderTop: '1px solid white',
-                borderBottom: '1px solid white',
-                borderRight: { xs: '', sm: '1px solid white' }
-              }}>
-                {create_profile_stats_table()}
-              </Grid>
-              <Grid item xs={12} sm={6} sx={{
-                margin: '12px 0',
-                borderTop: '1px solid white',
-                borderBottom: '1px solid white',
-                borderLeft: { xs: '', sm: '1px solid white' }
-              }}>
-                {create_nation_combat_table()}
-              </Grid>
-            </Grid>
-          </Stack>
-        </Container>
-      </Paper>
+          </Container>
+        </Paper>
+      )}
       <Footer />
     </>
   );

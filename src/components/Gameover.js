@@ -7,14 +7,20 @@ import ReplayIcon from '@mui/icons-material/Replay';
 
 import gameover_img from '../dump/256_lost_1.png';
 
-const Gameover = ({ score, playAgain }) => {
+const Gameover = ({ score_results, score, playAgain }) => {
+  const gameover_text = {
+    bad: 'Looks like you have lost. You can\'t stop like this... You can do better! How about another try?',
+    decent: 'Not bad. You seem to know a thing or two. Or you are just lucky... The only way to find out is to play more!',
+    great: 'Wow, that\'s a nice score. Good Job! Here have a happy sticker as your reward.'
+  };
+
   return (
     <Paper elevation={8} sx={{ padding: '24px 8px', flex: 1 }}>
       <Stack alignItems='center' spacing={2}>
         <Typography variant='h2'>Your final score:</Typography>
         <Typography variant='h1'>{score}</Typography>
         <Typography variant='p' textAlign='center'>
-          Looks like you have lost. You can't stop like this... How about another try?
+          {score <= score_results['bad'] ? gameover_text['bad'] : score <= score_results['decent'] ? gameover_text['decent'] : gameover_text['great']}
         </Typography>
         <Button variant='outlined' endIcon={<ReplayIcon />} onClick={playAgain} sx={{ borderRadius: '8px' }}>
           Play Again

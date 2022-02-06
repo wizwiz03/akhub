@@ -83,10 +83,10 @@ const GameBoard = () => {
     if (roundResult === 1) {
       console.log('Timeout triggered');
       setCurScore(curScore + 1);
-      timer = setTimeout(load_new_round, 2500);
+      timer = setTimeout(load_new_round, 2000);
     }
     if (roundResult === 0) {
-      timer = setTimeout(show_gameover, 2500);
+      timer = setTimeout(show_gameover, 2000);
     }
     return () => clearTimeout(timer);
   }, [roundResult])
@@ -146,7 +146,7 @@ const GameBoard = () => {
   return (
     <Stack>
       {isGameover ? (
-        <Gameover score={curScore} playAgain={onClickPlay} />
+        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} />
       ) : (
         <Paper elevation={8} sx={{ flex: 1, padding: '16px 0' }}>
           <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }} >
