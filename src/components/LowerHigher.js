@@ -112,7 +112,7 @@ const LowerHigher = () => {
       setRoundResult(0);
       if (curScore > highScore) {
         setHighScore(curScore);
-        setCookie('hs_lh', curScore, { path: '/' });
+        setCookie('hs_lh', curScore, { path: '/', maxAge: 100000000 });
       }
     }
   };

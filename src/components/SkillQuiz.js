@@ -56,7 +56,7 @@ const GameBoard = () => {
       setIsGameover(true);
       setRemaining([...skill_code_names]);
       setHighScore(curScore);
-      setCookie('hs_pg', curScore, { path: '/' });
+      setCookie('hs_pg', curScore, { path: '/', maxAge: 100000000 });
     }
     else {
       const new_skill = remaining[parseInt(remaining.length * Math.random())];
@@ -111,7 +111,7 @@ const GameBoard = () => {
       setRemaining([...skill_code_names]);
       if (curScore > highScore) {
         setHighScore(curScore);
-        setCookie('hs_sq', curScore, { path: '/' });
+        setCookie('hs_sq', curScore, { path: '/', maxAge: 100000000 });
       }
     }
   }

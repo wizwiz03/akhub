@@ -57,7 +57,7 @@ const ProfileGuesser = () => {
       isGameover(true);
       setRemaining([...Object.keys(profile_table)]);
       setHighScore(curScore);
-      setCookie('hs_pg', curScore, { path: '/' });
+      setCookie('hs_pg', curScore, { path: '/', maxAge: 100000000 });
     }
     else {
       const new_profile = remaining[parseInt(remaining.length * Math.random())];
@@ -106,7 +106,7 @@ const ProfileGuesser = () => {
       setRoundResult(0);
       if (curScore > highScore) {
         setHighScore(curScore);
-        setCookie('hs_pg', curScore, { path: '/' });
+        setCookie('hs_pg', curScore, { path: '/', maxAge: 100000000 });
       }
     }
   };
