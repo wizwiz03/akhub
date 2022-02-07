@@ -20,7 +20,7 @@ const Games = () => {
   const thumbnails = { 'lower_higher': lh_img, 'profile_guesser': pg_img, 'skill_quiz': sq_img };
   return (
     <>
-      <Container sx={{ py: 3 }}>
+      <Container sx={{ py: 3, flex: 1 }}>
         <Typography variant='h2' textAlign='center' gutterBottom fontWeight={500}>
           Games
         </Typography>

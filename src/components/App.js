@@ -14,6 +14,7 @@ import Games from './Games';
 import GameBoard from './SkillQuiz';
 import ProfileGuesser from './ProfileGuesser';
 import LowerHigher from './LowerHigher';
+import HTTP404 from './HTTP404';
 
 const App = () => {
   let darkTheme = createTheme({
@@ -50,7 +51,7 @@ const App = () => {
         <BrowserRouter>
           <CssBaseline />
           <ScrollToTop />
-          <Paper elevation={8} sx={{ minHeight: '100vh' }}>
+          <Paper elevation={8} sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
@@ -59,7 +60,7 @@ const App = () => {
               <Route path='/games/skill_quiz' element={<GameBoard />} />
               <Route path='/games/profile_guesser' element={<ProfileGuesser />} />
               <Route path='/games/lower_higher' element={<LowerHigher />} />
-              <Route path='*' element={<main><p>There's nothing here</p></main>} />
+              <Route path='*' element={<HTTP404 />} />
             </Routes>
           </Paper>
         </BrowserRouter>
