@@ -3,10 +3,9 @@ import { CookiesProvider } from 'react-cookie';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Paper from '@mui/material/Paper';
-import createTheme from '@mui/material/styles/createTheme';
-import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
+import createCustomTheme from './theme';
 import ScrollToTop from './ScrollToTop';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -17,37 +16,9 @@ import LowerHigher from './LowerHigher';
 import HTTP404 from './HTTP404';
 
 const App = () => {
-  let darkTheme = createTheme({
-    palette: {
-      mode: 'dark'
-    },
-    typography: {
-      body0: {
-        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-        fontWeight: 500,
-        fontSize: '1.1rem',
-        lineHeight: 1.5,
-        letterSpacing: '0.00938em'
-      }
-    },
-    components: {
-      MuiTableCell: {
-        styleOverrides: {
-          root: {
-            fontSize: '1rem',
-            fontWeight: 400
-          },
-          head: {
-            fontSize: '1.2rem'
-          }
-        }
-      }
-    }
-  });
-  darkTheme = responsiveFontSizes(darkTheme);
   return (
     <CookiesProvider>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={createCustomTheme()}>
         <BrowserRouter>
           <CssBaseline />
           <ScrollToTop />

@@ -236,7 +236,6 @@ const LowerHigher = () => {
         </TransitionGroup>
       )}
       {!isGameover && (
-
         <Box sx={{
           position: 'absolute',
           top: '50%',
