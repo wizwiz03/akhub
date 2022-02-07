@@ -133,7 +133,7 @@ const LowerHigher = () => {
     <Box sx={{ minHeight: '100vh', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       {isGameover ? (
         <>
-          <Gameover score_results={game.scores} score={curScore} playAgain={playAgain} />
+          <Gameover score_results={game.scores} score={curScore} playAgain={playAgain} perfect_res={false} />
           <Footer />
         </>
       ) : (

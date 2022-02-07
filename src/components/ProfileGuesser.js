@@ -49,15 +49,22 @@ const ProfileGuesser = () => {
   const [roundResult, setRoundResult] = useState(-1);
   const [solution, setSolution] = useState('char_500_noirc');
   const [isGameover, setIsGameover] = useState(false);
+  const [perfectRes, setPerfectRes] = useState(false);
 
   const set_rand_profile = () => {
     if (remaining.length === 0) {
-      //todo do something special
+      setPerfectRes(true);
+      isGameover(true);
+      setRemaining([...Object.keys(profile_table)]);
+      setHighScore(curScore);
+      setCookie('hs_pg', curScore, { path: '/' });
     }
-    const new_profile = remaining[parseInt(remaining.length * Math.random())];
-    setOperatorCode(new_profile);
-    setRemaining(remaining.filter(profile => profile !== new_profile));
-    console.log(profile_table[new_profile]['table1']['Code Name']);
+    else {
+      const new_profile = remaining[parseInt(remaining.length * Math.random())];
+      setOperatorCode(new_profile);
+      setRemaining(remaining.filter(profile => profile !== new_profile));
+      console.log(profile_table[new_profile]['table1']['Code Name']);
+    }
   };
 
   useEffect(() => {
@@ -74,10 +81,6 @@ const ProfileGuesser = () => {
     setRoundResult(-1);
   };
 
-  const show_gameover = () => {
-    setIsGameover(true);
-  };
-
   useEffect(() => {
     let timer = null;
     if (roundResult === 1) {
@@ -86,7 +89,7 @@ const ProfileGuesser = () => {
       timer = setTimeout(load_new_round, 2000);
     }
     if (roundResult === 0) {
-      timer = setTimeout(show_gameover, 2000);
+      timer = setTimeout(() => setIsGameover(true), 2000);
     }
     return () => clearTimeout(timer);
   }, [roundResult]);
@@ -119,6 +122,7 @@ const ProfileGuesser = () => {
     setCurScore(0);
     setIsGameover(false);
     load_new_round();
+    setPerfectRes(false);
   };
 
   const create_profile_story_table = () => {
@@ -234,7 +238,7 @@ const ProfileGuesser = () => {
   return (
     <>
       {isGameover ? (
-        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} />
+        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} perfect_res={perfectRes} />
       ) : (
         <Paper elevation={8}>
           <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }}>

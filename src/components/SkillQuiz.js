@@ -48,16 +48,23 @@ const GameBoard = () => {
   const [roundResult, setRoundResult] = useState(-1);
   const [operatorName, setOperatorName] = useState('');
   const [isGameover, setIsGameover] = useState(false);
+  const [perfectRes, setPerfectRes] = useState(false);
 
   const set_rand_skill = () => {
     if (remaining.length === 0) {
-      // todo do something special
+      setPerfectRes(true);
+      setIsGameover(true);
+      setRemaining([...skill_code_names]);
+      setHighScore(curScore);
+      setCookie('hs_pg', curScore, { path: '/' });
     }
-    const new_skill = remaining[parseInt(remaining.length * Math.random())];
-    setCurSkillCode(new_skill);
-    setCurSkillName(skill_table[new_skill]['name']);
-    setRemaining(remaining.filter(skill => skill !== new_skill))
-    console.log(skill_table[new_skill]['op_names'][0]);
+    else {
+      const new_skill = remaining[parseInt(remaining.length * Math.random())];
+      setCurSkillCode(new_skill);
+      setCurSkillName(skill_table[new_skill]['name']);
+      setRemaining(remaining.filter(skill => skill !== new_skill))
+      console.log(skill_table[new_skill]['op_names'][0]);
+    }
   }
 
   useEffect(() => {
@@ -120,6 +127,7 @@ const GameBoard = () => {
     setCurScore(0);
     setIsGameover(false);
     load_new_round();
+    setPerfectRes(false);
   }
 
   const createItem = (imgSrc, altText, subText) => (
@@ -146,7 +154,7 @@ const GameBoard = () => {
   return (
     <Stack>
       {isGameover ? (
-        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} />
+        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} perfect_res={perfectRes} />
       ) : (
         <Paper elevation={8} sx={{ flex: 1, padding: '16px 0' }}>
           <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }} >
