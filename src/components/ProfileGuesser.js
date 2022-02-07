@@ -63,7 +63,6 @@ const ProfileGuesser = () => {
       const new_profile = remaining[parseInt(remaining.length * Math.random())];
       setOperatorCode(new_profile);
       setRemaining(remaining.filter(profile => profile !== new_profile));
-      console.log(profile_table[new_profile]['table1']['Code Name']);
     }
   };
 
@@ -72,6 +71,7 @@ const ProfileGuesser = () => {
     if (cookies.hs_pg) {
       setHighScore(cookies.hs_pg);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const load_new_round = () => {
@@ -84,7 +84,6 @@ const ProfileGuesser = () => {
   useEffect(() => {
     let timer = null;
     if (roundResult === 1) {
-      console.log('Timeout triggered');
       setCurScore(curScore + 1);
       timer = setTimeout(load_new_round, 2000);
     }
@@ -92,6 +91,7 @@ const ProfileGuesser = () => {
       timer = setTimeout(() => setIsGameover(true), 2000);
     }
     return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roundResult]);
 
   const processRound = (val) => {

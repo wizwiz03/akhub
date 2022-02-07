@@ -47,8 +47,7 @@ const LowerHigher = () => {
   };
 
   const set_rand_matchup = () => {
-    const new_stat = stat_codes[parseInt(stat_codes.length * Math.random())];
-    setCurStat(new_stat);
+    setCurStat(stat_codes[parseInt(stat_codes.length * Math.random())]);
     let char_new = get_random_char();
     if (charMemory.length === 0) {
       let char_2 = char_new;
@@ -56,13 +55,11 @@ const LowerHigher = () => {
         char_2 = get_random_char();
       }
       setCharMemory([char_new, char_2]);
-      console.log(char_stats[char_new]['statsE2LV1'][new_stat], char_stats[char_2]['statsE2LV1'][new_stat]);
     }
     else {
       while (char_new === charMemory.at(-1)) {
         char_new = get_random_char();
       }
-      console.log(char_stats[charMemory.at(-1)]['statsE2LV1'][new_stat], char_stats[char_new]['statsE2LV1'][new_stat]);
       setCharMemory([...charMemory, char_new]);
     }
   }
@@ -72,6 +69,7 @@ const LowerHigher = () => {
     if (cookies.hs_lh) {
       setHighScore(cookies.hs_lh);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const load_new_round = () => {
@@ -87,14 +85,14 @@ const LowerHigher = () => {
   useEffect(() => {
     let timer = null;
     if (roundResult === 1) {
-      console.log('Timeout triggered');
-      setCurScore(curScore + 1);
+      setCurScore(cur => cur + 1);
       timer = setTimeout(load_new_round, 2500);
     }
     if (roundResult === 0) {
       timer = setTimeout(show_gameover, 2500);
     }
     return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roundResult]);
 
   const check_set_solution = (user_val) => {
@@ -149,7 +147,6 @@ const LowerHigher = () => {
                   <Stack
                     alignItems='center'
                     sx={{
-                      background: `url(${char_img_paths[img_key]}) no-repeat center, 'rgb(237,237,237)'`,
                       background: `linear-gradient(rgba(0,0,0,0.4) 100%, rgba(0,0,0,0.4) 100%), url(${char_img_paths[img_key]}) no-repeat center, radial-gradient(circle, rgba(237,237,237,1) 0%, rgba(120,120,120,1) 100%)`,
                       backgroundSize: 'contain, contain, auto auto',
                       padding: '16px',

@@ -63,7 +63,6 @@ const GameBoard = () => {
       setCurSkillCode(new_skill);
       setCurSkillName(skill_table[new_skill]['name']);
       setRemaining(remaining.filter(skill => skill !== new_skill))
-      console.log(skill_table[new_skill]['op_names'][0]);
     }
   }
 
@@ -72,6 +71,7 @@ const GameBoard = () => {
     if (cookies.hs_sq) {
       setHighScore(cookies.hs_sq);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const load_new_round = () => {
@@ -88,7 +88,6 @@ const GameBoard = () => {
   useEffect(() => {
     let timer = null;
     if (roundResult === 1) {
-      console.log('Timeout triggered');
       setCurScore(curScore + 1);
       timer = setTimeout(load_new_round, 2000);
     }
@@ -96,6 +95,7 @@ const GameBoard = () => {
       timer = setTimeout(show_gameover, 2000);
     }
     return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roundResult])
 
   const processRound = (val) => {

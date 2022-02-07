@@ -9,7 +9,7 @@
 
 
 <!-- PROJECT LOGO -->
-<h3 align="center">Live on <a href="akhub.netlify.app">akhub.netlify.app</a></h3>
+<h3 align="center">Live on <a href="https://akhub.netlify.app">akhub.netlify.app</a></h3>
 <br />
 <div align="center">
   <a href="https://github.com/wizwiz03/akhub">
@@ -22,7 +22,7 @@
     A fun little website that will test your Arknights knowledge
     <br />
     <br />
-    <a href="akhub.netlify.app">Visit the Website</a>
+    <a href="https://akhub.netlify.app">Visit the Website</a>
     ·
     <a href="https://github.com/wizwiz03/akhub/issues">Report Bug</a>
     ·
