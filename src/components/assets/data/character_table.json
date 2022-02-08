@@ -830,6 +830,7 @@
   "char_148_nearl": {
     "name": "Nearl",
     "skills": [
+      "skchr_demkni_1",
       "skchr_nearl_1",
       "skchr_nearl_2"
     ]
@@ -1295,6 +1296,7 @@
   "char_202_demkni": {
     "name": "Saria",
     "skills": [
+      "skchr_nearl_1",
       "skchr_demkni_1",
       "skchr_demkni_2",
       "skchr_demkni_3"

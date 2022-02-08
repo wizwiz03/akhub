@@ -1823,10 +1823,12 @@
   "skchr_nearl_1": {
     "name": "First Aid",
     "op_codes": [
-      "char_148_nearl"
+      "char_148_nearl",
+      "char_202_demkni"
     ],
     "op_names": [
-      "Nearl"
+      "Nearl",
+      "Saria"
     ]
   },
   "skchr_nearl_2": {
@@ -3128,10 +3130,12 @@
   "skchr_demkni_1": {
     "name": "First Aid",
     "op_codes": [
-      "char_202_demkni"
+      "char_202_demkni",
+      "char_148_nearl"
     ],
     "op_names": [
-      "Saria"
+      "Saria",
+      "Nearl"
     ]
   },
   "skchr_demkni_2": {
