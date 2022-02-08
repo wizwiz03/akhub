@@ -18,10 +18,12 @@ const Navbar = () => {
               <Typography variant='h5' component={Link} to='/'
                 sx={{ display: { xs: 'none', sm: 'block' }, textDecoration: 'none', color: 'white' }}
               >
-                Arknights Hub
+                Arknights <span style={{color: 'orange'}}>Hub</span>
               </Typography>
-              <Typography variant='h5' component='div' sx={{ display: { xs: 'block', sm: 'none' }, paddingRight: '8px' }}>
-                AKHub
+              <Typography variant='h5' component={Link} to='/'
+                sx={{ display: { xs: 'block', sm: 'none' }, paddingRight: '8px', textDecoration: 'none', color: 'white' }}
+              >
+                AK<span style={{color: 'orange'}}>Hub</span>
               </Typography>
             </Grid>
             <Grid item xs container sx={{ justifyContent: { xs: 'start', sm: 'center' } }}>
