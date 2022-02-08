@@ -1055,15 +1055,6 @@
       "Flamebringer"
     ]
   },
-  "skchr_aguard_1": {
-    "name": "Drawing Sword",
-    "op_codes": [
-      "char_508_aguard"
-    ],
-    "op_names": [
-      "Sharp"
-    ]
-  },
   "skchr_tiger_1": {
     "name": "Armorcrusher",
     "op_codes": [
@@ -1334,15 +1325,6 @@
       "GreyThroat"
     ]
   },
-  "skchr_asnipe_1": {
-    "name": "Spiral Arm",
-    "op_codes": [
-      "char_511_asnipe"
-    ],
-    "op_names": [
-      "Stormeye"
-    ]
-  },
   "skchr_aprl_1": {
     "name": "Precise Shooting",
     "op_codes": [
@@ -1494,15 +1476,6 @@
     ],
     "op_names": [
       "Skyfire"
-    ]
-  },
-  "skchr_acast_1": {
-    "name": "'All For Me'",
-    "op_codes": [
-      "char_509_acast"
-    ],
-    "op_names": [
-      "Pith"
     ]
   },
   "skchr_leizi_2": {
@@ -1692,15 +1665,6 @@
     ],
     "op_names": [
       "Tuye"
-    ]
-  },
-  "skchr_amedic_1": {
-    "name": "Apocalyptic Scene",
-    "op_codes": [
-      "char_510_amedic"
-    ],
-    "op_names": [
-      "Touch"
     ]
   },
   "skchr_ceylon_1": {
