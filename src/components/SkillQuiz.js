@@ -11,6 +11,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
+import { createFilterOptions } from '@mui/material/Autocomplete';
 
 import Gameover from './Gameover';
 import Footer from './Footer';
@@ -23,7 +24,9 @@ import opname_to_code from './assets/data/opname_to_code.json';
 const GameBoard = () => {
   const [cookies, setCookie] = useCookies(['hs_sq']);
   const game = game_list.find(mode => mode['sub'] === 'skill_quiz');
-
+  const filterOptions = createFilterOptions({
+    matchFrom: 'start'
+  });
 
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
@@ -32,7 +35,7 @@ const GameBoard = () => {
     }, {})
   }
 
-  const char_names = Object.keys(opname_to_code);
+  const char_names = Object.keys(opname_to_code).sort((a,b) => a.localeCompare(b));
   const avatar_img_paths = importAll(require.context('./assets/images/avatars_min', false, /\.(png|jpe?g|svg)$/));
   const skill_img_paths = importAll(require.context('./assets/images/skills2', false, /\.(png|jpe?g|svg)$/));
   const skill_code_names = Object.keys(skill_table);
@@ -200,6 +203,7 @@ const GameBoard = () => {
                   blurOnSelect
                   disabled={roundResult === -1 ? false : true}
                   options={char_names}
+                  filterOptions={ filterOptions }
                   sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
                 />

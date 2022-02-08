@@ -16,6 +16,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Collapse from '@mui/material/Collapse';
 import Grid from '@mui/material/Grid';
+import { createFilterOptions } from '@mui/material/Autocomplete';
 
 import Gameover from './Gameover';
 import Footer from './Footer';
@@ -29,6 +30,9 @@ import handbook_team_table from './assets/data/handbook_team_table.json';
 const ProfileGuesser = () => {
   const [cookies, setCookie] = useCookies(['hs_pg']);
   const game = game_list.find(mode => mode['sub'] === 'profile_guesser');
+  const filterOptions = createFilterOptions({
+    matchFrom: 'start'
+  });
 
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
@@ -38,7 +42,7 @@ const ProfileGuesser = () => {
   }
 
   const avatar_img_paths = importAll(require.context('./assets/images/avatars_min', false, /\.(png|jpe?g|svg)$/));
-  const char_names = Object.keys(opname_to_code);
+  const char_names = Object.keys(opname_to_code).sort((a, b) => a.localeCompare(b));
 
   const [userInput, setUserInput] = useState(null);
   const [remaining, setRemaining] = useState([...Object.keys(profile_table)]);
@@ -71,7 +75,7 @@ const ProfileGuesser = () => {
     if (cookies.hs_pg) {
       setHighScore(cookies.hs_pg);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const load_new_round = () => {
@@ -91,7 +95,7 @@ const ProfileGuesser = () => {
       timer = setTimeout(() => setIsGameover(true), 2000);
     }
     return () => clearTimeout(timer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roundResult]);
 
   const processRound = (val) => {
@@ -267,6 +271,7 @@ const ProfileGuesser = () => {
                   blurOnSelect
                   disabled={roundResult === -1 ? false : true}
                   options={char_names}
+                  filterOptions={ filterOptions }
                   sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
                 />
