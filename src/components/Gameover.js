@@ -7,7 +7,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 
 import perfectImg from './assets/images/gameover/perfect.png';
 
-const Gameover = ({ score_results, score, playAgain, perfect_res }) => {
+const Gameover = ({ score_results, score, playAgain, perfect_res, title }) => {
   const importAll = (r) => {
     return r.keys().reduce((prev, cur) => {
       prev[cur.replace('./', '').replace('.png', '')] = r(cur);
@@ -33,6 +33,7 @@ const Gameover = ({ score_results, score, playAgain, perfect_res }) => {
   return (
     <Paper elevation={8} sx={{ padding: '24px 8px', flex: 1 }}>
       <Stack alignItems='center' spacing={2}>
+        <Typography variant='body2'>({title})</Typography>
         <Typography variant='h2'>Your final score:</Typography>
         <Typography variant='h1'>{score}</Typography>
         <Typography variant='p' textAlign='center'>

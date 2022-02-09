@@ -157,7 +157,7 @@ const GameBoard = () => {
   return (
     <Stack>
       {isGameover ? (
-        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} perfect_res={perfectRes} />
+        <Gameover score_results={game.scores} score={curScore} playAgain={onClickPlay} perfect_res={perfectRes} title={game.title} />
       ) : (
         <Paper elevation={8} sx={{ flex: 1, padding: '16px 0' }}>
           <Container sx={{ p: { xs: 2, sm: 3, md: 4 } }} >
