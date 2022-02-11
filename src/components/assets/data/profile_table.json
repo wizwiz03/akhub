@@ -594,7 +594,7 @@
       "Combat Skill": "Excellent",
       "Originium Arts Assimilation": "Standard"
     },
-    "profile": "_  is a Kjerag warlord, chairman of the Karlan Commercial Co., and is current Chief of the Silverash Family. He has unique views on economics, trade, international politics, diplomacy, and strategic planning.\nHe provides strategic support for some Rhodes Island operations.\nIn view of the fact that his true purposes are unknown and he doesn't have the most cooperative attitude, it is advised that we maintain a conservative attitude in order to minimize risks when working with him.",
+    "profile": "_  is a Kjerag warlord, chairman of the Karlan Commercial Co., and is current Chief of the _ Family. He has unique views on economics, trade, international politics, diplomacy, and strategic planning.\nHe provides strategic support for some Rhodes Island operations.\nIn view of the fact that his true purposes are unknown and he doesn't have the most cooperative attitude, it is advised that we maintain a conservative attitude in order to minimize risks when working with him.",
     "nation": {
       "nationId": "kjerag",
       "groupId": "karlan",
