@@ -58,7 +58,7 @@ const ProfileGuesser = () => {
   const set_rand_profile = () => {
     if (remaining.length === 0) {
       setPerfectRes(true);
-      isGameover(true);
+      setIsGameover(true);
       setRemaining([...Object.keys(profile_table)]);
       setHighScore(curScore);
       setCookie('hs_pg', curScore, { path: '/', maxAge: 100000000 });
@@ -271,7 +271,7 @@ const ProfileGuesser = () => {
                   blurOnSelect
                   disabled={roundResult === -1 ? false : true}
                   options={char_names}
-                  filterOptions={ filterOptions }
+                  filterOptions={filterOptions}
                   sx={{ maxWidth: '300px', width: '70vw' }}
                   renderInput={tfProps => <TextField {...tfProps} label='Operator' sx={{ border: '1px solid rgb(250,250,250)', borderRadius: '6px' }} />}
                 />
